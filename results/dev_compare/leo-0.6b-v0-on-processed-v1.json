@@ -1,0 +1,122 @@
+{
+ "model": "checkpoints/leo-0.6b-v0",
+ "data": "data/processed-v1/dev.jsonl",
+ "summary": {
+  "all": {
+   "n": 1910,
+   "acc": 0.8780104712041885
+  },
+  "none_option/gold_is_none": {
+   "n": 44,
+   "acc": 1.0
+  },
+  "none_option/gold_is_real": {
+   "n": 70,
+   "acc": 0.35714285714285715
+  },
+  "source/ag_news": {
+   "n": 117,
+   "acc": 0.8888888888888888
+  },
+  "source/arc_challenge": {
+   "n": 50,
+   "acc": 0.74
+  },
+  "source/arc_easy": {
+   "n": 54,
+   "acc": 0.8703703703703703
+  },
+  "source/banking77": {
+   "n": 137,
+   "acc": 0.9051094890510949
+  },
+  "source/boolq": {
+   "n": 60,
+   "acc": 0.8166666666666667
+  },
+  "source/clinc_oos": {
+   "n": 80,
+   "acc": 0.8875
+  },
+  "source/commonsense_qa": {
+   "n": 86,
+   "acc": 0.7790697674418605
+  },
+  "source/dbpedia_14": {
+   "n": 116,
+   "acc": 0.9482758620689655
+  },
+  "source/helpsteer2": {
+   "n": 135,
+   "acc": 0.6074074074074074
+  },
+  "source/imdb": {
+   "n": 58,
+   "acc": 0.9827586206896551
+  },
+  "source/jailbreak": {
+   "n": 60,
+   "acc": 1.0
+  },
+  "source/mrpc": {
+   "n": 50,
+   "acc": 0.88
+  },
+  "source/multi_nli": {
+   "n": 96,
+   "acc": 0.9270833333333334
+  },
+  "source/prompt_injections": {
+   "n": 60,
+   "acc": 0.9333333333333333
+  },
+  "source/sms_spam": {
+   "n": 50,
+   "acc": 0.96
+  },
+  "source/snli": {
+   "n": 107,
+   "acc": 0.9439252336448598
+  },
+  "source/syn_conversation": {
+   "n": 113,
+   "acc": 0.9646017699115044
+  },
+  "source/syn_field_reference": {
+   "n": 177,
+   "acc": 0.96045197740113
+  },
+  "source/syn_policy": {
+   "n": 60,
+   "acc": 1.0
+  },
+  "source/syn_unknowable": {
+   "n": 24,
+   "acc": 0.875
+  },
+  "source/yahoo_answers": {
+   "n": 120,
+   "acc": 0.8333333333333334
+  },
+  "source/yelp": {
+   "n": 100,
+   "acc": 0.71
+  },
+  "type/choice": {
+   "n": 840,
+   "acc": 0.8714285714285714
+  },
+  "type/noul": {
+   "n": 887,
+   "acc": 0.939120631341601
+  },
+  "type/score": {
+   "n": 183,
+   "acc": 0.6120218579234973
+  },
+  "picked_none_rate_when_real_is_gold": {
+   "n": 70,
+   "acc": 0.6428571428571429
+  }
+ }
+}

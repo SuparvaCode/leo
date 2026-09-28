@@ -1,0 +1,203 @@
+{
+ "device": "NVIDIA GeForce RTX 3050",
+ "results": {
+  "leo-0.6b-v1 bf16": {
+   "order": [
+    {
+     "dataset": "emotion",
+     "n_rows": 300,
+     "n_perm": 5,
+     "flip_rate": 0.10533333333333332,
+     "mean_tvd": 0.09289061167203139
+    },
+    {
+     "dataset": "fin_topic",
+     "n_rows": 300,
+     "n_perm": 5,
+     "flip_rate": 0.15333333333333338,
+     "mean_tvd": 0.09527428457926215
+    }
+   ],
+   "parity": {
+    "n_questions": 400,
+    "max_abs_diff": 0.05830000000000002,
+    "argmax_changes": 2
+   },
+   "latency": [
+    {
+     "state": "short",
+     "questions": 1,
+     "model_p50_ms": 38.44849999586586,
+     "model_p95_ms": 49.364245020842645
+    },
+    {
+     "state": "short",
+     "questions": 10,
+     "model_p50_ms": 45.56189999857452,
+     "model_p95_ms": 46.202345011988655
+    },
+    {
+     "state": "short",
+     "questions": 50,
+     "model_p50_ms": 215.7217500061961,
+     "model_p95_ms": 216.8483150031534
+    },
+    {
+     "state": "long",
+     "questions": 1,
+     "model_p50_ms": 41.94644998642616,
+     "model_p95_ms": 44.165895007608924
+    },
+    {
+     "state": "long",
+     "questions": 10,
+     "model_p50_ms": 70.6423499941593,
+     "model_p95_ms": 71.75200001220219
+    },
+    {
+     "state": "long",
+     "questions": 50,
+     "model_p50_ms": 255.90930000180379,
+     "model_p95_ms": 257.2530899895355
+    }
+   ],
+   "seconds": 79.8
+  },
+  "leo-0.6b-v1 fp32": {
+   "order": [
+    {
+     "dataset": "emotion",
+     "n_rows": 300,
+     "n_perm": 5,
+     "flip_rate": 0.1,
+     "mean_tvd": 0.09308191133519031
+    },
+    {
+     "dataset": "fin_topic",
+     "n_rows": 300,
+     "n_perm": 5,
+     "flip_rate": 0.15866666666666665,
+     "mean_tvd": 0.09472203676424865
+    }
+   ],
+   "parity": {
+    "n_questions": 400,
+    "max_abs_diff": 0.0001000000000000445,
+    "argmax_changes": 0
+   },
+   "latency": [
+    {
+     "state": "short",
+     "questions": 1,
+     "model_p50_ms": 31.920900000841357,
+     "model_p95_ms": 40.251334983622655
+    },
+    {
+     "state": "short",
+     "questions": 10,
+     "model_p50_ms": 90.1053999987198,
+     "model_p95_ms": 90.75270999164786
+    },
+    {
+     "state": "short",
+     "questions": 50,
+     "model_p50_ms": 559.574650003924,
+     "model_p95_ms": 562.7607449961943
+    },
+    {
+     "state": "long",
+     "questions": 1,
+     "model_p50_ms": 84.79759999318048,
+     "model_p95_ms": 85.68699500028742
+    },
+    {
+     "state": "long",
+     "questions": 10,
+     "model_p50_ms": 170.35680000844877,
+     "model_p95_ms": 171.43199001293397
+    },
+    {
+     "state": "long",
+     "questions": 50,
+     "model_p50_ms": 658.8776999997208,
+     "model_p95_ms": 660.914669984777
+    }
+   ],
+   "seconds": 156.1
+  },
+  "Jev (live)": {
+   "order": [
+    {
+     "dataset": "emotion",
+     "n_rows": 300,
+     "n_perm": 5,
+     "flip_rate": 0.018000000000000002,
+     "mean_tvd": 0.03578
+    },
+    {
+     "dataset": "fin_topic",
+     "n_rows": 300,
+     "n_perm": 5,
+     "flip_rate": 0.06866666666666667,
+     "mean_tvd": 0.06277333333333333
+    }
+   ],
+   "parity": {
+    "n_questions": 400,
+    "max_abs_diff": 0.13,
+    "argmax_changes": 1
+   },
+   "latency": [
+    {
+     "state": "short",
+     "questions": 1,
+     "client_p50_ms": 331.05,
+     "client_p95_ms": 627.4500000000003,
+     "model_p50_ms": 54.0,
+     "model_p95_ms": 93.25000000000001
+    },
+    {
+     "state": "short",
+     "questions": 10,
+     "client_p50_ms": 358.75,
+     "client_p95_ms": 429.08000000000044,
+     "model_p50_ms": 71.0,
+     "model_p95_ms": 116.9
+    },
+    {
+     "state": "short",
+     "questions": 50,
+     "client_p50_ms": 366.05,
+     "client_p95_ms": 426.4600000000002,
+     "model_p50_ms": 81.5,
+     "model_p95_ms": 99.60000000000002
+    },
+    {
+     "state": "long",
+     "questions": 1,
+     "client_p50_ms": 348.45000000000005,
+     "client_p95_ms": 603.755,
+     "model_p50_ms": 65.5,
+     "model_p95_ms": 97.35000000000001
+    },
+    {
+     "state": "long",
+     "questions": 10,
+     "client_p50_ms": 353.54999999999995,
+     "client_p95_ms": 648.0950000000009,
+     "model_p50_ms": 65.5,
+     "model_p95_ms": 104.80000000000001
+    },
+    {
+     "state": "long",
+     "questions": 50,
+     "client_p50_ms": 377.70000000000005,
+     "client_p95_ms": 607.885,
+     "model_p50_ms": 89.5,
+     "model_p95_ms": 174.00000000000003
+    }
+   ],
+   "seconds": 335.4
+  }
+ }
+}

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leo-systemone"
+version = "0.2.0"
+description = "Leo: an open-weight decision model (typed questions in, calibrated probabilities out, one forward pass)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+dependencies = [
+    "torch>=2.6",
+    "transformers>=5.0",
+    "peft>=0.15",
+    "safetensors",
+    "numpy",
+    "pydantic>=2",
+]
+
+[project.optional-dependencies]
+data = ["datasets>=4", "huggingface_hub", "pandas", "python-dotenv"]
+serve = ["fastapi", "uvicorn", "httpx"]
+dev = ["pytest", "httpx"]
+
+[project.urls]
+Homepage = "https://github.com/SuparvaCode/leo"
+Model = "https://huggingface.co/Suparva/leo-1.7b"
+
+[tool.setuptools.packages.find]
+include = ["leo*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

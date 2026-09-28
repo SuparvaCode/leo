@@ -1,0 +1,98 @@
+{
+  "emotion": {
+    "n": 2000,
+    "accuracy": 0.587,
+    "macro_f1": 0.5025991410955439,
+    "balanced_accuracy": 0.49868703131807607,
+    "brier": 0.666708493929191,
+    "ece": 0.2795232828282828,
+    "nll": 2.862589879421763,
+    "mean_confidence": 0.865423282828283,
+    "acc_at_50": 0.737,
+    "acc_at_80": 0.653125,
+    "majority_class_accuracy": 0.3475,
+    "seconds": 132.3,
+    "ms_per_row": 66.15,
+    "limit": null,
+    "jev_model": [
+      "jev-1.13.0"
+    ],
+    "client_p50_ms": 332.9,
+    "client_p95_ms": 391.31,
+    "server_p50_ms": 60.0,
+    "server_p95_ms": 107.0,
+    "input_tokens": 676323
+  },
+  "tweet_topic": {
+    "n": 1693,
+    "accuracy": 0.7903130537507383,
+    "macro_f1": 0.6932370620220162,
+    "balanced_accuracy": 0.7493096174920636,
+    "brier": 0.2928498250567269,
+    "ece": 0.06401188494513957,
+    "nll": 0.6901575552100476,
+    "mean_confidence": 0.8500603196763857,
+    "acc_at_50": 0.9539007092198581,
+    "acc_at_80": 0.8648449039881831,
+    "majority_class_accuracy": 0.3963378617838157,
+    "seconds": 113.2,
+    "ms_per_row": 66.84,
+    "limit": null,
+    "jev_model": [
+      "jev-1.13.0"
+    ],
+    "client_p50_ms": 332.8,
+    "client_p95_ms": 380.88,
+    "server_p50_ms": 59.0,
+    "server_p95_ms": 107.0,
+    "input_tokens": 628743
+  },
+  "fin_topic": {
+    "n": 4117,
+    "accuracy": 0.6686907942676706,
+    "macro_f1": 0.626961586943456,
+    "balanced_accuracy": 0.7300299060337558,
+    "brier": 0.5095717587570997,
+    "ece": 0.1677415397599999,
+    "nll": 1.7976288415219348,
+    "mean_confidence": 0.8358639589973085,
+    "acc_at_50": 0.82555879494655,
+    "acc_at_80": 0.7325440194292653,
+    "majority_class_accuracy": 0.2069468059266456,
+    "seconds": 273.5,
+    "ms_per_row": 66.42,
+    "limit": null,
+    "jev_model": [
+      "jev-1.13.0"
+    ],
+    "client_p50_ms": 332.4,
+    "client_p95_ms": 378.1,
+    "server_p50_ms": 58.0,
+    "server_p95_ms": 101.0,
+    "input_tokens": 1985374
+  },
+  "daily_dialog": {
+    "n": 7740,
+    "accuracy": 0.7099483204134367,
+    "macro_f1": 0.3847991355559954,
+    "balanced_accuracy": 0.6604229076478132,
+    "brier": 0.4596651790528151,
+    "ece": 0.1559679351656096,
+    "nll": 1.45326453688624,
+    "mean_confidence": 0.8655157387831806,
+    "acc_at_50": 0.8281653746770026,
+    "acc_at_80": 0.7635658914728682,
+    "majority_class_accuracy": 0.8166666666666667,
+    "seconds": 516.4,
+    "ms_per_row": 66.71,
+    "limit": null,
+    "jev_model": [
+      "jev-1.13.0"
+    ],
+    "client_p50_ms": 332.0,
+    "client_p95_ms": 375.30499999999995,
+    "server_p50_ms": 58.0,
+    "server_p95_ms": 101.0,
+    "input_tokens": 2675430
+  }
+}

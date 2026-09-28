@@ -1,0 +1,122 @@
+{
+ "model": "checkpoints/leo-0.6b-v1",
+ "data": "data/processed/dev.jsonl",
+ "summary": {
+  "all": {
+   "n": 1854,
+   "acc": 0.8861920172599784
+  },
+  "none_option/gold_is_none": {
+   "n": 45,
+   "acc": 0.9333333333333333
+  },
+  "none_option/gold_is_real": {
+   "n": 15,
+   "acc": 0.8666666666666667
+  },
+  "source/ag_news": {
+   "n": 99,
+   "acc": 0.9191919191919192
+  },
+  "source/arc_challenge": {
+   "n": 50,
+   "acc": 0.72
+  },
+  "source/arc_easy": {
+   "n": 54,
+   "acc": 0.8518518518518519
+  },
+  "source/banking77": {
+   "n": 129,
+   "acc": 0.8992248062015504
+  },
+  "source/boolq": {
+   "n": 60,
+   "acc": 0.75
+  },
+  "source/clinc_oos": {
+   "n": 80,
+   "acc": 1.0
+  },
+  "source/commonsense_qa": {
+   "n": 86,
+   "acc": 0.7790697674418605
+  },
+  "source/dbpedia_14": {
+   "n": 108,
+   "acc": 0.9351851851851852
+  },
+  "source/helpsteer2": {
+   "n": 135,
+   "acc": 0.6074074074074074
+  },
+  "source/imdb": {
+   "n": 58,
+   "acc": 0.9655172413793104
+  },
+  "source/jailbreak": {
+   "n": 60,
+   "acc": 0.95
+  },
+  "source/mrpc": {
+   "n": 50,
+   "acc": 0.86
+  },
+  "source/multi_nli": {
+   "n": 96,
+   "acc": 0.9375
+  },
+  "source/prompt_injections": {
+   "n": 60,
+   "acc": 0.95
+  },
+  "source/sms_spam": {
+   "n": 50,
+   "acc": 0.96
+  },
+  "source/snli": {
+   "n": 107,
+   "acc": 0.9345794392523364
+  },
+  "source/syn_conversation": {
+   "n": 119,
+   "acc": 1.0
+  },
+  "source/syn_field_reference": {
+   "n": 161,
+   "acc": 1.0
+  },
+  "source/syn_policy": {
+   "n": 60,
+   "acc": 1.0
+  },
+  "source/syn_unknowable": {
+   "n": 27,
+   "acc": 1.0
+  },
+  "source/yahoo_answers": {
+   "n": 105,
+   "acc": 0.8761904761904762
+  },
+  "source/yelp": {
+   "n": 100,
+   "acc": 0.69
+  },
+  "type/choice": {
+   "n": 834,
+   "acc": 0.9088729016786571
+  },
+  "type/noul": {
+   "n": 837,
+   "acc": 0.9223416965352449
+  },
+  "type/score": {
+   "n": 183,
+   "acc": 0.6174863387978142
+  },
+  "picked_none_rate_when_real_is_gold": {
+   "n": 15,
+   "acc": 0.13333333333333333
+  }
+ }
+}

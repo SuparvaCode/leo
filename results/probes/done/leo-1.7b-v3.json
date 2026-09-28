@@ -1,0 +1,182 @@
+{
+ "checkpoint": "checkpoints\\leo-1.7b-v3",
+ "evidence_heldout_themes": {
+  "all": {
+   "n": 400,
+   "step_acc": 0.665,
+   "false_done_rate": 0.0672,
+   "mean_p_done_when_wrong": 0.0683,
+   "done_recall": 0.6977
+  },
+  "blank": {
+   "n": 18,
+   "step_acc": 0.4444,
+   "false_done_rate": 0.5556,
+   "mean_p_done_when_wrong": 0.4865,
+   "done_recall": null
+  },
+  "detail": {
+   "n": 18,
+   "step_acc": 0.6667,
+   "false_done_rate": null,
+   "mean_p_done_when_wrong": null,
+   "done_recall": 0.6667
+  },
+  "form": {
+   "n": 45,
+   "step_acc": 0.8222,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": 0.72
+  },
+  "loading": {
+   "n": 18,
+   "step_acc": 0.8889,
+   "false_done_rate": 0.1111,
+   "mean_p_done_when_wrong": 0.1318,
+   "done_recall": null
+  },
+  "overlay": {
+   "n": 82,
+   "step_acc": 0.7561,
+   "false_done_rate": 0.0854,
+   "mean_p_done_when_wrong": 0.1022,
+   "done_recall": null
+  },
+  "popover": {
+   "n": 65,
+   "step_acc": 0.7231,
+   "false_done_rate": 0.0308,
+   "mean_p_done_when_wrong": 0.0324,
+   "done_recall": null
+  },
+  "stale": {
+   "n": 19,
+   "step_acc": 0.4737,
+   "false_done_rate": 0.0526,
+   "mean_p_done_when_wrong": 0.0527,
+   "done_recall": null
+  },
+  "unsubmitted": {
+   "n": 135,
+   "step_acc": 0.5556,
+   "false_done_rate": 0.0148,
+   "mean_p_done_when_wrong": 0.013,
+   "done_recall": null
+  }
+ },
+ "catalog_v3_sim": {
+  "BLOCKED": {
+   "n": 1,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "CLICK": {
+   "n": 90,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "DONE": {
+   "n": 37,
+   "step_acc": 0.973,
+   "false_done_rate": null,
+   "mean_p_done_when_wrong": null,
+   "done_recall": 0.973
+  },
+  "SCROLL_DOWN": {
+   "n": 11,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "SELECT": {
+   "n": 23,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0003,
+   "done_recall": null
+  },
+  "TYPE_TEXT": {
+   "n": 31,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "WAIT": {
+   "n": 7,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "all": {
+   "n": 200,
+   "step_acc": 0.995,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0001,
+   "done_recall": 0.973
+  }
+ },
+ "flights_states": [
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-0.json",
+   "decision": 12,
+   "page_text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rent",
+   "n_elements": 26,
+   "v3_p_done": 0.3775,
+   "p_done": 0.3775,
+   "choice": "CLICK"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-0.json",
+   "decision": 13,
+   "page_text": "Economy\nPremium economy\nBusiness\nFirst",
+   "n_elements": 4,
+   "v3_p_done": 0.9845,
+   "p_done": 0.986,
+   "choice": "DONE"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-1.json",
+   "decision": 12,
+   "page_text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rent",
+   "n_elements": 26,
+   "v3_p_done": 0.3775,
+   "p_done": 0.3775,
+   "choice": "CLICK"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-1.json",
+   "decision": 13,
+   "page_text": "Economy\nPremium economy\nBusiness\nFirst",
+   "n_elements": 4,
+   "v3_p_done": 0.9845,
+   "p_done": 0.986,
+   "choice": "DONE"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-2.json",
+   "decision": 12,
+   "page_text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rent",
+   "n_elements": 26,
+   "v3_p_done": 0.3775,
+   "p_done": 0.3775,
+   "choice": "CLICK"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-2.json",
+   "decision": 13,
+   "page_text": "",
+   "n_elements": 0,
+   "v3_p_done": 0.9986,
+   "p_done": 0.9986,
+   "choice": "DONE"
+  }
+ ]
+}

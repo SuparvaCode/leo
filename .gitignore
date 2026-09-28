@@ -1,0 +1,58 @@
+# Secrets
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Data, checkpoints, caches (large / regenerable)
+data/raw/
+data/cache/
+data/processed*/
+data/external/
+checkpoints/
+runs/
+wandb/
+hf_cache/
+*.safetensors
+*.bin
+*.pt
+*.onnx
+
+# Benchmark raw API responses may contain request payloads
+results/raw/
+# Jev response cache and per-item Jev outputs stay local (only aggregate scores are published)
+results/cache/
+results/bench/jev-live/*.jsonl
+results/multilingual/jev-live.json
+results/jevbench/jev-live.json
+# browser automation: throwaway Chrome profile (cookies), full traces, early runs
+results/browser/chrome-profile/
+results/browser/*/traces/
+results/browser/*/runs.jsonl
+results/browser/run1/
+results/browser/run2/
+results/browser/run2-jev/
+results/browser/smoke/
+# local run artefacts
+results/kaggle/
+results/logs/
+results/hf_access.json
+results/bench/laya-0.3.20/
+results/bench/*-step800/
+results/probes/leo-0.6b-v0.*
+release/
+external/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
