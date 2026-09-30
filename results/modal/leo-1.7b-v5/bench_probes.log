@@ -1,0 +1,18 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 3098.82it/s]
+leo-1.7b-v5 bf16 {"order": [{"dataset": "emotion", "n_rows": 300, "n_perm": 5, "flip_rate": 0.07666666666666667, "mean_tvd": 0.06066910474976763}, {"dataset": "fin_topic", "n_rows": 300, "n_perm": 5, "flip_rate": 0.17733333333333334, "mean_tvd": 0.10148618481530206}], "parity": {"n_questions": 400, "max_abs_diff": 0.01639999999999997, "argmax_changes": 3}, "latency": [{"state": "short", "questions": 1, "model_p50_ms": 53.324339000027976, "model_p95_ms": 55.176114050027536}, {"state": "short", "questions": 10, "model_p50_ms": 54.792434500029685, "model_p95_ms": 56.04533369996716}, {"state": "short", "questions": 50, "model_p50_ms": 139.78060400000913, "model_p95_ms": 142.20106869993288}, {"state": "long", "questions": 1, "model_p50_ms": 52.52729649998855, "model_p95_ms": 54.46183960009421}, {"state": "long", "questions": 10, "model_p50_ms": 56.0465275000297, "model_p95_ms": 56.95992130007426}, {"state": "long", "questions": 50, "model_p50_ms": 165.28901049991873, "model_p95_ms": 168.49096699992856}], "seconds": 85.6}
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  64%|██████▍   | 198/310 [00:00<00:00, 1979.76it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2931.78it/s]
+leo-1.7b-v5 bf16 2 views {"order": [{"dataset": "emotion", "n_rows": 300, "n_perm": 5, "flip_rate": 0.041333333333333326, "mean_tvd": 0.02738972998957978}, {"dataset": "fin_topic", "n_rows": 300, "n_perm": 5, "flip_rate": 0.09, "mean_tvd": 0.051525847809735945}], "parity": {"n_questions": 400, "max_abs_diff": 0.015300000000000036, "argmax_changes": 3}, "latency": [{"state": "short", "questions": 1, "model_p50_ms": 52.359523000063746, "model_p95_ms": 52.932550050007876}, {"state": "short", "questions": 10, "model_p50_ms": 55.25362500003439, "model_p95_ms": 57.596009850038854}, {"state": "short", "questions": 50, "model_p50_ms": 430.07336199997326, "model_p95_ms": 432.54025854997735}, {"state": "long", "questions": 1, "model_p50_ms": 53.16853799996579, "model_p95_ms": 54.0967277500215}, {"state": "long", "questions": 10, "model_p50_ms": 66.83066400000826, "model_p95_ms": 69.24357535006607}, {"state": "long", "questions": 50, "model_p50_ms": 432.5738560000332, "model_p95_ms": 435.3156151999485}], "seconds": 118.8}
+| probe | leo-1.7b-v5 bf16 | leo-1.7b-v5 bf16 2 views |
+|---|---|---|
+| option-order flip rate, emotion (300 rows x 5 shuffles) | 0.077 | 0.041 |
+| mean total-variation shift, emotion | 0.061 | 0.027 |
+| option-order flip rate, fin_topic (300 rows x 5 shuffles) | 0.177 | 0.090 |
+| mean total-variation shift, fin_topic | 0.101 | 0.052 |
+| 4 questions together vs one at a time: max prob. difference (100 states) | 0.0164 | 0.0153 |
+| ... top answers that changed | 3 | 3 |
+| model p50 / p95 ms, short state, 1 question(s) | 53 / 55 | 52 / 53 |
+| model p50 / p95 ms, short state, 10 question(s) | 55 / 56 | 55 / 58 |
+| model p50 / p95 ms, short state, 50 question(s) | 140 / 142 | 430 / 433 |
+| model p50 / p95 ms, long state, 1 question(s) | 53 / 54 | 53 / 54 |
+| model p50 / p95 ms, long state, 10 question(s) | 56 / 57 | 67 / 69 |
+| model p50 / p95 ms, long state, 50 question(s) | 165 / 168 | 433 / 435 |

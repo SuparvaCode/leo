@@ -1,0 +1,14 @@
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   4%|▍         | 16/398 [00:00<00:02, 159.58it/s]Loading weights:   8%|▊         | 32/398 [00:00<00:02, 122.46it/s]Loading weights:  12%|█▏        | 47/398 [00:00<00:03, 116.32it/s]Loading weights:  15%|█▌        | 60/398 [00:00<00:02, 119.71it/s]Loading weights:  18%|█▊        | 73/398 [00:00<00:02, 115.18it/s]Loading weights:  22%|██▏       | 86/398 [00:00<00:02, 116.15it/s]Loading weights:  25%|██▍       | 98/398 [00:00<00:02, 106.30it/s]Loading weights:  28%|██▊       | 112/398 [00:00<00:02, 113.06it/s]Loading weights:  31%|███▏      | 125/398 [00:01<00:02, 115.60it/s]Loading weights:  34%|███▍      | 137/398 [00:01<00:02, 110.66it/s]Loading weights:  38%|███▊      | 151/398 [00:01<00:02, 112.98it/s]Loading weights:  42%|████▏     | 169/398 [00:01<00:01, 129.29it/s]Loading weights:  46%|████▌     | 183/398 [00:01<00:01, 127.27it/s]Loading weights:  49%|████▉     | 196/398 [00:01<00:01, 118.66it/s]Loading weights:  53%|█████▎    | 212/398 [00:01<00:01, 127.81it/s]Loading weights:  58%|█████▊    | 229/398 [00:01<00:01, 139.22it/s]Loading weights:  61%|██████▏   | 244/398 [00:01<00:01, 136.50it/s]Loading weights:  65%|██████▍   | 258/398 [00:02<00:01, 120.38it/s]Loading weights: 100%|██████████| 398/398 [00:02<00:00, 183.12it/s]
+all              {'n': 211, 'accuracy': 0.9573, 'log_loss': 0.109, 'ece': 0.036}
+form:caps        {'n': 3, 'accuracy': 1.0, 'log_loss': 0.0122}
+form:negated     {'n': 4, 'accuracy': 0.75, 'log_loss': 0.2991}
+form:phrase      {'n': 86, 'accuracy': 0.9651, 'log_loss': 0.0973}
+form:question    {'n': 4, 'accuracy': 1.0, 'log_loss': 0.003}
+form:statement   {'n': 1, 'accuracy': 1.0, 'log_loss': 0.0032}
+form:word        {'n': 113, 'accuracy': 0.9558, 'log_loss': 0.1185}
+gold:False       {'n': 109, 'accuracy': 0.9725, 'log_loss': 0.0676}
+gold:True        {'n': 102, 'accuracy': 0.9412, 'log_loss': 0.1534}
+lang:en          {'n': 172, 'accuracy': 0.9477, 'log_loss': 0.1312}
+lang:other       {'n': 39, 'accuracy': 1.0, 'log_loss': 0.0115}
+state:sentence   {'n': 161, 'accuracy': 0.9503, 'log_loss': 0.1142}
+state:tiny       {'n': 50, 'accuracy': 0.98, 'log_loss': 0.0926}

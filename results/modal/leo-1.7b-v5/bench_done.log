@@ -1,0 +1,27 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 3668.84it/s]
+evidence_heldout_themes
+  all          {'n': 400, 'step_acc': 0.9975, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0001, 'done_recall': 1.0}
+  blank        {'n': 23, 'step_acc': 1.0, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0, 'done_recall': None}
+  detail       {'n': 27, 'step_acc': 1.0, 'false_done_rate': None, 'mean_p_done_when_wrong': None, 'done_recall': 1.0}
+  form         {'n': 48, 'step_acc': 1.0, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0005, 'done_recall': 1.0}
+  loading      {'n': 20, 'step_acc': 1.0, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0, 'done_recall': None}
+  overlay      {'n': 75, 'step_acc': 0.9867, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0, 'done_recall': None}
+  popover      {'n': 56, 'step_acc': 1.0, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0, 'done_recall': None}
+  stale        {'n': 16, 'step_acc': 1.0, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0024, 'done_recall': None}
+  unsubmitted  {'n': 135, 'step_acc': 1.0, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0, 'done_recall': None}
+catalog_v3_sim
+  BLOCKED      {'n': 1, 'step_acc': 1.0, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0, 'done_recall': None}
+  CLICK        {'n': 90, 'step_acc': 1.0, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0, 'done_recall': None}
+  DONE         {'n': 37, 'step_acc': 1.0, 'false_done_rate': None, 'mean_p_done_when_wrong': None, 'done_recall': 1.0}
+  SCROLL_DOWN  {'n': 11, 'step_acc': 1.0, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0, 'done_recall': None}
+  SELECT       {'n': 23, 'step_acc': 0.9565, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0001, 'done_recall': None}
+  TYPE_TEXT    {'n': 31, 'step_acc': 1.0, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0, 'done_recall': None}
+  WAIT         {'n': 7, 'step_acc': 1.0, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0, 'done_recall': None}
+  all          {'n': 200, 'step_acc': 0.995, 'false_done_rate': 0.0, 'mean_p_done_when_wrong': 0.0, 'done_recall': 1.0}
+flights states (v3 P(DONE) -> this checkpoint)
+  3-0.json #12 0.378 -> 0.002 CLICK      26 el  'Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rent'
+  3-0.json #13 0.985 -> 0.000 CLICK       4 el  'Economy\nPremium economy\nBusiness\nFirst'
+  3-1.json #12 0.378 -> 0.002 CLICK      26 el  'Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rent'
+  3-1.json #13 0.985 -> 0.000 CLICK       4 el  'Economy\nPremium economy\nBusiness\nFirst'
+  3-2.json #12 0.378 -> 0.002 CLICK      26 el  'Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rent'
+  3-2.json #13 0.999 -> 0.000 WAIT        0 el  ''

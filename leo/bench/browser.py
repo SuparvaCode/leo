@@ -261,7 +261,8 @@ class LocalTextHelper:
 
         self.tok = AutoTokenizer.from_pretrained(self.model_id)
         free = torch.cuda.mem_get_info()[0] / 2**30 if self.device.startswith("cuda") else 1e9
-        if free < 5.0:  # sharing an 8 GB card with Leo: 4-bit weights (about 1.2 GB instead of 3.4 GB)
+        force = os.environ.get("LEO_TEXT_HELPER_DTYPE")  # "bf16" or "nf4" overrides the memory-based choice
+        if force == "nf4" or (force != "bf16" and free < 5.0):  # sharing an 8 GB card with Leo: 4-bit (1.2 GB vs 3.4 GB)
             from transformers import BitsAndBytesConfig
 
             q = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.bfloat16)
@@ -333,6 +334,21 @@ def fix_snapshot_encoding() -> None:
 
     jb.READ_STATE = Path(jb.__file__).with_name("snapshot.js").read_text(encoding="utf-8")
     jb.MARKER = f"(() => {{ const state={jb.READ_STATE}; return state?.marker ?? null; }})()"
+
+
+class RemoteLeo:
+    """A Leo served over /v1/systemone (e.g. a checkpoint too big for the local GPU, on scripts/modal/leo_bench_modal.py)."""
+
+    def __init__(self, url: str, key_env: str = "LEO_API_KEY") -> None:
+        from leo.client import SystemOneClient
+
+        self.client = SystemOneClient(url, api_key=os.environ.get(key_env), timeout=120)
+
+    def system_one(self, state: Any, questions: dict[str, Any]) -> dict[str, Any]:
+        out = self.client.system_one(state, questions)
+        out.pop("client_latency_ms", None)
+        out.pop("server_ms", None)
+        return out
 
 
 def load_leo(path: str, dtype: str = "fp32") -> Any:
@@ -457,6 +473,8 @@ def main() -> None:
     ap.add_argument("--backends", default="jev,leo", help="comma list of jev, leo")
     ap.add_argument("--leo", help="Leo checkpoint for the leo backend")
     ap.add_argument("--leo-dtype", default="fp32", choices=["fp32", "bf16", "auto"])
+    ap.add_argument("--leo-url", help="answer Leo requests over HTTP at this /v1/systemone server (key: LEO_API_KEY); "
+                                      "--leo then only names the checkpoint in the results")
     ap.add_argument("--name", required=True, help="results/browser/<name>/")
     ap.add_argument("--tasks", default="all", help="comma list, 'fixture' (local only) or 'all'")
     ap.add_argument("--repeats", type=int, default=3)
@@ -491,7 +509,13 @@ def main() -> None:
     fix_snapshot_encoding()
 
     # Leo first, so the local text helper sees how much GPU memory is left and picks bf16 or 4-bit.
-    router = Router(load_leo(args.leo, args.leo_dtype) if "leo" in backends else None)
+    if "leo" not in backends:
+        leo_backend = None
+    elif args.leo_url:
+        leo_backend = RemoteLeo(args.leo_url)
+    else:
+        leo_backend = load_leo(args.leo, args.leo_dtype)
+    router = Router(leo_backend)
     helper: Any
     if os.environ.get("TEXT_MODEL_API_KEY"):
         helper, helper_name = ja.field_text, os.environ.get("TEXT_MODEL", "deepseek-chat")

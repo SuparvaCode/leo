@@ -47,6 +47,14 @@ class PointerHead(nn.Module):
         return self.mlp(torch.cat([q, o, q * o], dim=-1)).squeeze(-1)
 
 
+def base_source(path: Path, cfg: dict[str, Any]) -> tuple[str, str | None]:
+    """Where to load the backbone from: a bundled ``<model>/base`` folder (offline copy) if present, else the Hub."""
+    local = Path(path) / "base"
+    if (local / "config.json").exists():
+        return str(local), None
+    return cfg["base_model"], cfg.get("base_revision")
+
+
 def supports_block_mask(config: Any) -> bool:
     """True when every layer is softmax attention, so a 4D block mask isolates questions packed in one row.
 
@@ -178,9 +186,8 @@ class LeoModel(nn.Module):
 
         path = resolve_checkpoint(path)  # a run directory resolves to its best/ export
         cfg = json.loads((path / "leo_config.json").read_text(encoding="utf-8"))
-        backbone = AutoModel.from_pretrained(
-            cfg["base_model"], revision=cfg.get("base_revision"), dtype=dtype, attn_implementation="sdpa"
-        )
+        base, rev = base_source(path, cfg)
+        backbone = AutoModel.from_pretrained(base, revision=rev, dtype=dtype, attn_implementation="sdpa")
         backbone.config.use_cache = False
         if (path / "adapter").exists():
             from peft import PeftModel

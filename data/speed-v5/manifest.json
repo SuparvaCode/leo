@@ -1,0 +1,126 @@
+{
+  "recipe": "v5",
+  "seed": 505,
+  "v3_train_requests": 84315,
+  "families": {
+    "short_choices": {
+      "n_train": 27571,
+      "n_dev": 150
+    },
+    "short_ratings": {
+      "n_train": 1284,
+      "n_dev": 44
+    },
+    "short_binary": {
+      "n_train": 2646,
+      "n_dev": 170
+    },
+    "short_generic": {
+      "n_train": 8000,
+      "n_dev": 120
+    },
+    "go_emotions": {
+      "n_train": 15000,
+      "n_dev": 150
+    },
+    "civil_comments": {
+      "n_train": 15000,
+      "n_dev": 150
+    },
+    "syn_pii": {
+      "n_train": 4000,
+      "n_dev": 100
+    },
+    "syn_tiny": {
+      "n_train": 806,
+      "n_dev": 62
+    },
+    "syn_severity": {
+      "n_train": 3000,
+      "n_dev": 100
+    },
+    "syn_browser_evidence": {
+      "n_train": 9000,
+      "n_dev": 300
+    },
+    "reasoning_v5": {
+      "n_train": 5900,
+      "n_dev": 0
+    }
+  },
+  "train_by_source": {
+    "syn_browser": 12000,
+    "syn_long_state": 2000,
+    "imdb": 1500,
+    "short_ml_sentiment": 1803,
+    "short_massive": 9274,
+    "syn_pii": 4000,
+    "syn_unknowable": 500,
+    "mind2web": 7132,
+    "go_emotions": 15000,
+    "short_sib200": 5447,
+    "syn_policy": 1800,
+    "sib200": 6384,
+    "arc_easy": 1200,
+    "syn_numeric": 3000,
+    "syn_field_reference": 1800,
+    "civil_comments": 15000,
+    "syn_browser_evidence": 9000,
+    "syn_injection": 1400,
+    "multi_nli": 2500,
+    "ag_news": 2500,
+    "short_dbpedia_14": 1693,
+    "clinc_oos": 2500,
+    "ml_sentiment": 4607,
+    "short_generic": 8000,
+    "syn_multi_hop": 3000,
+    "syn_policy_exceptions": 2400,
+    "dbpedia_14": 2000,
+    "prompt_injections": 546,
+    "short_sms_spam": 1200,
+    "boolq": 2000,
+    "banking77": 2500,
+    "yahoo_answers": 2500,
+    "yelp": 2500,
+    "helpsteer2": 2000,
+    "short_jailbreak": 900,
+    "massive": 11146,
+    "commonsense_qa": 2000,
+    "syn_conversation": 900,
+    "mrpc": 1000,
+    "arc_challenge": 800,
+    "short_banking77": 2166,
+    "syn_severity": 3000,
+    "short_ag_news": 2063,
+    "short_yahoo_answers": 2137,
+    "short_ratings": 1284,
+    "short_imdb": 761,
+    "short_clinc_oos": 2227,
+    "sms_spam": 1200,
+    "snli": 2000,
+    "syn_mention": 338,
+    "syn_tiny": 468,
+    "short_prompt_injections": 546,
+    "jailbreak": 900
+  },
+  "train": {
+    "requests": 176522,
+    "questions": 352151,
+    "by_type": {
+      "choice": 109121,
+      "noul": 231843,
+      "score": 11187
+    },
+    "sha256": "016fa6daf62056600457ebd10202307c9503b44242a2fa6af3b15cdf76bf629a"
+  },
+  "dev": {
+    "requests": 3611,
+    "questions": 6106,
+    "by_type": {
+      "choice": 2551,
+      "noul": 3218,
+      "score": 337
+    },
+    "sha256": "acdec80598dc01c835d6ed4c1f11bee48f5aca2813a9fee08aa6bc1cf9a6b7a9"
+  }
+}

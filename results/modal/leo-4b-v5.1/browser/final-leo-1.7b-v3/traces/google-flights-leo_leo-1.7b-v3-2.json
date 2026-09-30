@@ -1,0 +1,5228 @@
+{
+ "task": "google-flights",
+ "status": "done",
+ "passed": false,
+ "goal_state_reached": false,
+ "checks": {
+  "search_page": false,
+  "one_way": false,
+  "origin": false,
+  "destination": false,
+  "date": false,
+  "year": true,
+  "results": false
+ },
+ "error": null,
+ "elapsed_ms": 18654,
+ "wall_s": 19.4,
+ "decisions": 14,
+ "actions": 8,
+ "text_calls": 2,
+ "decision_ms_p50": 1155,
+ "input_tokens": 47297,
+ "final_url": "https://www.google.com/travel/flights?tfs=CBwQARopEgoyMDI2LTEwLTIwag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en",
+ "trace": [
+  {
+   "step": 1,
+   "action": "Where to? ",
+   "kind": "fill",
+   "operation": "TYPE_TEXT",
+   "target": "16",
+   "probability": 0.7337,
+   "confidence": 0.8384,
+   "text": "London",
+   "page_changed": true,
+   "url": "https://www.google.com/travel/flights?hl=en"
+  },
+  {
+   "step": 2,
+   "action": "London, United Kingdom",
+   "kind": "click",
+   "operation": "CLICK",
+   "target": "3",
+   "probability": 0.9996,
+   "confidence": 0.9622,
+   "text": null,
+   "page_changed": true,
+   "url": "https://www.google.com/travel/flights?hl=en"
+  },
+  {
+   "step": 3,
+   "action": "Departure",
+   "kind": "fill",
+   "operation": "TYPE_TEXT",
+   "target": "18",
+   "probability": 0.4146,
+   "confidence": 0.7421,
+   "text": "Zurich",
+   "page_changed": true,
+   "url": "https://www.google.com/travel/flights?tfs=CBwQARodag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en"
+  },
+  {
+   "step": 4,
+   "action": "Tuesday, October 20, 2026 , 109070 Indian rupees",
+   "kind": "click",
+   "operation": "CLICK",
+   "target": "26",
+   "probability": 0.9071,
+   "confidence": 0.5038,
+   "text": null,
+   "page_changed": true,
+   "url": "https://www.google.com/travel/flights?tfs=CBwQARodag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en"
+  },
+  {
+   "step": 5,
+   "action": "Done. Search for one-way flights, departing on October 20, 2026",
+   "kind": "click",
+   "operation": "CLICK",
+   "target": "23",
+   "probability": 0.4771,
+   "confidence": 0.9946,
+   "text": null,
+   "page_changed": false,
+   "url": "https://www.google.com/travel/flights?tfs=CBwQARodag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en"
+  },
+  {
+   "step": 6,
+   "action": "1 passenger",
+   "kind": "click",
+   "operation": "CLICK",
+   "target": "13",
+   "probability": 0.5816,
+   "confidence": 0.9992,
+   "text": null,
+   "page_changed": true,
+   "url": "https://www.google.com/travel/flights?tfs=CBwQARopEgoyMDI2LTEwLTIwag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en"
+  },
+  {
+   "step": 7,
+   "action": "Done",
+   "kind": "click",
+   "operation": "CLICK",
+   "target": "5",
+   "probability": 0.6372,
+   "confidence": 0.995,
+   "text": null,
+   "page_changed": true,
+   "url": "https://www.google.com/travel/flights?tfs=CBwQARopEgoyMDI2LTEwLTIwag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en"
+  },
+  {
+   "step": 8,
+   "action": "Change seating class. Economy",
+   "kind": "click",
+   "operation": "CLICK",
+   "target": "14",
+   "probability": 0.9917,
+   "confidence": 0.9994,
+   "text": null,
+   "page_changed": true,
+   "url": "https://www.google.com/travel/flights?tfs=CBwQARopEgoyMDI2LTEwLTIwag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en"
+  }
+ ],
+ "goal": "Find one-way flights from Zurich to London on October 20, 2026, for one adult in economy. Stop when matching flight options are visible. Do not select or book a flight.",
+ "decisions_full": [
+  {
+   "choice": "e17",
+   "operation": "TYPE_TEXT",
+   "target": "16",
+   "confidence": 0.8384,
+   "probabilities": {
+    "e15": 0.2312,
+    "e17": 0.7337,
+    "e19": 0.0302,
+    "e21": 0.0049
+   },
+   "operation_probabilities": {
+    "CLICK": 0.1338,
+    "TYPE_TEXT": 0.8653,
+    "SCROLL_DOWN": 0.0004,
+    "WAIT": 0.0004,
+    "DONE": 0.0,
+    "BLOCKED": 0.0001
+   },
+   "target_probabilities": {
+    "15": 0.2312,
+    "16": 0.7337,
+    "17": 0.0302,
+    "18": 0.0049
+   },
+   "target_confidence": 0.645,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "TYPE_TEXT",
+     "probabilities": {
+      "CLICK": 0.1338,
+      "TYPE_TEXT": 0.8653,
+      "SCROLL_DOWN": 0.0004,
+      "WAIT": 0.0004,
+      "DONE": 0.0,
+      "BLOCKED": 0.0001
+     },
+     "confidence": 0.8384
+    },
+    "click_target": {
+     "type": "choice",
+     "choice": "6",
+     "probabilities": {
+      "1": 0.1691,
+      "2": 0.0017,
+      "3": 0.0033,
+      "4": 0.0003,
+      "5": 0.0123,
+      "6": 0.5604,
+      "7": 0.0002,
+      "8": 0.0002,
+      "9": 0.0001,
+      "10": 0.0002,
+      "11": 0.0007,
+      "12": 0.0137,
+      "13": 0.0136,
+      "14": 0.0742,
+      "15": 0.0047,
+      "16": 0.0214,
+      "17": 0.0077,
+      "18": 0.0031,
+      "19": 0.0079,
+      "20": 0.0028,
+      "21": 0.0019,
+      "22": 0.0972,
+      "23": 0.0016,
+      "24": 0.0006,
+      "25": 0.0011
+     },
+     "confidence": 0.5421
+    },
+    "type_text_target": {
+     "type": "choice",
+     "choice": "16",
+     "probabilities": {
+      "15": 0.2312,
+      "16": 0.7337,
+      "17": 0.0302,
+      "18": 0.0049
+     },
+     "confidence": 0.645
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 3172,
+    "output_tokens": 407
+   },
+   "latency_ms": 1163,
+   "fingerprint": "55be69485b58705968b6a7bdcc9a1d2f10b6ef599d12522a1f4927957c24f1bc",
+   "elapsed_ms": 1172,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rentals\nSign in\nFlights\n1\nExplore\nFlexible? Discover the best flight deals with AI\nDescribe your ideal trip, and let Google Flights find the best deals for you\nExplore deals with AI\nFind and book cheap flights worldwide and track prices\nFind cheap flights from India to anywhere\nLucknow\nNew Delhi\nMumbai\nBengaluru"
+    },
+    "elements": [
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "1",
+      "label": "Main menu",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "2",
+      "label": "Google",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "3",
+      "label": "Skip to main content",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "4",
+      "label": "Accessibility feedback",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "5",
+      "label": "Explore",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "6",
+      "label": "Flights",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "7",
+      "label": "Hotels",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "8",
+      "label": "Vacation rentals",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "9",
+      "label": "Change appearance",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "10",
+      "label": "Google apps",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "11",
+      "label": "Sign in",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Round trip",
+      "expanded": "false",
+      "index": "12",
+      "label": "Change ticket type. Round trip",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "13",
+      "label": "1 passenger, change number of passengers.",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Economy",
+      "expanded": "false",
+      "index": "14",
+      "label": "Change seating class. Economy",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Lucknow",
+      "expanded": "false",
+      "index": "15",
+      "label": "Where from?",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "",
+      "expanded": "false",
+      "index": "16",
+      "label": "Where to? ",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "17",
+      "label": "Departure",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "18",
+      "label": "Return",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "19",
+      "label": "Explore destinations",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "20",
+      "label": "Explore deals with AI",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "21",
+      "label": "Learn more about this section",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "true",
+      "index": "22",
+      "label": "Lucknow",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "23",
+      "label": "New Delhi",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "24",
+      "label": "Mumbai",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "25",
+      "label": "Bengaluru",
+      "operations": [
+       "CLICK"
+      ]
+     }
+    ],
+    "recent_actions": []
+   }
+  },
+  {
+   "choice": "e4",
+   "operation": "CLICK",
+   "target": "3",
+   "confidence": 0.9622,
+   "probabilities": {
+    "e2": 0.0001,
+    "e3": 0.0003,
+    "e4": 0.9996,
+    "e5": 0.0,
+    "e6": 0.0,
+    "e7": 0.0,
+    "e8": 0.0,
+    "e9": 0.0
+   },
+   "operation_probabilities": {
+    "TYPE_TEXT": 0.0315,
+    "CLICK": 0.9685,
+    "SCROLL_DOWN": 0.0,
+    "WAIT": 0.0,
+    "DONE": 0.0,
+    "BLOCKED": 0.0
+   },
+   "target_probabilities": {
+    "1": 0.0001,
+    "2": 0.0003,
+    "3": 0.9996,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0
+   },
+   "target_confidence": 0.9996,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "CLICK",
+     "probabilities": {
+      "TYPE_TEXT": 0.0315,
+      "CLICK": 0.9685,
+      "SCROLL_DOWN": 0.0,
+      "WAIT": 0.0,
+      "DONE": 0.0,
+      "BLOCKED": 0.0
+     },
+     "confidence": 0.9622
+    },
+    "type_text_target": {
+     "type": "choice",
+     "choice": "1",
+     "probabilities": {
+      "1": 1.0
+     },
+     "confidence": 1.0
+    },
+    "click_target": {
+     "type": "choice",
+     "choice": "3",
+     "probabilities": {
+      "1": 0.0001,
+      "2": 0.0003,
+      "3": 0.9996,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "confidence": 0.9996
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 1877,
+    "output_tokens": 176
+   },
+   "latency_ms": 515,
+   "fingerprint": "122461fec4bc215745f41415de2254285b684d0e380b515bf0d222025d330835",
+   "elapsed_ms": 2735,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": "London, United Kingdom\nCapital of England\nHeathrow Airport\nLHR\n23 km to destination\nLondon Stansted Airport\nSTN\n48 km to destination\nLondon Gatwick Airport\nLGW\n40 km to destination\nLondon Luton Airport\nLTN\n44 km to destination\nLondon City Airport\nLCY"
+    },
+    "elements": [
+     {
+      "role": "combobox",
+      "value": "London",
+      "expanded": "true",
+      "index": "1",
+      "label": "Where else?",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "2",
+      "label": "Destination, Select multiple airports",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "option",
+      "value": "0",
+      "selected": "false",
+      "index": "3",
+      "label": "London, United Kingdom",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "true",
+      "index": "4",
+      "label": "Toggle nearby airports for London, United Kingdom",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "option",
+      "value": "0",
+      "selected": "false",
+      "index": "5",
+      "label": "Heathrow Airport (LHR)",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "option",
+      "value": "0",
+      "selected": "false",
+      "index": "6",
+      "label": "London Stansted Airport (STN)",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "option",
+      "value": "0",
+      "selected": "false",
+      "index": "7",
+      "label": "London Gatwick Airport (LGW)",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "option",
+      "value": "0",
+      "selected": "false",
+      "index": "8",
+      "label": "London Luton Airport (LTN)",
+      "operations": [
+       "CLICK"
+      ]
+     }
+    ],
+    "recent_actions": [
+     {
+      "action": "Where to? ",
+      "kind": "fill",
+      "text": "London",
+      "page_changed": true
+     }
+    ]
+   }
+  },
+  {
+   "choice": "e20",
+   "operation": "TYPE_TEXT",
+   "target": "18",
+   "confidence": 0.7656,
+   "probabilities": {
+    "e15": 0.1988,
+    "e18": 0.251,
+    "e20": 0.4997,
+    "e22": 0.0505
+   },
+   "operation_probabilities": {
+    "CLICK": 0.1939,
+    "TYPE_TEXT": 0.8047,
+    "SCROLL_DOWN": 0.0004,
+    "WAIT": 0.0008,
+    "DONE": 0.0,
+    "BLOCKED": 0.0002
+   },
+   "target_probabilities": {
+    "15": 0.1988,
+    "17": 0.251,
+    "18": 0.4997,
+    "19": 0.0505
+   },
+   "target_confidence": 0.3329,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "TYPE_TEXT",
+     "probabilities": {
+      "CLICK": 0.1939,
+      "TYPE_TEXT": 0.8047,
+      "SCROLL_DOWN": 0.0004,
+      "WAIT": 0.0008,
+      "DONE": 0.0,
+      "BLOCKED": 0.0002
+     },
+     "confidence": 0.7656
+    },
+    "click_target": {
+     "type": "choice",
+     "choice": "14",
+     "probabilities": {
+      "1": 0.0019,
+      "2": 0.0005,
+      "3": 0.001,
+      "4": 0.0003,
+      "5": 0.0009,
+      "6": 0.0067,
+      "7": 0.0001,
+      "8": 0.0001,
+      "9": 0.0001,
+      "10": 0.0003,
+      "11": 0.0003,
+      "12": 0.0477,
+      "13": 0.0601,
+      "14": 0.3042,
+      "15": 0.0595,
+      "16": 0.0345,
+      "17": 0.0558,
+      "18": 0.1909,
+      "19": 0.0309,
+      "20": 0.0131,
+      "21": 0.0063,
+      "22": 0.0044,
+      "23": 0.1711,
+      "24": 0.0054,
+      "25": 0.0015,
+      "26": 0.0024
+     },
+     "confidence": 0.2763
+    },
+    "type_text_target": {
+     "type": "choice",
+     "choice": "18",
+     "probabilities": {
+      "15": 0.1988,
+      "17": 0.251,
+      "18": 0.4997,
+      "19": 0.0505
+     },
+     "confidence": 0.3329
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 3320,
+    "output_tokens": 417
+   },
+   "latency_ms": 1025,
+   "fingerprint": "f093ba128b865ab3926cacc16e34de07d5fb447aadb599f249e7307dad928f14",
+   "elapsed_ms": 3949,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rentals\nSign in\nFlights\n1\nExplore\nFlexible? Discover the best flight deals with AI\nDescribe your ideal trip, and let Google Flights find the best deals for you\nExplore deals with AI\nFind and book cheap flights worldwide and track prices\nFind cheap flights from India to anywhere\nLucknow\nNew Delhi\nMumbai\nBengaluru"
+    },
+    "elements": [
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "1",
+      "label": "Main menu",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "2",
+      "label": "Google",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "3",
+      "label": "Skip to main content",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "4",
+      "label": "Accessibility feedback",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "5",
+      "label": "Explore",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "6",
+      "label": "Flights",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "7",
+      "label": "Hotels",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "8",
+      "label": "Vacation rentals",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "9",
+      "label": "Change appearance",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "10",
+      "label": "Google apps",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "11",
+      "label": "Sign in",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Round trip",
+      "expanded": "false",
+      "index": "12",
+      "label": "Change ticket type. Round trip",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "13",
+      "label": "1 passenger, change number of passengers.",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Economy",
+      "expanded": "false",
+      "index": "14",
+      "label": "Change seating class. Economy",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Lucknow",
+      "expanded": "false",
+      "index": "15",
+      "label": "Where from?",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "16",
+      "label": "Swap origin and destination.",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "London",
+      "expanded": "false",
+      "index": "17",
+      "label": "Where to?",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "18",
+      "label": "Departure",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "19",
+      "label": "Return",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "20",
+      "label": "Explore destinations",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "21",
+      "label": "Explore deals with AI",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "22",
+      "label": "Learn more about this section",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "true",
+      "index": "23",
+      "label": "Lucknow",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "24",
+      "label": "New Delhi",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "25",
+      "label": "Mumbai",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "26",
+      "label": "Bengaluru",
+      "operations": [
+       "CLICK"
+      ]
+     }
+    ],
+    "recent_actions": [
+     {
+      "action": "Where to? ",
+      "kind": "fill",
+      "text": "London",
+      "page_changed": true
+     },
+     {
+      "action": "London, United Kingdom",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     }
+    ]
+   }
+  },
+  {
+   "choice": "e20",
+   "operation": "TYPE_TEXT",
+   "target": "18",
+   "confidence": 0.7421,
+   "probabilities": {
+    "e15": 0.2102,
+    "e18": 0.3134,
+    "e20": 0.4146,
+    "e22": 0.0618
+   },
+   "operation_probabilities": {
+    "CLICK": 0.2132,
+    "TYPE_TEXT": 0.7851,
+    "SCROLL_DOWN": 0.0005,
+    "WAIT": 0.0008,
+    "DONE": 0.0001,
+    "BLOCKED": 0.0003
+   },
+   "target_probabilities": {
+    "15": 0.2102,
+    "17": 0.3134,
+    "18": 0.4146,
+    "19": 0.0618
+   },
+   "target_confidence": 0.2195,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "TYPE_TEXT",
+     "probabilities": {
+      "CLICK": 0.2132,
+      "TYPE_TEXT": 0.7851,
+      "SCROLL_DOWN": 0.0005,
+      "WAIT": 0.0008,
+      "DONE": 0.0001,
+      "BLOCKED": 0.0003
+     },
+     "confidence": 0.7421
+    },
+    "click_target": {
+     "type": "choice",
+     "choice": "14",
+     "probabilities": {
+      "1": 0.0015,
+      "2": 0.0003,
+      "3": 0.0007,
+      "4": 0.0002,
+      "5": 0.0006,
+      "6": 0.0059,
+      "7": 0.0001,
+      "8": 0.0001,
+      "9": 0.0001,
+      "10": 0.0002,
+      "11": 0.0003,
+      "12": 0.0406,
+      "13": 0.1223,
+      "14": 0.2075,
+      "15": 0.0625,
+      "16": 0.0254,
+      "17": 0.0399,
+      "18": 0.15,
+      "19": 0.0285,
+      "20": 0.1037,
+      "21": 0.0069,
+      "22": 0.0042,
+      "23": 0.1901,
+      "24": 0.005,
+      "25": 0.0014,
+      "26": 0.002
+     },
+     "confidence": 0.1759
+    },
+    "type_text_target": {
+     "type": "choice",
+     "choice": "18",
+     "probabilities": {
+      "15": 0.2102,
+      "17": 0.3134,
+      "18": 0.4146,
+      "19": 0.0618
+     },
+     "confidence": 0.2195
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 3395,
+    "output_tokens": 418
+   },
+   "latency_ms": 1061,
+   "fingerprint": "5236e94d1077672d496cefdfd227a84e79b572a76ab9306336a3f8c2ff1a1b38",
+   "elapsed_ms": 5067,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?tfs=CBwQARodag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rentals\nSign in\nFlights\n1\nSearch\nFlexible? Discover the best flight deals with AI\nDescribe your ideal trip, and let Google Flights find the best deals for you\nExplore deals with AI\nFind and book cheap flights worldwide and track prices\nFind cheap flights from India to anywhere\nLucknow\nNew Delhi\nMumbai\nBengaluru"
+    },
+    "elements": [
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "1",
+      "label": "Main menu",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "2",
+      "label": "Google",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "3",
+      "label": "Skip to main content",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "4",
+      "label": "Accessibility feedback",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "5",
+      "label": "Explore",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "6",
+      "label": "Flights",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "7",
+      "label": "Hotels",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "8",
+      "label": "Vacation rentals",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "9",
+      "label": "Change appearance",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "10",
+      "label": "Google apps",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "11",
+      "label": "Sign in",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Round trip",
+      "expanded": "false",
+      "index": "12",
+      "label": "Change ticket type. Round trip",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "13",
+      "label": "1 passenger",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Economy",
+      "expanded": "false",
+      "index": "14",
+      "label": "Change seating class. Economy",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Lucknow",
+      "expanded": "false",
+      "index": "15",
+      "label": "Where from?",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "16",
+      "label": "Swap origin and destination.",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "London",
+      "expanded": "false",
+      "index": "17",
+      "label": "Where to?",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "18",
+      "label": "Departure",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "19",
+      "label": "Return",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "20",
+      "label": "Search",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "21",
+      "label": "Explore deals with AI",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "22",
+      "label": "Learn more about this section",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "true",
+      "index": "23",
+      "label": "Lucknow",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "24",
+      "label": "New Delhi",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "25",
+      "label": "Mumbai",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "26",
+      "label": "Bengaluru",
+      "operations": [
+       "CLICK"
+      ]
+     }
+    ],
+    "recent_actions": [
+     {
+      "action": "Where to? ",
+      "kind": "fill",
+      "text": "London",
+      "page_changed": true
+     },
+     {
+      "action": "London, United Kingdom",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     }
+    ]
+   }
+  },
+  {
+   "choice": "e1",
+   "operation": "TYPE_TEXT",
+   "target": "1",
+   "confidence": 0.4234,
+   "probabilities": {
+    "e1": 0.8995,
+    "e3": 0.1005
+   },
+   "operation_probabilities": {
+    "TYPE_TEXT": 0.5195,
+    "CLICK": 0.4797,
+    "SCROLL_DOWN": 0.0003,
+    "WAIT": 0.0003,
+    "DONE": 0.0001,
+    "BLOCKED": 0.0001
+   },
+   "target_probabilities": {
+    "1": 0.8995,
+    "2": 0.1005
+   },
+   "target_confidence": 0.7989,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "TYPE_TEXT",
+     "probabilities": {
+      "TYPE_TEXT": 0.5195,
+      "CLICK": 0.4797,
+      "SCROLL_DOWN": 0.0003,
+      "WAIT": 0.0003,
+      "DONE": 0.0001,
+      "BLOCKED": 0.0001
+     },
+     "confidence": 0.4234
+    },
+    "type_text_target": {
+     "type": "choice",
+     "choice": "1",
+     "probabilities": {
+      "1": 0.8995,
+      "2": 0.1005
+     },
+     "confidence": 0.7989
+    },
+    "click_target": {
+     "type": "choice",
+     "choice": "26",
+     "probabilities": {
+      "1": 0.0003,
+      "2": 0.0001,
+      "3": 0.0006,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0002,
+      "9": 0.0,
+      "10": 0.0,
+      "11": 0.0001,
+      "12": 0.0001,
+      "13": 0.0,
+      "14": 0.0001,
+      "15": 0.0001,
+      "16": 0.0,
+      "17": 0.0,
+      "18": 0.0001,
+      "19": 0.0001,
+      "20": 0.0001,
+      "21": 0.0,
+      "22": 0.0,
+      "23": 0.0001,
+      "24": 0.0001,
+      "25": 0.0004,
+      "26": 0.9793,
+      "27": 0.0002,
+      "28": 0.0001,
+      "29": 0.0001,
+      "30": 0.0001,
+      "31": 0.0002,
+      "32": 0.0001,
+      "33": 0.0002,
+      "34": 0.0002,
+      "35": 0.0001,
+      "36": 0.0002,
+      "37": 0.0003,
+      "38": 0.0001,
+      "39": 0.0,
+      "40": 0.0,
+      "41": 0.0,
+      "42": 0.0001,
+      "43": 0.0162
+     },
+     "confidence": 0.9788
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 5180,
+    "output_tokens": 527
+   },
+   "latency_ms": 1840,
+   "fingerprint": "43f247da2a74e82474eaff8c8d6a24d2099798915e59f6f8a00fbd86b92f07e0",
+   "elapsed_ms": 7791,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?tfs=CBwQARodag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": "Reset\nSeptember\n28\n29\n30\nOctober\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n1\n8\n15\n22\n29\nShowing prices in INR for\n7 day trips\nUnderlined prices indicate cheapest compared with other prices shown\nDone"
+    },
+    "elements": [
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "1",
+      "label": "Departure",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "2",
+      "label": "Return",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Round trip",
+      "expanded": "false",
+      "index": "3",
+      "label": "Select your ticket type. Round trip",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "4",
+      "label": "Monday, September 28, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "5",
+      "label": "Tuesday, September 29, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "6",
+      "label": "Wednesday, September 30, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "7",
+      "label": "Thursday, October 1, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "8",
+      "label": "Friday, October 2, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "9",
+      "label": "Saturday, October 3, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "10",
+      "label": "Sunday, October 4, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "11",
+      "label": "Monday, October 5, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "12",
+      "label": "Tuesday, October 6, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "13",
+      "label": "Wednesday, October 7, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "14",
+      "label": "Thursday, October 8, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "15",
+      "label": "Friday, October 9, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "16",
+      "label": "Saturday, October 10, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "17",
+      "label": "Sunday, October 11, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "18",
+      "label": "Monday, October 12, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "19",
+      "label": "Tuesday, October 13, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "20",
+      "label": "Wednesday, October 14, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "21",
+      "label": "Thursday, October 15, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "22",
+      "label": "Friday, October 16, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "23",
+      "label": "Saturday, October 17, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "24",
+      "label": "Sunday, October 18, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "25",
+      "label": "Monday, October 19, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "26",
+      "label": "Tuesday, October 20, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "27",
+      "label": "Wednesday, October 21, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "28",
+      "label": "Thursday, October 22, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "29",
+      "label": "Friday, October 23, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "30",
+      "label": "Saturday, October 24, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "31",
+      "label": "Sunday, October 25, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "32",
+      "label": "Monday, October 26, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "33",
+      "label": "Tuesday, October 27, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "34",
+      "label": "Wednesday, October 28, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "35",
+      "label": "Thursday, October 29, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "36",
+      "label": "Friday, October 30, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "37",
+      "label": "Saturday, October 31, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "38",
+      "label": "Sunday, November 1, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "39",
+      "label": "Sunday, November 8, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "40",
+      "label": "Sunday, November 15, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "41",
+      "label": "Sunday, November 22, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "42",
+      "label": "Sunday, November 29, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "43",
+      "label": "Done. ",
+      "operations": [
+       "CLICK"
+      ]
+     }
+    ],
+    "recent_actions": [
+     {
+      "action": "Where to? ",
+      "kind": "fill",
+      "text": "London",
+      "page_changed": true
+     },
+     {
+      "action": "London, United Kingdom",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Departure",
+      "kind": "fill",
+      "text": "Zurich",
+      "page_changed": true
+     }
+    ]
+   }
+  },
+  {
+   "choice": "e28",
+   "operation": "CLICK",
+   "target": "26",
+   "confidence": 0.5038,
+   "probabilities": {
+    "e2": 0.0021,
+    "e4": 0.0003,
+    "e5": 0.0046,
+    "e6": 0.0002,
+    "e7": 0.0001,
+    "e8": 0.0002,
+    "e9": 0.0001,
+    "e10": 0.0001,
+    "e11": 0.0001,
+    "e12": 0.0001,
+    "e13": 0.0002,
+    "e14": 0.0001,
+    "e15": 0.0002,
+    "e16": 0.0,
+    "e17": 0.0001,
+    "e18": 0.0,
+    "e19": 0.0002,
+    "e20": 0.0002,
+    "e21": 0.0003,
+    "e22": 0.0002,
+    "e23": 0.0005,
+    "e24": 0.0001,
+    "e25": 0.0001,
+    "e26": 0.0002,
+    "e27": 0.001,
+    "e28": 0.9071,
+    "e29": 0.0007,
+    "e30": 0.0022,
+    "e31": 0.0006,
+    "e32": 0.0005,
+    "e33": 0.0002,
+    "e34": 0.0013,
+    "e35": 0.001,
+    "e36": 0.0007,
+    "e37": 0.0005,
+    "e38": 0.0002,
+    "e39": 0.0016,
+    "e40": 0.0001,
+    "e41": 0.0001,
+    "e42": 0.0001,
+    "e43": 0.0001,
+    "e44": 0.0002,
+    "e45": 0.0715
+   },
+   "operation_probabilities": {
+    "TYPE_TEXT": 0.412,
+    "CLICK": 0.5865,
+    "SCROLL_DOWN": 0.0004,
+    "WAIT": 0.0005,
+    "DONE": 0.0002,
+    "BLOCKED": 0.0004
+   },
+   "target_probabilities": {
+    "1": 0.0021,
+    "2": 0.0003,
+    "3": 0.0046,
+    "4": 0.0002,
+    "5": 0.0001,
+    "6": 0.0002,
+    "7": 0.0001,
+    "8": 0.0001,
+    "9": 0.0001,
+    "10": 0.0001,
+    "11": 0.0002,
+    "12": 0.0001,
+    "13": 0.0002,
+    "14": 0.0,
+    "15": 0.0001,
+    "16": 0.0,
+    "17": 0.0002,
+    "18": 0.0002,
+    "19": 0.0003,
+    "20": 0.0002,
+    "21": 0.0005,
+    "22": 0.0001,
+    "23": 0.0001,
+    "24": 0.0002,
+    "25": 0.001,
+    "26": 0.9071,
+    "27": 0.0007,
+    "28": 0.0022,
+    "29": 0.0006,
+    "30": 0.0005,
+    "31": 0.0002,
+    "32": 0.0013,
+    "33": 0.001,
+    "34": 0.0007,
+    "35": 0.0005,
+    "36": 0.0002,
+    "37": 0.0016,
+    "38": 0.0001,
+    "39": 0.0001,
+    "40": 0.0001,
+    "41": 0.0001,
+    "42": 0.0002,
+    "43": 0.0715
+   },
+   "target_confidence": 0.9049,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "CLICK",
+     "probabilities": {
+      "TYPE_TEXT": 0.412,
+      "CLICK": 0.5865,
+      "SCROLL_DOWN": 0.0004,
+      "WAIT": 0.0005,
+      "DONE": 0.0002,
+      "BLOCKED": 0.0004
+     },
+     "confidence": 0.5038
+    },
+    "type_text_target": {
+     "type": "choice",
+     "choice": "1",
+     "probabilities": {
+      "1": 0.8901,
+      "2": 0.1099
+     },
+     "confidence": 0.7803
+    },
+    "click_target": {
+     "type": "choice",
+     "choice": "26",
+     "probabilities": {
+      "1": 0.0021,
+      "2": 0.0003,
+      "3": 0.0046,
+      "4": 0.0002,
+      "5": 0.0001,
+      "6": 0.0002,
+      "7": 0.0001,
+      "8": 0.0001,
+      "9": 0.0001,
+      "10": 0.0001,
+      "11": 0.0002,
+      "12": 0.0001,
+      "13": 0.0002,
+      "14": 0.0,
+      "15": 0.0001,
+      "16": 0.0,
+      "17": 0.0002,
+      "18": 0.0002,
+      "19": 0.0003,
+      "20": 0.0002,
+      "21": 0.0005,
+      "22": 0.0001,
+      "23": 0.0001,
+      "24": 0.0002,
+      "25": 0.001,
+      "26": 0.9071,
+      "27": 0.0007,
+      "28": 0.0022,
+      "29": 0.0006,
+      "30": 0.0005,
+      "31": 0.0002,
+      "32": 0.0013,
+      "33": 0.001,
+      "34": 0.0007,
+      "35": 0.0005,
+      "36": 0.0002,
+      "37": 0.0016,
+      "38": 0.0001,
+      "39": 0.0001,
+      "40": 0.0001,
+      "41": 0.0001,
+      "42": 0.0002,
+      "43": 0.0715
+     },
+     "confidence": 0.9049
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 6150,
+    "output_tokens": 559
+   },
+   "latency_ms": 2345,
+   "fingerprint": "d5c5722fc020268aa07578119b4a82eec52012d639f3e168e30488201ef0333b",
+   "elapsed_ms": 10174,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?tfs=CBwQARodag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": "Reset\nSeptember\n28\n₹87.4K\n29\n₹88.4K\n30\n₹82.3K\nOctober\n1\n₹87.6K\n2\n₹86.1K\n3\n₹79.1K\n4\n₹79.1K\n5\n₹81.3K\n6\n₹90.7K\n7\n₹104K\n8\n₹115K\n9\n₹94K\n10\n₹129K\n11\n₹110K\n12\n₹110K\n13\n₹104K\n14\n₹110K\n15\n₹110K\n16\n₹117K\n17\n₹126K\n18\n₹98.8K\n19\n₹110K\n20\n₹109K\n21\n₹98.1K\n22\n₹101K\n23\n₹102K\n24\n₹114K\n25\n₹114K\n26\n₹101K\n27\n₹104K\n28\n₹114K\n29\n₹104K\n30\n₹118K\n31\n₹125K\n1\n8\n15\n22\n29\nShowing prices in INR for\n7 day trips\nUnderlined prices indicate cheapest compared with other prices shown\nDone"
+    },
+    "elements": [
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "1",
+      "label": "Departure",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "2",
+      "label": "Return",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Round trip",
+      "expanded": "false",
+      "index": "3",
+      "label": "Select your ticket type. Round trip",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "4",
+      "label": "Monday, September 28, 2026 , 87443 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "5",
+      "label": "Tuesday, September 29, 2026 , 88405 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "6",
+      "label": "Wednesday, September 30, 2026 , 82284 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "7",
+      "label": "Thursday, October 1, 2026 , 87630 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "8",
+      "label": "Friday, October 2, 2026 , 86102 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "9",
+      "label": "Saturday, October 3, 2026 , 79076 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "10",
+      "label": "Sunday, October 4, 2026 , 79076 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "11",
+      "label": "Monday, October 5, 2026 , 81265 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "12",
+      "label": "Tuesday, October 6, 2026 , 90689 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "13",
+      "label": "Wednesday, October 7, 2026 , 103996 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "14",
+      "label": "Thursday, October 8, 2026 , 115018 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "15",
+      "label": "Friday, October 9, 2026 , 93977 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "16",
+      "label": "Saturday, October 10, 2026 , 129357 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "17",
+      "label": "Sunday, October 11, 2026 , 110227 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "18",
+      "label": "Monday, October 12, 2026 , 110227 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "19",
+      "label": "Tuesday, October 13, 2026 , 103996 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "20",
+      "label": "Wednesday, October 14, 2026 , 110383 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "21",
+      "label": "Thursday, October 15, 2026 , 110227 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "22",
+      "label": "Friday, October 16, 2026 , 116926 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "23",
+      "label": "Saturday, October 17, 2026 , 125888 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "24",
+      "label": "Sunday, October 18, 2026 , 98821 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "25",
+      "label": "Monday, October 19, 2026 , 110177 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "26",
+      "label": "Tuesday, October 20, 2026 , 109070 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "27",
+      "label": "Wednesday, October 21, 2026 , 98118 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "28",
+      "label": "Thursday, October 22, 2026 , 101464 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "29",
+      "label": "Friday, October 23, 2026 , 101581 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "30",
+      "label": "Saturday, October 24, 2026 , 113821 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "31",
+      "label": "Sunday, October 25, 2026 , 114275 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "32",
+      "label": "Monday, October 26, 2026 , 101377 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "33",
+      "label": "Tuesday, October 27, 2026 , 104102 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "34",
+      "label": "Wednesday, October 28, 2026 , 113848 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "35",
+      "label": "Thursday, October 29, 2026 , 104318 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "36",
+      "label": "Friday, October 30, 2026 , 118368 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "37",
+      "label": "Saturday, October 31, 2026 , 124872 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "38",
+      "label": "Sunday, November 1, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "39",
+      "label": "Sunday, November 8, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "40",
+      "label": "Sunday, November 15, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "41",
+      "label": "Sunday, November 22, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "42",
+      "label": "Sunday, November 29, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "43",
+      "label": "Done. ",
+      "operations": [
+       "CLICK"
+      ]
+     }
+    ],
+    "recent_actions": [
+     {
+      "action": "Where to? ",
+      "kind": "fill",
+      "text": "London",
+      "page_changed": true
+     },
+     {
+      "action": "London, United Kingdom",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Departure",
+      "kind": "fill",
+      "text": "Zurich",
+      "page_changed": true
+     }
+    ]
+   }
+  },
+  {
+   "choice": "e25",
+   "operation": "CLICK",
+   "target": "23",
+   "confidence": 0.998,
+   "probabilities": {
+    "e2": 0.0006,
+    "e4": 0.0004,
+    "e5": 0.1613,
+    "e6": 0.0004,
+    "e7": 0.2941,
+    "e8": 0.0012,
+    "e9": 0.0017,
+    "e10": 0.0016,
+    "e11": 0.0014,
+    "e12": 0.0017,
+    "e13": 0.0025,
+    "e14": 0.0049,
+    "e15": 0.0012,
+    "e16": 0.0008,
+    "e17": 0.0011,
+    "e18": 0.0012,
+    "e19": 0.0004,
+    "e20": 0.0002,
+    "e21": 0.0002,
+    "e22": 0.0003,
+    "e23": 0.0007,
+    "e24": 0.0123,
+    "e25": 0.5098
+   },
+   "operation_probabilities": {
+    "TYPE_TEXT": 0.001,
+    "CLICK": 0.9983,
+    "SCROLL_DOWN": 0.0,
+    "WAIT": 0.0001,
+    "DONE": 0.0005,
+    "BLOCKED": 0.0001
+   },
+   "target_probabilities": {
+    "1": 0.0006,
+    "2": 0.0004,
+    "3": 0.1613,
+    "4": 0.0004,
+    "5": 0.2941,
+    "6": 0.0012,
+    "7": 0.0017,
+    "8": 0.0016,
+    "9": 0.0014,
+    "10": 0.0017,
+    "11": 0.0025,
+    "12": 0.0049,
+    "13": 0.0012,
+    "14": 0.0008,
+    "15": 0.0011,
+    "16": 0.0012,
+    "17": 0.0004,
+    "18": 0.0002,
+    "19": 0.0002,
+    "20": 0.0003,
+    "21": 0.0007,
+    "22": 0.0123,
+    "23": 0.5098
+   },
+   "target_confidence": 0.4876,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "CLICK",
+     "probabilities": {
+      "TYPE_TEXT": 0.001,
+      "CLICK": 0.9983,
+      "SCROLL_DOWN": 0.0,
+      "WAIT": 0.0001,
+      "DONE": 0.0005,
+      "BLOCKED": 0.0001
+     },
+     "confidence": 0.998
+    },
+    "type_text_target": {
+     "type": "choice",
+     "choice": "1",
+     "probabilities": {
+      "1": 0.6423,
+      "2": 0.3577
+     },
+     "confidence": 0.2845
+    },
+    "click_target": {
+     "type": "choice",
+     "choice": "23",
+     "probabilities": {
+      "1": 0.0006,
+      "2": 0.0004,
+      "3": 0.1613,
+      "4": 0.0004,
+      "5": 0.2941,
+      "6": 0.0012,
+      "7": 0.0017,
+      "8": 0.0016,
+      "9": 0.0014,
+      "10": 0.0017,
+      "11": 0.0025,
+      "12": 0.0049,
+      "13": 0.0012,
+      "14": 0.0008,
+      "15": 0.0011,
+      "16": 0.0012,
+      "17": 0.0004,
+      "18": 0.0002,
+      "19": 0.0002,
+      "20": 0.0003,
+      "21": 0.0007,
+      "22": 0.0123,
+      "23": 0.5098
+     },
+     "confidence": 0.4876
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 3455,
+    "output_tokens": 363
+   },
+   "latency_ms": 1061,
+   "fingerprint": "c304aae7875ad1e3267df651ad46a95d7bc5b5208a377306d758e16e482648a0",
+   "elapsed_ms": 11423,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?tfs=CBwQARodag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": "Reset\nSeptember\nOctober\n20\n21\n22\n23\n24\n25\n26\n27\n₹109K\n28\n29\n30\n31\n1\n8\n15\n22\n29\nShowing prices in INR for trips departing on 20 Oct\nUnderlined prices indicate cheapest compared with other prices shown\nDone"
+    },
+    "elements": [
+     {
+      "role": "textbox",
+      "value": "Tue, Oct 20",
+      "index": "1",
+      "label": "Departure",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "2",
+      "label": "Return",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Round trip",
+      "expanded": "false",
+      "index": "3",
+      "label": "Select your ticket type. Round trip",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "4",
+      "label": "Reset",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "5",
+      "label": "Tuesday, October 20, 2026, departure date.",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "6",
+      "label": "Wednesday, October 21, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "7",
+      "label": "Thursday, October 22, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "8",
+      "label": "Friday, October 23, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "9",
+      "label": "Saturday, October 24, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "10",
+      "label": "Sunday, October 25, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "11",
+      "label": "Monday, October 26, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "12",
+      "label": "Tuesday, October 27, 2026 , 109070 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "13",
+      "label": "Wednesday, October 28, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "14",
+      "label": "Thursday, October 29, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "15",
+      "label": "Friday, October 30, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "16",
+      "label": "Saturday, October 31, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "17",
+      "label": "Sunday, November 1, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "18",
+      "label": "Sunday, November 8, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "19",
+      "label": "Sunday, November 15, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "20",
+      "label": "Sunday, November 22, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "21",
+      "label": "Sunday, November 29, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "22",
+      "label": "Next",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "23",
+      "label": "Done. Search for one-way flights, departing on October 20, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     }
+    ],
+    "recent_actions": [
+     {
+      "action": "Where to? ",
+      "kind": "fill",
+      "text": "London",
+      "page_changed": true
+     },
+     {
+      "action": "London, United Kingdom",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Departure",
+      "kind": "fill",
+      "text": "Zurich",
+      "page_changed": true
+     },
+     {
+      "action": "Tuesday, October 20, 2026 , 109070 Indian rupees",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     }
+    ]
+   }
+  },
+  {
+   "choice": "e25",
+   "operation": "CLICK",
+   "target": "23",
+   "confidence": 0.9946,
+   "probabilities": {
+    "e2": 0.0006,
+    "e4": 0.0003,
+    "e5": 0.2886,
+    "e6": 0.0003,
+    "e7": 0.1999,
+    "e8": 0.0027,
+    "e9": 0.0011,
+    "e10": 0.0003,
+    "e11": 0.0002,
+    "e12": 0.0006,
+    "e13": 0.0004,
+    "e14": 0.0056,
+    "e15": 0.0006,
+    "e16": 0.0004,
+    "e17": 0.0005,
+    "e18": 0.0009,
+    "e19": 0.0005,
+    "e20": 0.0004,
+    "e21": 0.0005,
+    "e22": 0.0005,
+    "e23": 0.0011,
+    "e24": 0.0169,
+    "e25": 0.4771
+   },
+   "operation_probabilities": {
+    "TYPE_TEXT": 0.0017,
+    "CLICK": 0.9955,
+    "SCROLL_DOWN": 0.0,
+    "WAIT": 0.0001,
+    "DONE": 0.0026,
+    "BLOCKED": 0.0001
+   },
+   "target_probabilities": {
+    "1": 0.0006,
+    "2": 0.0003,
+    "3": 0.2886,
+    "4": 0.0003,
+    "5": 0.1999,
+    "6": 0.0027,
+    "7": 0.0011,
+    "8": 0.0003,
+    "9": 0.0002,
+    "10": 0.0006,
+    "11": 0.0004,
+    "12": 0.0056,
+    "13": 0.0006,
+    "14": 0.0004,
+    "15": 0.0005,
+    "16": 0.0009,
+    "17": 0.0005,
+    "18": 0.0004,
+    "19": 0.0005,
+    "20": 0.0005,
+    "21": 0.0011,
+    "22": 0.0169,
+    "23": 0.4771
+   },
+   "target_confidence": 0.4533,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "CLICK",
+     "probabilities": {
+      "TYPE_TEXT": 0.0017,
+      "CLICK": 0.9955,
+      "SCROLL_DOWN": 0.0,
+      "WAIT": 0.0001,
+      "DONE": 0.0026,
+      "BLOCKED": 0.0001
+     },
+     "confidence": 0.9946
+    },
+    "type_text_target": {
+     "type": "choice",
+     "choice": "1",
+     "probabilities": {
+      "1": 0.6693,
+      "2": 0.3307
+     },
+     "confidence": 0.3387
+    },
+    "click_target": {
+     "type": "choice",
+     "choice": "23",
+     "probabilities": {
+      "1": 0.0006,
+      "2": 0.0003,
+      "3": 0.2886,
+      "4": 0.0003,
+      "5": 0.1999,
+      "6": 0.0027,
+      "7": 0.0011,
+      "8": 0.0003,
+      "9": 0.0002,
+      "10": 0.0006,
+      "11": 0.0004,
+      "12": 0.0056,
+      "13": 0.0006,
+      "14": 0.0004,
+      "15": 0.0005,
+      "16": 0.0009,
+      "17": 0.0005,
+      "18": 0.0004,
+      "19": 0.0005,
+      "20": 0.0005,
+      "21": 0.0011,
+      "22": 0.0169,
+      "23": 0.4771
+     },
+     "confidence": 0.4533
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 3747,
+    "output_tokens": 365
+   },
+   "latency_ms": 1193,
+   "fingerprint": "8dc5a3c234c6aeedfed78ffa09c4c7a3d4c6e7647892c6ee56dc30fbb0b5d468",
+   "elapsed_ms": 12685,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?tfs=CBwQARodag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": "Reset\nSeptember\nOctober\n20\n????\n21\n????\n22\n₹102K\n23\n₹117K\n24\n₹126K\n25\n₹98.8K\n26\n₹110K\n27\n₹109K\n28\n₹98.1K\n29\n₹101K\n30\n₹102K\n31\n₹112K\n1\n8\n15\n22\n29\nShowing prices in INR for trips departing on 20 Oct\nUnderlined prices indicate cheapest compared with other prices shown\nDone"
+    },
+    "elements": [
+     {
+      "role": "textbox",
+      "value": "Tue, Oct 20",
+      "index": "1",
+      "label": "Departure",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "2",
+      "label": "Return",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Round trip",
+      "expanded": "false",
+      "index": "3",
+      "label": "Select your ticket type. Round trip",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "4",
+      "label": "Reset",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "5",
+      "label": "Tuesday, October 20, 2026, departure date. ????",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "6",
+      "label": "Wednesday, October 21, 2026 ????",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "7",
+      "label": "Thursday, October 22, 2026 , 101712 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "8",
+      "label": "Friday, October 23, 2026 , 116926 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "9",
+      "label": "Saturday, October 24, 2026 , 125888 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "10",
+      "label": "Sunday, October 25, 2026 , 98821 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "11",
+      "label": "Monday, October 26, 2026 , 110177 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "12",
+      "label": "Tuesday, October 27, 2026 , 109070 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "13",
+      "label": "Wednesday, October 28, 2026 , 98118 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "14",
+      "label": "Thursday, October 29, 2026 , 101464 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "15",
+      "label": "Friday, October 30, 2026 , 101581 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "16",
+      "label": "Saturday, October 31, 2026 , 111637 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "17",
+      "label": "Sunday, November 1, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "18",
+      "label": "Sunday, November 8, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "19",
+      "label": "Sunday, November 15, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "20",
+      "label": "Sunday, November 22, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "21",
+      "label": "Sunday, November 29, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "22",
+      "label": "Next",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "23",
+      "label": "Done. Search for one-way flights, departing on October 20, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     }
+    ],
+    "recent_actions": [
+     {
+      "action": "Where to? ",
+      "kind": "fill",
+      "text": "London",
+      "page_changed": true
+     },
+     {
+      "action": "London, United Kingdom",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Departure",
+      "kind": "fill",
+      "text": "Zurich",
+      "page_changed": true
+     },
+     {
+      "action": "Tuesday, October 20, 2026 , 109070 Indian rupees",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     }
+    ]
+   }
+  },
+  {
+   "choice": "e5",
+   "operation": "CLICK",
+   "target": "3",
+   "confidence": 0.9567,
+   "probabilities": {
+    "e2": 0.0002,
+    "e4": 0.0002,
+    "e5": 0.8539,
+    "e6": 0.0003,
+    "e7": 0.0083,
+    "e8": 0.0008,
+    "e9": 0.0004,
+    "e10": 0.0002,
+    "e11": 0.0001,
+    "e12": 0.0003,
+    "e13": 0.0003,
+    "e14": 0.0016,
+    "e15": 0.0003,
+    "e16": 0.0003,
+    "e17": 0.0004,
+    "e18": 0.0007,
+    "e19": 0.0003,
+    "e20": 0.0002,
+    "e21": 0.0003,
+    "e22": 0.0003,
+    "e23": 0.0008,
+    "e24": 0.0074,
+    "e25": 0.1224
+   },
+   "operation_probabilities": {
+    "TYPE_TEXT": 0.0038,
+    "CLICK": 0.9639,
+    "SCROLL_DOWN": 0.0004,
+    "WAIT": 0.0004,
+    "DONE": 0.031,
+    "BLOCKED": 0.0005
+   },
+   "target_probabilities": {
+    "1": 0.0002,
+    "2": 0.0002,
+    "3": 0.8539,
+    "4": 0.0003,
+    "5": 0.0083,
+    "6": 0.0008,
+    "7": 0.0004,
+    "8": 0.0002,
+    "9": 0.0001,
+    "10": 0.0003,
+    "11": 0.0003,
+    "12": 0.0016,
+    "13": 0.0003,
+    "14": 0.0003,
+    "15": 0.0004,
+    "16": 0.0007,
+    "17": 0.0003,
+    "18": 0.0002,
+    "19": 0.0003,
+    "20": 0.0003,
+    "21": 0.0008,
+    "22": 0.0074,
+    "23": 0.1224
+   },
+   "target_confidence": 0.8472,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "CLICK",
+     "probabilities": {
+      "TYPE_TEXT": 0.0038,
+      "CLICK": 0.9639,
+      "SCROLL_DOWN": 0.0004,
+      "WAIT": 0.0004,
+      "DONE": 0.031,
+      "BLOCKED": 0.0005
+     },
+     "confidence": 0.9567
+    },
+    "type_text_target": {
+     "type": "choice",
+     "choice": "2",
+     "probabilities": {
+      "1": 0.4074,
+      "2": 0.5926
+     },
+     "confidence": 0.1851
+    },
+    "click_target": {
+     "type": "choice",
+     "choice": "3",
+     "probabilities": {
+      "1": 0.0002,
+      "2": 0.0002,
+      "3": 0.8539,
+      "4": 0.0003,
+      "5": 0.0083,
+      "6": 0.0008,
+      "7": 0.0004,
+      "8": 0.0002,
+      "9": 0.0001,
+      "10": 0.0003,
+      "11": 0.0003,
+      "12": 0.0016,
+      "13": 0.0003,
+      "14": 0.0003,
+      "15": 0.0004,
+      "16": 0.0007,
+      "17": 0.0003,
+      "18": 0.0002,
+      "19": 0.0003,
+      "20": 0.0003,
+      "21": 0.0008,
+      "22": 0.0074,
+      "23": 0.1224
+     },
+     "confidence": 0.8472
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 3803,
+    "output_tokens": 366
+   },
+   "latency_ms": 1197,
+   "fingerprint": "8dc5a3c234c6aeedfed78ffa09c4c7a3d4c6e7647892c6ee56dc30fbb0b5d468",
+   "elapsed_ms": 14056,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?tfs=CBwQARodag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": "Reset\nSeptember\nOctober\n20\n????\n21\n????\n22\n₹102K\n23\n₹117K\n24\n₹126K\n25\n₹98.8K\n26\n₹110K\n27\n₹109K\n28\n₹98.1K\n29\n₹101K\n30\n₹102K\n31\n₹112K\n1\n8\n15\n22\n29\nShowing prices in INR for trips departing on 20 Oct\nUnderlined prices indicate cheapest compared with other prices shown\nDone"
+    },
+    "elements": [
+     {
+      "role": "textbox",
+      "value": "Tue, Oct 20",
+      "index": "1",
+      "label": "Departure",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "2",
+      "label": "Return",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Round trip",
+      "expanded": "false",
+      "index": "3",
+      "label": "Select your ticket type. Round trip",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "4",
+      "label": "Reset",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "5",
+      "label": "Tuesday, October 20, 2026, departure date. ????",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "6",
+      "label": "Wednesday, October 21, 2026 ????",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "7",
+      "label": "Thursday, October 22, 2026 , 101712 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "8",
+      "label": "Friday, October 23, 2026 , 116926 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "9",
+      "label": "Saturday, October 24, 2026 , 125888 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "10",
+      "label": "Sunday, October 25, 2026 , 98821 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "11",
+      "label": "Monday, October 26, 2026 , 110177 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "12",
+      "label": "Tuesday, October 27, 2026 , 109070 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "13",
+      "label": "Wednesday, October 28, 2026 , 98118 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "14",
+      "label": "Thursday, October 29, 2026 , 101464 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "15",
+      "label": "Friday, October 30, 2026 , 101581 Indian rupees, Cheapest price",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "16",
+      "label": "Saturday, October 31, 2026 , 111637 Indian rupees",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "17",
+      "label": "Sunday, November 1, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "18",
+      "label": "Sunday, November 8, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "19",
+      "label": "Sunday, November 15, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "20",
+      "label": "Sunday, November 22, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "21",
+      "label": "Sunday, November 29, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "22",
+      "label": "Next",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "23",
+      "label": "Done. Search for one-way flights, departing on October 20, 2026",
+      "operations": [
+       "CLICK"
+      ]
+     }
+    ],
+    "recent_actions": [
+     {
+      "action": "Where to? ",
+      "kind": "fill",
+      "text": "London",
+      "page_changed": true
+     },
+     {
+      "action": "London, United Kingdom",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Departure",
+      "kind": "fill",
+      "text": "Zurich",
+      "page_changed": true
+     },
+     {
+      "action": "Tuesday, October 20, 2026 , 109070 Indian rupees",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Done. Search for one-way flights, departing on October 20, 2026",
+      "kind": "click",
+      "text": null,
+      "page_changed": false
+     }
+    ]
+   }
+  },
+  {
+   "choice": "e13",
+   "operation": "CLICK",
+   "target": "13",
+   "confidence": 0.9992,
+   "probabilities": {
+    "e1": 0.0,
+    "e2": 0.0,
+    "e3": 0.0,
+    "e4": 0.0,
+    "e5": 0.0,
+    "e6": 0.0001,
+    "e7": 0.0,
+    "e8": 0.0,
+    "e9": 0.0,
+    "e10": 0.0,
+    "e11": 0.0,
+    "e12": 0.0292,
+    "e13": 0.5816,
+    "e14": 0.378,
+    "e16": 0.0004,
+    "e17": 0.0001,
+    "e19": 0.0002,
+    "e21": 0.0001,
+    "e23": 0.0002,
+    "e24": 0.0066,
+    "e25": 0.0011,
+    "e26": 0.0002,
+    "e27": 0.0021,
+    "e28": 0.0001,
+    "e29": 0.0,
+    "e30": 0.0
+   },
+   "operation_probabilities": {
+    "CLICK": 0.9994,
+    "TYPE_TEXT": 0.0005,
+    "SCROLL_DOWN": 0.0,
+    "WAIT": 0.0,
+    "DONE": 0.0001,
+    "BLOCKED": 0.0
+   },
+   "target_probabilities": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0001,
+    "7": 0.0,
+    "8": 0.0,
+    "9": 0.0,
+    "10": 0.0,
+    "11": 0.0,
+    "12": 0.0292,
+    "13": 0.5816,
+    "14": 0.378,
+    "15": 0.0004,
+    "16": 0.0001,
+    "17": 0.0002,
+    "18": 0.0001,
+    "19": 0.0002,
+    "20": 0.0066,
+    "21": 0.0011,
+    "22": 0.0002,
+    "23": 0.0021,
+    "24": 0.0001,
+    "25": 0.0,
+    "26": 0.0
+   },
+   "target_confidence": 0.5649,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "CLICK",
+     "probabilities": {
+      "CLICK": 0.9994,
+      "TYPE_TEXT": 0.0005,
+      "SCROLL_DOWN": 0.0,
+      "WAIT": 0.0,
+      "DONE": 0.0001,
+      "BLOCKED": 0.0
+     },
+     "confidence": 0.9992
+    },
+    "click_target": {
+     "type": "choice",
+     "choice": "13",
+     "probabilities": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0001,
+      "7": 0.0,
+      "8": 0.0,
+      "9": 0.0,
+      "10": 0.0,
+      "11": 0.0,
+      "12": 0.0292,
+      "13": 0.5816,
+      "14": 0.378,
+      "15": 0.0004,
+      "16": 0.0001,
+      "17": 0.0002,
+      "18": 0.0001,
+      "19": 0.0002,
+      "20": 0.0066,
+      "21": 0.0011,
+      "22": 0.0002,
+      "23": 0.0021,
+      "24": 0.0001,
+      "25": 0.0,
+      "26": 0.0
+     },
+     "confidence": 0.5649
+    },
+    "type_text_target": {
+     "type": "choice",
+     "choice": "15",
+     "probabilities": {
+      "15": 0.5482,
+      "17": 0.2368,
+      "18": 0.0962,
+      "19": 0.1188
+     },
+     "confidence": 0.3976
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 3577,
+    "output_tokens": 375
+   },
+   "latency_ms": 1115,
+   "fingerprint": "8c3f9be182a5948f980b8928438c91fde8a518c574c4d08a71e1cd90f083618d",
+   "elapsed_ms": 15231,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?tfs=CBwQARopEgoyMDI2LTEwLTIwag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rentals\nSign in\nFlights\n1\nSearch\nFlexible? Discover the best flight deals with AI\nDescribe your ideal trip, and let Google Flights find the best deals for you\nExplore deals with AI\nFind and book cheap flights worldwide and track prices\nFind cheap flights from India to anywhere\nLucknow\nNew Delhi\nMumbai\nBengaluru"
+    },
+    "elements": [
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "1",
+      "label": "Main menu",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "2",
+      "label": "Google",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "3",
+      "label": "Skip to main content",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "4",
+      "label": "Accessibility feedback",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "5",
+      "label": "Explore",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "6",
+      "label": "Flights",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "7",
+      "label": "Hotels",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "8",
+      "label": "Vacation rentals",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "9",
+      "label": "Change appearance",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "10",
+      "label": "Google apps",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "11",
+      "label": "Sign in",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Round trip",
+      "expanded": "false",
+      "index": "12",
+      "label": "Change ticket type. Round trip",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "13",
+      "label": "1 passenger",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Economy",
+      "expanded": "false",
+      "index": "14",
+      "label": "Change seating class. Economy",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Lucknow",
+      "expanded": "false",
+      "index": "15",
+      "label": "Where from?",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "16",
+      "label": "Swap origin and destination.",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "London",
+      "expanded": "false",
+      "index": "17",
+      "label": "Where to?",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "Tue, Oct 20",
+      "index": "18",
+      "label": "Departure",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "19",
+      "label": "Return",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "20",
+      "label": "Search",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "21",
+      "label": "Explore deals with AI",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "22",
+      "label": "Learn more about this section",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "true",
+      "index": "23",
+      "label": "Lucknow",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "24",
+      "label": "New Delhi",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "25",
+      "label": "Mumbai",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "26",
+      "label": "Bengaluru",
+      "operations": [
+       "CLICK"
+      ]
+     }
+    ],
+    "recent_actions": [
+     {
+      "action": "Where to? ",
+      "kind": "fill",
+      "text": "London",
+      "page_changed": true
+     },
+     {
+      "action": "London, United Kingdom",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Departure",
+      "kind": "fill",
+      "text": "Zurich",
+      "page_changed": true
+     },
+     {
+      "action": "Tuesday, October 20, 2026 , 109070 Indian rupees",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Done. Search for one-way flights, departing on October 20, 2026",
+      "kind": "click",
+      "text": null,
+      "page_changed": false
+     }
+    ]
+   }
+  },
+  {
+   "choice": "e5",
+   "operation": "CLICK",
+   "target": "5",
+   "confidence": 0.995,
+   "probabilities": {
+    "e1": 0.3604,
+    "e2": 0.0001,
+    "e3": 0.0001,
+    "e4": 0.0001,
+    "e5": 0.6372,
+    "e6": 0.0021
+   },
+   "operation_probabilities": {
+    "CLICK": 0.996,
+    "SCROLL_DOWN": 0.0001,
+    "WAIT": 0.0002,
+    "DONE": 0.0036,
+    "BLOCKED": 0.0001
+   },
+   "target_probabilities": {
+    "1": 0.3604,
+    "2": 0.0001,
+    "3": 0.0001,
+    "4": 0.0001,
+    "5": 0.6372,
+    "6": 0.0021
+   },
+   "target_confidence": 0.5647,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "CLICK",
+     "probabilities": {
+      "CLICK": 0.996,
+      "SCROLL_DOWN": 0.0001,
+      "WAIT": 0.0002,
+      "DONE": 0.0036,
+      "BLOCKED": 0.0001
+     },
+     "confidence": 0.995
+    },
+    "click_target": {
+     "type": "choice",
+     "choice": "5",
+     "probabilities": {
+      "1": 0.3604,
+      "2": 0.0001,
+      "3": 0.0001,
+      "4": 0.0001,
+      "5": 0.6372,
+      "6": 0.0021
+     },
+     "confidence": 0.5647
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 1490,
+    "output_tokens": 146
+   },
+   "latency_ms": 401,
+   "fingerprint": "1f8d8821a092d291fff3fabc1e993d3a53b9152fd9cb6f8740c5920c9ed60f89",
+   "elapsed_ms": 15747,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?tfs=CBwQARopEgoyMDI2LTEwLTIwag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": "Adults\n1\nChildren\nAged 2 to 11\n0\nInfants\nIn seat\n0\nInfants\nOn lap\n0\nDone\nCancel"
+    },
+    "elements": [
+     {
+      "role": "button",
+      "value": "",
+      "index": "1",
+      "label": "Add adult",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "2",
+      "label": "Add child aged 2 to 11",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "3",
+      "label": "Add infant in seat",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "4",
+      "label": "Add infant on lap",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "5",
+      "label": "Done",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "6",
+      "label": "Cancel",
+      "operations": [
+       "CLICK"
+      ]
+     }
+    ],
+    "recent_actions": [
+     {
+      "action": "Where to? ",
+      "kind": "fill",
+      "text": "London",
+      "page_changed": true
+     },
+     {
+      "action": "London, United Kingdom",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Departure",
+      "kind": "fill",
+      "text": "Zurich",
+      "page_changed": true
+     },
+     {
+      "action": "Tuesday, October 20, 2026 , 109070 Indian rupees",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Done. Search for one-way flights, departing on October 20, 2026",
+      "kind": "click",
+      "text": null,
+      "page_changed": false
+     },
+     {
+      "action": "1 passenger",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     }
+    ]
+   }
+  },
+  {
+   "choice": "e14",
+   "operation": "CLICK",
+   "target": "14",
+   "confidence": 0.9994,
+   "probabilities": {
+    "e1": 0.0,
+    "e2": 0.0,
+    "e3": 0.0,
+    "e4": 0.0,
+    "e5": 0.0,
+    "e6": 0.0,
+    "e7": 0.0,
+    "e8": 0.0,
+    "e9": 0.0,
+    "e10": 0.0,
+    "e11": 0.0,
+    "e12": 0.0043,
+    "e13": 0.001,
+    "e14": 0.9917,
+    "e16": 0.0001,
+    "e17": 0.0,
+    "e19": 0.0001,
+    "e21": 0.0,
+    "e23": 0.0001,
+    "e24": 0.0015,
+    "e25": 0.0004,
+    "e26": 0.0001,
+    "e27": 0.0007,
+    "e28": 0.0,
+    "e29": 0.0,
+    "e30": 0.0
+   },
+   "operation_probabilities": {
+    "CLICK": 0.9995,
+    "TYPE_TEXT": 0.0003,
+    "SCROLL_DOWN": 0.0,
+    "WAIT": 0.0,
+    "DONE": 0.0002,
+    "BLOCKED": 0.0
+   },
+   "target_probabilities": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0,
+    "9": 0.0,
+    "10": 0.0,
+    "11": 0.0,
+    "12": 0.0043,
+    "13": 0.001,
+    "14": 0.9917,
+    "15": 0.0001,
+    "16": 0.0,
+    "17": 0.0001,
+    "18": 0.0,
+    "19": 0.0001,
+    "20": 0.0015,
+    "21": 0.0004,
+    "22": 0.0001,
+    "23": 0.0007,
+    "24": 0.0,
+    "25": 0.0,
+    "26": 0.0
+   },
+   "target_confidence": 0.9913,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "CLICK",
+     "probabilities": {
+      "CLICK": 0.9995,
+      "TYPE_TEXT": 0.0003,
+      "SCROLL_DOWN": 0.0,
+      "WAIT": 0.0,
+      "DONE": 0.0002,
+      "BLOCKED": 0.0
+     },
+     "confidence": 0.9994
+    },
+    "click_target": {
+     "type": "choice",
+     "choice": "14",
+     "probabilities": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0,
+      "9": 0.0,
+      "10": 0.0,
+      "11": 0.0,
+      "12": 0.0043,
+      "13": 0.001,
+      "14": 0.9917,
+      "15": 0.0001,
+      "16": 0.0,
+      "17": 0.0001,
+      "18": 0.0,
+      "19": 0.0001,
+      "20": 0.0015,
+      "21": 0.0004,
+      "22": 0.0001,
+      "23": 0.0007,
+      "24": 0.0,
+      "25": 0.0,
+      "26": 0.0
+     },
+     "confidence": 0.9913
+    },
+    "type_text_target": {
+     "type": "choice",
+     "choice": "15",
+     "probabilities": {
+      "15": 0.5264,
+      "17": 0.2905,
+      "18": 0.0616,
+      "19": 0.1215
+     },
+     "confidence": 0.3685
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 3653,
+    "output_tokens": 363
+   },
+   "latency_ms": 1155,
+   "fingerprint": "8c3f9be182a5948f980b8928438c91fde8a518c574c4d08a71e1cd90f083618d",
+   "elapsed_ms": 17099,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?tfs=CBwQARopEgoyMDI2LTEwLTIwag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rentals\nSign in\nFlights\n1\nSearch\nFlexible? Discover the best flight deals with AI\nDescribe your ideal trip, and let Google Flights find the best deals for you\nExplore deals with AI\nFind and book cheap flights worldwide and track prices\nFind cheap flights from India to anywhere\nLucknow\nNew Delhi\nMumbai\nBengaluru"
+    },
+    "elements": [
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "1",
+      "label": "Main menu",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "2",
+      "label": "Google",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "3",
+      "label": "Skip to main content",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "4",
+      "label": "Accessibility feedback",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "5",
+      "label": "Explore",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "6",
+      "label": "Flights",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "7",
+      "label": "Hotels",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "8",
+      "label": "Vacation rentals",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "9",
+      "label": "Change appearance",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "10",
+      "label": "Google apps",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "11",
+      "label": "Sign in",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Round trip",
+      "expanded": "false",
+      "index": "12",
+      "label": "Change ticket type. Round trip",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "13",
+      "label": "1 passenger",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Economy",
+      "expanded": "false",
+      "index": "14",
+      "label": "Change seating class. Economy",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Lucknow",
+      "expanded": "false",
+      "index": "15",
+      "label": "Where from?",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "16",
+      "label": "Swap origin and destination.",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "London",
+      "expanded": "false",
+      "index": "17",
+      "label": "Where to?",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "Tue, Oct 20",
+      "index": "18",
+      "label": "Departure",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "19",
+      "label": "Return",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "20",
+      "label": "Search",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "21",
+      "label": "Explore deals with AI",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "22",
+      "label": "Learn more about this section",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "true",
+      "index": "23",
+      "label": "Lucknow",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "24",
+      "label": "New Delhi",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "25",
+      "label": "Mumbai",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "26",
+      "label": "Bengaluru",
+      "operations": [
+       "CLICK"
+      ]
+     }
+    ],
+    "recent_actions": [
+     {
+      "action": "Where to? ",
+      "kind": "fill",
+      "text": "London",
+      "page_changed": true
+     },
+     {
+      "action": "London, United Kingdom",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Departure",
+      "kind": "fill",
+      "text": "Zurich",
+      "page_changed": true
+     },
+     {
+      "action": "Tuesday, October 20, 2026 , 109070 Indian rupees",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Done. Search for one-way flights, departing on October 20, 2026",
+      "kind": "click",
+      "text": null,
+      "page_changed": false
+     },
+     {
+      "action": "1 passenger",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Done",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     }
+    ]
+   }
+  },
+  {
+   "choice": "e24",
+   "operation": "CLICK",
+   "target": "20",
+   "confidence": 0.5295,
+   "probabilities": {
+    "e1": 0.0015,
+    "e2": 0.0002,
+    "e3": 0.0006,
+    "e4": 0.0003,
+    "e5": 0.0015,
+    "e6": 0.0069,
+    "e7": 0.0002,
+    "e8": 0.0002,
+    "e9": 0.0002,
+    "e10": 0.0003,
+    "e11": 0.0003,
+    "e12": 0.049,
+    "e13": 0.0853,
+    "e14": 0.0891,
+    "e16": 0.0238,
+    "e17": 0.0094,
+    "e19": 0.0185,
+    "e21": 0.0063,
+    "e23": 0.0184,
+    "e24": 0.4463,
+    "e25": 0.0427,
+    "e26": 0.0108,
+    "e27": 0.1747,
+    "e28": 0.0068,
+    "e29": 0.0022,
+    "e30": 0.0045
+   },
+   "operation_probabilities": {
+    "CLICK": 0.6079,
+    "TYPE_TEXT": 0.0123,
+    "SCROLL_DOWN": 0.0005,
+    "WAIT": 0.0012,
+    "DONE": 0.3775,
+    "BLOCKED": 0.0006
+   },
+   "target_probabilities": {
+    "1": 0.0015,
+    "2": 0.0002,
+    "3": 0.0006,
+    "4": 0.0003,
+    "5": 0.0015,
+    "6": 0.0069,
+    "7": 0.0002,
+    "8": 0.0002,
+    "9": 0.0002,
+    "10": 0.0003,
+    "11": 0.0003,
+    "12": 0.049,
+    "13": 0.0853,
+    "14": 0.0891,
+    "15": 0.0238,
+    "16": 0.0094,
+    "17": 0.0185,
+    "18": 0.0063,
+    "19": 0.0184,
+    "20": 0.4463,
+    "21": 0.0427,
+    "22": 0.0108,
+    "23": 0.1747,
+    "24": 0.0068,
+    "25": 0.0022,
+    "26": 0.0045
+   },
+   "target_confidence": 0.4242,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "CLICK",
+     "probabilities": {
+      "CLICK": 0.6079,
+      "TYPE_TEXT": 0.0123,
+      "SCROLL_DOWN": 0.0005,
+      "WAIT": 0.0012,
+      "DONE": 0.3775,
+      "BLOCKED": 0.0006
+     },
+     "confidence": 0.5295
+    },
+    "click_target": {
+     "type": "choice",
+     "choice": "20",
+     "probabilities": {
+      "1": 0.0015,
+      "2": 0.0002,
+      "3": 0.0006,
+      "4": 0.0003,
+      "5": 0.0015,
+      "6": 0.0069,
+      "7": 0.0002,
+      "8": 0.0002,
+      "9": 0.0002,
+      "10": 0.0003,
+      "11": 0.0003,
+      "12": 0.049,
+      "13": 0.0853,
+      "14": 0.0891,
+      "15": 0.0238,
+      "16": 0.0094,
+      "17": 0.0185,
+      "18": 0.0063,
+      "19": 0.0184,
+      "20": 0.4463,
+      "21": 0.0427,
+      "22": 0.0108,
+      "23": 0.1747,
+      "24": 0.0068,
+      "25": 0.0022,
+      "26": 0.0045
+     },
+     "confidence": 0.4242
+    },
+    "type_text_target": {
+     "type": "choice",
+     "choice": "15",
+     "probabilities": {
+      "15": 0.481,
+      "17": 0.3106,
+      "18": 0.0652,
+      "19": 0.1432
+     },
+     "confidence": 0.308
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 3694,
+    "output_tokens": 418
+   },
+   "latency_ms": 1170,
+   "fingerprint": "a278a7c0e3211391d3c9cb9b563f15690ea1c8abac1adb38dbb1a74c03a21c03",
+   "elapsed_ms": 18418,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?tfs=CBwQARopEgoyMDI2LTEwLTIwag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rentals\nSign in\nFlights\n1\nSearch\nFlexible? Discover the best flight deals with AI\nDescribe your ideal trip, and let Google Flights find the best deals for you\nExplore deals with AI\nFind and book cheap flights worldwide and track prices\nFind cheap flights from India to anywhere\nLucknow\nNew Delhi\nMumbai\nBengaluru"
+    },
+    "elements": [
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "1",
+      "label": "Main menu",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "2",
+      "label": "Google",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "3",
+      "label": "Skip to main content",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "4",
+      "label": "Accessibility feedback",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "5",
+      "label": "Explore",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "6",
+      "label": "Flights",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "7",
+      "label": "Hotels",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "8",
+      "label": "Vacation rentals",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "9",
+      "label": "Change appearance",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "expanded": "false",
+      "index": "10",
+      "label": "Google apps",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "link",
+      "value": "",
+      "index": "11",
+      "label": "Sign in",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Round trip",
+      "expanded": "false",
+      "index": "12",
+      "label": "Change ticket type. Round trip",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "13",
+      "label": "1 passenger",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Economy",
+      "expanded": "true",
+      "index": "14",
+      "label": "Change seating class. Economy",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "Lucknow",
+      "expanded": "false",
+      "index": "15",
+      "label": "Where from?",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "16",
+      "label": "Swap origin and destination.",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "combobox",
+      "value": "London",
+      "expanded": "false",
+      "index": "17",
+      "label": "Where to?",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "Tue, Oct 20",
+      "index": "18",
+      "label": "Departure",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "textbox",
+      "value": "",
+      "index": "19",
+      "label": "Return",
+      "operations": [
+       "TYPE_TEXT",
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "20",
+      "label": "Search",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "21",
+      "label": "Explore deals with AI",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "button",
+      "value": "",
+      "index": "22",
+      "label": "Learn more about this section",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "true",
+      "index": "23",
+      "label": "Lucknow",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "24",
+      "label": "New Delhi",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "25",
+      "label": "Mumbai",
+      "operations": [
+       "CLICK"
+      ]
+     },
+     {
+      "role": "tab",
+      "value": "",
+      "selected": "false",
+      "index": "26",
+      "label": "Bengaluru",
+      "operations": [
+       "CLICK"
+      ]
+     }
+    ],
+    "recent_actions": [
+     {
+      "action": "Where to? ",
+      "kind": "fill",
+      "text": "London",
+      "page_changed": true
+     },
+     {
+      "action": "London, United Kingdom",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Departure",
+      "kind": "fill",
+      "text": "Zurich",
+      "page_changed": true
+     },
+     {
+      "action": "Tuesday, October 20, 2026 , 109070 Indian rupees",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Done. Search for one-way flights, departing on October 20, 2026",
+      "kind": "click",
+      "text": null,
+      "page_changed": false
+     },
+     {
+      "action": "1 passenger",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Done",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Change seating class. Economy",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     }
+    ]
+   }
+  },
+  {
+   "choice": "DONE",
+   "operation": "DONE",
+   "target": null,
+   "confidence": 0.9982,
+   "probabilities": {
+    "DONE": 0.9986
+   },
+   "operation_probabilities": {
+    "SCROLL_DOWN": 0.0003,
+    "WAIT": 0.0006,
+    "DONE": 0.9986,
+    "BLOCKED": 0.0005
+   },
+   "target_probabilities": {},
+   "target_confidence": null,
+   "raw_answers": {
+    "operation": {
+     "type": "choice",
+     "choice": "DONE",
+     "probabilities": {
+      "SCROLL_DOWN": 0.0003,
+      "WAIT": 0.0006,
+      "DONE": 0.9986,
+      "BLOCKED": 0.0005
+     },
+     "confidence": 0.9982
+    }
+   },
+   "model": "leo-1.7b-v3",
+   "usage": {
+    "input_tokens": 784,
+    "output_tokens": 62
+   },
+   "latency_ms": 216,
+   "fingerprint": "10da1dbd170455378ff474e8cd297f65dfcb975317bd786c693c7998d24b662f",
+   "elapsed_ms": 18649,
+   "state": {
+    "page": {
+     "url": "https://www.google.com/travel/flights?tfs=CBwQARopEgoyMDI2LTEwLTIwag0IAhIJL20vMDIydHE0cgwIAxIIL20vMDRqcGwaHWoMCAMSCC9tLzA0anBscg0IAhIJL20vMDIydHE0QAFIAXABggELCP___________wGYAQE&tfu=KgIIAw&hl=en",
+     "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+     "text": ""
+    },
+    "elements": [],
+    "recent_actions": [
+     {
+      "action": "Where to? ",
+      "kind": "fill",
+      "text": "London",
+      "page_changed": true
+     },
+     {
+      "action": "London, United Kingdom",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Departure",
+      "kind": "fill",
+      "text": "Zurich",
+      "page_changed": true
+     },
+     {
+      "action": "Tuesday, October 20, 2026 , 109070 Indian rupees",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Done. Search for one-way flights, departing on October 20, 2026",
+      "kind": "click",
+      "text": null,
+      "page_changed": false
+     },
+     {
+      "action": "1 passenger",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Done",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     },
+     {
+      "action": "Change seating class. Economy",
+      "kind": "click",
+      "text": null,
+      "page_changed": true
+     }
+    ]
+   }
+  }
+ ],
+ "text_calls_full": [
+  {
+   "model": "local:Qwen/Qwen3-1.7B (nf4)",
+   "latency_ms": 740,
+   "usage": {
+    "prompt_tokens": 354,
+    "completion_tokens": 7
+   },
+   "field": "Where to? ",
+   "value": "London"
+  },
+  {
+   "model": "local:Qwen/Qwen3-1.7B (nf4)",
+   "latency_ms": 720,
+   "usage": {
+    "prompt_tokens": 378,
+    "completion_tokens": 9
+   },
+   "field": "Departure",
+   "value": "Zurich"
+  }
+ ]
+}

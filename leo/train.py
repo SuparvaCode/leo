@@ -238,6 +238,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
                     help="auto: bf16 on Ampere+, fp16 with loss scaling on older GPUs")
     ap.add_argument("--time_budget_min", type=float, default=0.0,
                     help="save resume state and stop cleanly after this many minutes (0 = no limit)")
+    ap.add_argument("--grad_ckpt", type=int, default=1,
+                    help="gradient checkpointing (1) or not (0): 0 is faster but needs far more GPU memory")
     ap.add_argument("--init", default=None,
                     help="warm start: exported Leo model dir (adapter/ + leo_head.safetensors) whose weights start "
                          "this run; base, LoRA shape and head size must match. Optimizer and schedule start fresh.")
@@ -333,7 +335,7 @@ def main(argv: list[str] | None = None) -> None:
 
     model = LeoModel.from_pretrained_base(
         args.base, tokenize, revision=revision, dtype=dtype, lora_r=args.lora_r, lora_alpha=args.lora_alpha,
-        head_dim=args.head_dim, gradient_checkpointing=True,
+        head_dim=args.head_dim, gradient_checkpointing=bool(args.grad_ckpt),
     ).to(device)
     bb, head = model.trainable_parameter_groups()
     for p in bb + head:  # master copies of trained weights stay fp32; the frozen base runs in `dtype`

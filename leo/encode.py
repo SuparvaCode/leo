@@ -20,7 +20,7 @@ from typing import Any, Callable, Sequence
 
 import torch
 
-from leo.render import option_text, render
+from leo.render import canonical_condition, option_text, render
 from leo.schema import QuestionSpec
 
 MARKERS = ("state", "q_choice", "q_score", "q_noul", "opt", "opt_end", "decide")
@@ -31,6 +31,17 @@ TYPE_ID = {"choice": 0, "score": 1, "noul": 2}
 
 class QuestionTooLong(ValueError):
     """The question cannot fit the token budget even after trimming option descriptions."""
+
+
+class StateTooLong(ValueError):
+    """The state exceeds ``max_state_tokens`` and the encoder's policy is to reject it."""
+
+    def __init__(self, n_tokens: int, limit: int) -> None:
+        super().__init__(f"state has {n_tokens} tokens; this server accepts at most {limit}")
+        self.n_tokens, self.limit = n_tokens, limit
+
+
+LONG_STATE_POLICIES = ("head", "head_tail", "reject")
 
 
 @dataclass
@@ -71,19 +82,52 @@ class Encoder:
         max_instruction_tokens: int = 512,
         max_question_tokens: int = 2048,
         min_option_tokens: int = 4,
+        canonicalize: str | None = None,
+        long_state: str = "head",
+        n_pause: int = 0,
     ) -> None:
+        """``canonicalize``: template name from ``leo.render.CONDITION_TEMPLATES`` used to rewrite bare yes/no
+        conditions ("angry") into questions, or None to leave them as sent.
+
+        ``long_state``: what to do with a state longer than ``max_state_tokens``: keep the head (the historical
+        behaviour), keep head and tail (2/3 + 1/3), or raise ``StateTooLong``.
+
+        ``n_pause``: learned pause markers inserted after each question's options, before ``<decide>``."""
+        if long_state not in LONG_STATE_POLICIES:
+            raise ValueError(f"long_state must be one of {LONG_STATE_POLICIES}")
         self._tok = lru_cache(maxsize=200_000)(lambda s: tuple(tokenize(s)))
         self.max_state_tokens = max_state_tokens
         self.max_instruction_tokens = max_instruction_tokens
         self.max_question_tokens = max_question_tokens
         self.min_option_tokens = min_option_tokens
+        self.canonicalize = canonicalize
+        self.long_state = long_state
+        self.n_pause = n_pause
 
     def tok(self, text: str) -> list[int]:
         return list(self._tok(text)) if text else []
 
+    def state_tokens(self, state: Any) -> int:
+        return len(self.tok(render(state)))
+
     def encode_state(self, state: Any) -> EncodedState:
-        ids = self.tok(render(state))[: self.max_state_tokens]
+        ids = self.tok(render(state))
+        cap = self.max_state_tokens
+        if len(ids) > cap:
+            if self.long_state == "reject":
+                raise StateTooLong(len(ids), cap)
+            if self.long_state == "head_tail":
+                head = (2 * cap) // 3
+                ids = ids[:head] + ids[len(ids) - (cap - head):]
+            else:
+                ids = ids[:cap]
         return EncodedState([0] + ids, [MID["state"]] + [-1] * len(ids))
+
+    def instruction_text(self, spec: QuestionSpec) -> str:
+        instr = spec.instructions
+        if self.canonicalize and spec.type == "noul":
+            instr = canonical_condition(instr, self.canonicalize)
+        return render(instr).strip()
 
     def encode_question(
         self,
@@ -93,7 +137,7 @@ class Encoder:
     ) -> EncodedQuestion:
         k = spec.n_options
         perm = list(range(k)) if perm is None else list(perm)
-        instr = self.tok(render(spec.instructions).strip())[: self.max_instruction_tokens]
+        instr = self.tok(self.instruction_text(spec))[: self.max_instruction_tokens]
         opts = [self.tok(option_text(spec.type, spec.keys[i], spec.descriptions[i])) for i in perm]
 
         # Fixed overhead: q marker + decide + (opt, /opt) per option. Trim long descriptions evenly.

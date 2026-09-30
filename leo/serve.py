@@ -21,7 +21,7 @@ from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import JSONResponse
 from pydantic import ValidationError
 
-from leo.encode import QuestionTooLong
+from leo.encode import QuestionTooLong, StateTooLong
 from leo.infer import Leo
 from leo.schema import SystemOneRequest
 
@@ -87,6 +87,8 @@ def create_app(leo: Leo, api_key: str | None = None, max_body_bytes: int = MAX_B
             result = await run_in_threadpool(run)
         except QuestionTooLong as e:
             return _error(422, "invalid_request", str(e))
+        except StateTooLong as e:
+            return _error(422, "state_too_long", str(e), {"state_tokens": e.n_tokens, "max_state_tokens": e.limit})
         result["model"] = leo.name
         return result
 
@@ -116,14 +118,24 @@ def main() -> None:
                     help="4-decimal probabilities plus a latency_ms field, instead of TypeSafe's exact response shape")
     ap.add_argument("--order-views", type=int, default=int(os.environ.get("LEO_ORDER_VIEWS", "1")),
                     help="average each choice over this many option orders (less order-sensitive, slower)")
+    ap.add_argument("--max-state-tokens", type=int, default=int(os.environ.get("LEO_MAX_STATE_TOKENS", "8192")),
+                    help="longest state accepted (tokens)")
+    ap.add_argument("--long-state", default=os.environ.get("LEO_LONG_STATE", "reject"), choices=["reject", "head_tail", "head"],
+                    help="state over the limit: 422 (default), or keep head+tail / head and set usage.truncated")
+    ap.add_argument("--canonicalize", default=os.environ.get("LEO_CANONICALIZE", "config"),
+                    help="rewrite bare yes/no conditions ('angry') into questions: a template name, 'off', or "
+                         "'config' to use the checkpoint's setting")
     args = ap.parse_args()
     key = os.environ.get("LEO_API_KEY")
     if not key and not _is_loopback(args.host):
         raise SystemExit("Refusing to bind a non-loopback address without LEO_API_KEY set.")
     if not key:
         print("LEO_API_KEY is not set: the server accepts unauthenticated requests on loopback only.")
+    overrides: dict[str, Any] = {"long_state": args.long_state}
+    if args.canonicalize != "config":
+        overrides["canonicalize"] = None if args.canonicalize == "off" else args.canonicalize
     leo = Leo.load(args.model, device=args.device, dtype=args.dtype, jev_exact=not args.precise,
-                   order_views=args.order_views)
+                   order_views=args.order_views, max_state_tokens=args.max_state_tokens, encoder_overrides=overrides)
     uvicorn.run(create_app(leo, api_key=key), host=args.host, port=args.port, log_level="info")
 
 

@@ -1,0 +1,59 @@
+| system | Belebele | MMMLU | INCLUDE | all | ECE (all) |
+|---|---|---|---|---|---|
+| leo-4b-v5 | 0.675 | 0.476 | 0.563 | 0.574 | 0.113 |
+
+belebele accuracy by language:
+
+| language | leo-4b-v5 |
+|---|---|
+| Arabic | 0.70 |
+| Bengali | 0.64 |
+| Chinese | 0.82 |
+| English | 0.82 |
+| French | 0.78 |
+| German | 0.74 |
+| Hindi | 0.62 |
+| Indonesian | 0.68 |
+| Italian | 0.74 |
+| Japanese | 0.66 |
+| Korean | 0.74 |
+| Portuguese | 0.76 |
+| Spanish | 0.76 |
+| Swahili | 0.44 |
+| Yoruba | 0.22 |
+
+mmmlu accuracy by language:
+
+| language | leo-4b-v5 |
+|---|---|
+| Arabic | 0.48 |
+| Bengali | 0.38 |
+| Chinese | 0.58 |
+| French | 0.48 |
+| German | 0.60 |
+| Hindi | 0.46 |
+| Indonesian | 0.46 |
+| Italian | 0.60 |
+| Japanese | 0.48 |
+| Korean | 0.42 |
+| Portuguese | 0.48 |
+| Spanish | 0.56 |
+| Swahili | 0.36 |
+| Yoruba | 0.32 |
+
+include accuracy by language:
+
+| language | leo-4b-v5 |
+|---|---|
+| Arabic | 0.47 |
+| Bengali | 0.28 |
+| Chinese | 0.76 |
+| French | 0.60 |
+| German | 0.52 |
+| Hindi | 0.46 |
+| Indonesian | 0.64 |
+| Italian | 0.68 |
+| Japanese | 0.68 |
+| Korean | 0.50 |
+| Portuguese | 0.48 |
+| Spanish | 0.68 |

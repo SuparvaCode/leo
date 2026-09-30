@@ -1,0 +1,14 @@
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:  58%|█████▊    | 232/398 [00:00<00:00, 2312.84it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 3552.28it/s]
+all              {'n': 211, 'accuracy': 0.9668, 'log_loss': 0.09, 'ece': 0.0372}
+form:caps        {'n': 3, 'accuracy': 1.0, 'log_loss': 0.0054}
+form:negated     {'n': 4, 'accuracy': 0.75, 'log_loss': 0.2371}
+form:phrase      {'n': 86, 'accuracy': 0.9651, 'log_loss': 0.0945}
+form:question    {'n': 4, 'accuracy': 1.0, 'log_loss': 0.0016}
+form:statement   {'n': 1, 'accuracy': 1.0, 'log_loss': 0.0017}
+form:word        {'n': 113, 'accuracy': 0.9735, 'log_loss': 0.0876}
+gold:False       {'n': 109, 'accuracy': 0.9541, 'log_loss': 0.0838}
+gold:True        {'n': 102, 'accuracy': 0.9804, 'log_loss': 0.0967}
+lang:en          {'n': 172, 'accuracy': 0.9593, 'log_loss': 0.103}
+lang:other       {'n': 39, 'accuracy': 1.0, 'log_loss': 0.0331}
+state:sentence   {'n': 161, 'accuracy': 0.9627, 'log_loss': 0.0975}
+state:tiny       {'n': 50, 'accuracy': 0.98, 'log_loss': 0.0661}

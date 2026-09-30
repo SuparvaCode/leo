@@ -1,0 +1,182 @@
+{
+ "checkpoint": "/vol/runs/leo-4b-v5",
+ "evidence_heldout_themes": {
+  "all": {
+   "n": 400,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0002,
+   "done_recall": 1.0
+  },
+  "blank": {
+   "n": 23,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "detail": {
+   "n": 27,
+   "step_acc": 1.0,
+   "false_done_rate": null,
+   "mean_p_done_when_wrong": null,
+   "done_recall": 1.0
+  },
+  "form": {
+   "n": 48,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": 1.0
+  },
+  "loading": {
+   "n": 20,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "overlay": {
+   "n": 75,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "popover": {
+   "n": 56,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "stale": {
+   "n": 16,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.004,
+   "done_recall": null
+  },
+  "unsubmitted": {
+   "n": 135,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  }
+ },
+ "catalog_v3_sim": {
+  "BLOCKED": {
+   "n": 1,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "CLICK": {
+   "n": 90,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "DONE": {
+   "n": 37,
+   "step_acc": 1.0,
+   "false_done_rate": null,
+   "mean_p_done_when_wrong": null,
+   "done_recall": 1.0
+  },
+  "SCROLL_DOWN": {
+   "n": 11,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0002,
+   "done_recall": null
+  },
+  "SELECT": {
+   "n": 23,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0002,
+   "done_recall": null
+  },
+  "TYPE_TEXT": {
+   "n": 31,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "WAIT": {
+   "n": 7,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "all": {
+   "n": 200,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0001,
+   "done_recall": 1.0
+  }
+ },
+ "flights_states": [
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-0.json",
+   "decision": 12,
+   "page_text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rent",
+   "n_elements": 26,
+   "v3_p_done": 0.3775,
+   "p_done": 0.0048,
+   "choice": "CLICK"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-0.json",
+   "decision": 13,
+   "page_text": "Economy\nPremium economy\nBusiness\nFirst",
+   "n_elements": 4,
+   "v3_p_done": 0.9845,
+   "p_done": 0.0004,
+   "choice": "CLICK"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-1.json",
+   "decision": 12,
+   "page_text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rent",
+   "n_elements": 26,
+   "v3_p_done": 0.3775,
+   "p_done": 0.0048,
+   "choice": "CLICK"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-1.json",
+   "decision": 13,
+   "page_text": "Economy\nPremium economy\nBusiness\nFirst",
+   "n_elements": 4,
+   "v3_p_done": 0.9845,
+   "p_done": 0.0004,
+   "choice": "CLICK"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-2.json",
+   "decision": 12,
+   "page_text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rent",
+   "n_elements": 26,
+   "v3_p_done": 0.3775,
+   "p_done": 0.0048,
+   "choice": "CLICK"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-2.json",
+   "decision": 13,
+   "page_text": "",
+   "n_elements": 0,
+   "v3_p_done": 0.9986,
+   "p_done": 0.0007,
+   "choice": "WAIT"
+  }
+ ]
+}

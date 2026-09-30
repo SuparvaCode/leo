@@ -56,3 +56,7 @@ external/
 Thumbs.db
 .vscode/
 .idea/
+
+# trial site
+node_modules/
+site/data/

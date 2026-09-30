@@ -1,0 +1,182 @@
+{
+ "checkpoint": "/vol/ckpt/leo-4b-soup3",
+ "evidence_heldout_themes": {
+  "all": {
+   "n": 400,
+   "step_acc": 0.995,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": 1.0
+  },
+  "blank": {
+   "n": 15,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "detail": {
+   "n": 33,
+   "step_acc": 1.0,
+   "false_done_rate": null,
+   "mean_p_done_when_wrong": null,
+   "done_recall": 1.0
+  },
+  "form": {
+   "n": 51,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": 1.0
+  },
+  "loading": {
+   "n": 21,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "overlay": {
+   "n": 74,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "popover": {
+   "n": 62,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "stale": {
+   "n": 13,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "unsubmitted": {
+   "n": 131,
+   "step_acc": 0.9847,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  }
+ },
+ "catalog_v3_sim": {
+  "BLOCKED": {
+   "n": 5,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0002,
+   "done_recall": null
+  },
+  "CLICK": {
+   "n": 93,
+   "step_acc": 0.9892,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "DONE": {
+   "n": 29,
+   "step_acc": 1.0,
+   "false_done_rate": null,
+   "mean_p_done_when_wrong": null,
+   "done_recall": 1.0
+  },
+  "SCROLL_DOWN": {
+   "n": 20,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0002,
+   "done_recall": null
+  },
+  "SELECT": {
+   "n": 20,
+   "step_acc": 0.95,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0001,
+   "done_recall": null
+  },
+  "TYPE_TEXT": {
+   "n": 27,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "WAIT": {
+   "n": 6,
+   "step_acc": 1.0,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0,
+   "done_recall": null
+  },
+  "all": {
+   "n": 200,
+   "step_acc": 0.99,
+   "false_done_rate": 0.0,
+   "mean_p_done_when_wrong": 0.0001,
+   "done_recall": 1.0
+  }
+ },
+ "flights_states": [
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-0.json",
+   "decision": 12,
+   "page_text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rent",
+   "n_elements": 26,
+   "v3_p_done": 0.3775,
+   "p_done": 0.0048,
+   "choice": "CLICK"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-0.json",
+   "decision": 13,
+   "page_text": "Economy\nPremium economy\nBusiness\nFirst",
+   "n_elements": 4,
+   "v3_p_done": 0.9845,
+   "p_done": 0.0004,
+   "choice": "CLICK"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-1.json",
+   "decision": 12,
+   "page_text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rent",
+   "n_elements": 26,
+   "v3_p_done": 0.3775,
+   "p_done": 0.0048,
+   "choice": "CLICK"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-1.json",
+   "decision": 13,
+   "page_text": "Economy\nPremium economy\nBusiness\nFirst",
+   "n_elements": 4,
+   "v3_p_done": 0.9845,
+   "p_done": 0.0004,
+   "choice": "CLICK"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-2.json",
+   "decision": 12,
+   "page_text": "Skip to main content\nAccessibility feedback\nExplore\nFlights\nHotels\nVacation rent",
+   "n_elements": 26,
+   "v3_p_done": 0.3775,
+   "p_done": 0.0048,
+   "choice": "CLICK"
+  },
+  {
+   "trace": "google-flights-leo_leo-1.7b-v3-2.json",
+   "decision": 13,
+   "page_text": "",
+   "n_elements": 0,
+   "v3_p_done": 0.9986,
+   "p_done": 0.0012,
+   "choice": "WAIT"
+  }
+ ]
+}

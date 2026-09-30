@@ -41,6 +41,20 @@ PLURAL = {"person": "people"}
 COMMIT = ["Done", "Done", "Done", "Apply", "OK", "Confirm"]
 
 
+def typed_form(value: str, rng: random.Random) -> str:
+    """How a text helper may write the goal's value: often in another case ("COPENHAGEN" for "Copenhagen").
+    leo-4b-v5 retyped a correct but upper-case value until jev-ultrafast stopped it, because in training the
+    field always held the goal's exact spelling. A value that matches ignoring case is already filled."""
+    r = rng.random()
+    if r < 0.45:
+        return value
+    if r < 0.7:
+        return value.upper()
+    if r < 0.88:
+        return value.lower()
+    return value.title()
+
+
 def _units(unit: str, n: int) -> str:
     return f"{n} {unit if n == 1 else PLURAL.get(unit, unit + 's')}"
 
@@ -58,6 +72,7 @@ class Site:
     facet_style: int
     close_button: bool
     url: str
+    featured: int | None = None  # always listed before a search (direct goals)
 
 
 @dataclass
@@ -68,6 +83,7 @@ class Goal:
     count: int | None
     target: int | None          # item to open; None = stop at the results
     missing: bool = False       # a requested value is not offered
+    direct: bool = False        # v5: open a listed item, no search needed (DONE as soon as it is open)
 
 
 @dataclass
@@ -129,6 +145,11 @@ def make_goal(site: Site, rng: random.Random) -> Goal:
                 f"Show {desc + ' ' if desc else ''}{th.plural}{where}{who}. Stop when matching results are visible; "
                 f"do not open or book anything.",
                 f"Search for {desc + ' ' if desc else ''}{th.plural}{where}{who} and stop once the matching results are shown."][style]
+    if open_it and rng.random() < 0.4:  # v4 learned "item page without a search = go back"; these goals say otherwise
+        text = rng.choice([f"Open {it['name']}.", f"Open the page for {it['name']}.", f"Find {it['name']} and open it.",
+                           f"Go to {it['name']}.", f"Show me the {th.noun} {it['name']}."])
+        site.featured = t
+        return Goal(text, None, {}, None, t, direct=True)
     return Goal(text.replace("  ", " "), query, selects, count, t if open_it else None)
 
 
@@ -236,6 +257,8 @@ def observe(site: Site, s: State, rng: random.Random) -> tuple[dict[str, Any], s
             if rng.random() < 0.5:
                 add(f"Search to see matching {th.plural}.")
             shown = rng.sample(range(len(site.items)), min(3, len(site.items)))
+            if site.featured is not None and site.featured not in shown:
+                shown[rng.randrange(len(shown))] = site.featured
         else:
             q, sel, cnt = s.applied
             shown = _matches(site, s)
@@ -276,9 +299,11 @@ def oracle(site: Site, g: Goal, s: State, page: dict[str, Any]) -> str:
             return by(lambda a: a.get("_close")) or by(lambda a: a.get("_pick") == want)
         return by(lambda a: a.get("_pick") == want) or "BLOCKED"  # the requested value is not offered
     if s.detail is not None:
-        if s.detail == g.target and s.applied == _wanted(site, g):
+        if s.detail == g.target and (g.direct or s.applied == _wanted(site, g)):
             return "DONE"
         return by(lambda a: a.get("_back"))
+    if g.direct:  # the item is listed on the page: open it, no search
+        return by(lambda a: a.get("_item") == g.target) or "BLOCKED"
     if g.query:
         if s.suggestions and s.field_value.lower() == g.query.lower():
             return by(lambda a: a.get("_suggest", "").lower() == g.query.lower())
@@ -315,7 +340,7 @@ def apply(site: Site, s: State, page: dict[str, Any], aid: str, rng: random.Rand
             s.loading = rng.choice([0, 0, 1])
 
     if a["kind"] == "fill":
-        s.field_value = s.goal_query  # type: ignore[attr-defined]
+        s.field_value = typed_form(s.goal_query, rng)  # type: ignore[attr-defined]
         rec["text"] = s.field_value
         s.chosen = not site.autocomplete
         s.suggestions = site.autocomplete
@@ -354,7 +379,7 @@ def apply(site: Site, s: State, page: dict[str, Any], aid: str, rng: random.Rand
 
 def _perturb(site: Site, g: Goal, s: State, rng: random.Random) -> None:
     r = rng.random()
-    if r < 0.2:  # an earlier search for something else is still on screen
+    if r < 0.2 and not g.direct:  # an earlier search for something else is still on screen
         other = rng.choice([it["search"] for it in site.items])
         s.field_value, s.applied = other, (other.lower(), (), 1)
         s.history.append({"action": site.theme.search_label, "kind": "fill", "text": other, "page_changed": True})
@@ -365,6 +390,13 @@ def _perturb(site: Site, g: Goal, s: State, rng: random.Random) -> None:
                           "kind": "click", "text": None, "page_changed": True})
     elif r < 0.35:
         s.blank = True
+    elif r < 0.5 and g.query and not site.autocomplete:
+        # v5.1: the value is already typed (maybe in another case), possibly more than once with no page change.
+        # Typing it again cannot help; the next move is the rest of the form, then submit.
+        s.field_value = typed_form(g.query, rng)
+        s.history.append({"action": site.theme.search_label, "kind": "fill", "text": s.field_value, "page_changed": True})
+        for _ in range(rng.choice([0, 1, 1, 2])):
+            s.history.append({"action": site.theme.search_label, "kind": "fill", "text": s.field_value, "page_changed": False})
 
 
 def episode(rng: random.Random, themes: tuple[Theme, ...] = TRAIN_THEMES, max_steps: int = 24):

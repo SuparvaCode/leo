@@ -1,0 +1,14 @@
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   3%|▎         | 12/398 [00:00<00:03, 117.57it/s]Loading weights:   6%|▌         | 24/398 [00:00<00:04, 89.14it/s] Loading weights:  10%|█         | 40/398 [00:00<00:03, 112.57it/s]Loading weights:  13%|█▎        | 52/398 [00:00<00:03, 114.99it/s]Loading weights:  16%|█▌        | 64/398 [00:00<00:02, 113.43it/s]Loading weights:  19%|█▉        | 76/398 [00:00<00:03, 101.90it/s]Loading weights:  22%|██▏       | 87/398 [00:00<00:03, 97.76it/s] Loading weights:  25%|██▌       | 100/398 [00:00<00:02, 100.14it/s]Loading weights:  29%|██▊       | 114/398 [00:01<00:02, 104.08it/s]Loading weights:  32%|███▏      | 126/398 [00:01<00:02, 106.60it/s]Loading weights:  34%|███▍      | 137/398 [00:01<00:02, 104.03it/s]Loading weights:  38%|███▊      | 151/398 [00:01<00:02, 112.23it/s]Loading weights:  41%|████      | 163/398 [00:01<00:02, 113.87it/s]Loading weights:  44%|████▍     | 175/398 [00:01<00:01, 115.16it/s]Loading weights:  47%|████▋     | 187/398 [00:01<00:01, 111.85it/s]Loading weights:  51%|█████     | 202/398 [00:01<00:01, 121.18it/s]Loading weights:  54%|█████▍    | 215/398 [00:01<00:01, 117.39it/s]Loading weights:  57%|█████▋    | 228/398 [00:02<00:01, 117.62it/s]Loading weights:  61%|██████    | 243/398 [00:02<00:01, 114.59it/s]Loading weights: 100%|██████████| 398/398 [00:02<00:00, 173.89it/s]
+all              {'n': 211, 'accuracy': 0.9431, 'log_loss': 0.1109, 'ece': 0.0347}
+form:caps        {'n': 3, 'accuracy': 1.0, 'log_loss': 0.0041}
+form:negated     {'n': 4, 'accuracy': 0.75, 'log_loss': 0.2934}
+form:phrase      {'n': 86, 'accuracy': 0.9535, 'log_loss': 0.0961}
+form:question    {'n': 4, 'accuracy': 1.0, 'log_loss': 0.0014}
+form:statement   {'n': 1, 'accuracy': 1.0, 'log_loss': 0.0013}
+form:word        {'n': 113, 'accuracy': 0.9381, 'log_loss': 0.1233}
+gold:False       {'n': 109, 'accuracy': 0.9633, 'log_loss': 0.0784}
+gold:True        {'n': 102, 'accuracy': 0.9216, 'log_loss': 0.1456}
+lang:en          {'n': 172, 'accuracy': 0.9302, 'log_loss': 0.1329}
+lang:other       {'n': 39, 'accuracy': 1.0, 'log_loss': 0.0135}
+state:sentence   {'n': 161, 'accuracy': 0.9379, 'log_loss': 0.1101}
+state:tiny       {'n': 50, 'accuracy': 0.96, 'log_loss': 0.1135}

@@ -1,0 +1,4538 @@
+{
+ "backend": "leo",
+ "model": "/vol/runs/leo-4b-v5.1",
+ "jevbench_commit": "1bcc55eb6c8cffde2306b3db03ede39b61c6152a",
+ "seconds": 66.3,
+ "accuracy": {
+  "easy": 1.0,
+  "standard": 0.9305555555555556,
+  "hard": 0.4144144144144144,
+  "all": 0.696969696969697
+ },
+ "ece": 0.14050216450216446,
+ "max_state_tokens": 4096,
+ "reference": "Jev 1.13 (published by JevBench)",
+ "paired_with_reference": {
+  "ref=True,this=True": 152,
+  "ref=False,this=True": 9,
+  "ref=True,this=False": 48,
+  "ref=False,this=False": 22
+ },
+ "items": [
+  {
+   "id": "easy-intent-00",
+   "tier": "easy",
+   "family": "intent",
+   "type": "choice",
+   "expected": "track_order",
+   "predicted": "track_order",
+   "p_predicted": 1.0,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "track_order",
+    "probabilities": {
+     "billing_question": 0.0,
+     "cancel_order": 0.0,
+     "change_address": 0.0,
+     "report_damage": 0.0,
+     "track_order": 1.0
+    },
+    "confidence": 0.9999
+   }
+  },
+  {
+   "id": "easy-intent-01",
+   "tier": "easy",
+   "family": "intent",
+   "type": "choice",
+   "expected": "cancel_order",
+   "predicted": "cancel_order",
+   "p_predicted": 1.0,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "cancel_order",
+    "probabilities": {
+     "billing_question": 0.0,
+     "cancel_order": 1.0,
+     "change_address": 0.0,
+     "report_damage": 0.0,
+     "track_order": 0.0
+    },
+    "confidence": 1.0
+   }
+  },
+  {
+   "id": "easy-intent-02",
+   "tier": "easy",
+   "family": "intent",
+   "type": "choice",
+   "expected": "change_address",
+   "predicted": "change_address",
+   "p_predicted": 0.9999,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "change_address",
+    "probabilities": {
+     "billing_question": 0.0,
+     "cancel_order": 0.0,
+     "change_address": 0.9999,
+     "report_damage": 0.0,
+     "track_order": 0.0001
+    },
+    "confidence": 0.9999
+   }
+  },
+  {
+   "id": "easy-intent-03",
+   "tier": "easy",
+   "family": "intent",
+   "type": "choice",
+   "expected": "report_damage",
+   "predicted": "report_damage",
+   "p_predicted": 0.9994,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "report_damage",
+    "probabilities": {
+     "billing_question": 0.0001,
+     "cancel_order": 0.0004,
+     "change_address": 0.0,
+     "report_damage": 0.9994,
+     "track_order": 0.0001
+    },
+    "confidence": 0.9993
+   }
+  },
+  {
+   "id": "easy-intent-04",
+   "tier": "easy",
+   "family": "intent",
+   "type": "choice",
+   "expected": "billing_question",
+   "predicted": "billing_question",
+   "p_predicted": 0.9746,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "billing_question",
+    "probabilities": {
+     "billing_question": 0.9746,
+     "cancel_order": 0.0155,
+     "change_address": 0.0005,
+     "report_damage": 0.0016,
+     "track_order": 0.0078
+    },
+    "confidence": 0.9682
+   }
+  },
+  {
+   "id": "easy-intent-05",
+   "tier": "easy",
+   "family": "intent",
+   "type": "choice",
+   "expected": "track_order",
+   "predicted": "track_order",
+   "p_predicted": 0.9998,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "track_order",
+    "probabilities": {
+     "billing_question": 0.0001,
+     "cancel_order": 0.0,
+     "change_address": 0.0,
+     "report_damage": 0.0001,
+     "track_order": 0.9998
+    },
+    "confidence": 0.9998
+   }
+  },
+  {
+   "id": "easy-intent-06",
+   "tier": "easy",
+   "family": "intent",
+   "type": "choice",
+   "expected": "set_alarm",
+   "predicted": "set_alarm",
+   "p_predicted": 1.0,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "set_alarm",
+    "probabilities": {
+     "play_music": 0.0,
+     "send_message": 0.0,
+     "set_alarm": 1.0,
+     "turn_off_lights": 0.0,
+     "weather": 0.0
+    },
+    "confidence": 1.0
+   }
+  },
+  {
+   "id": "easy-intent-07",
+   "tier": "easy",
+   "family": "intent",
+   "type": "choice",
+   "expected": "play_music",
+   "predicted": "play_music",
+   "p_predicted": 0.9998,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "play_music",
+    "probabilities": {
+     "play_music": 0.9998,
+     "send_message": 0.0001,
+     "set_alarm": 0.0,
+     "turn_off_lights": 0.0,
+     "weather": 0.0001
+    },
+    "confidence": 0.9998
+   }
+  },
+  {
+   "id": "easy-intent-08",
+   "tier": "easy",
+   "family": "intent",
+   "type": "choice",
+   "expected": "weather",
+   "predicted": "weather",
+   "p_predicted": 1.0,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "weather",
+    "probabilities": {
+     "play_music": 0.0,
+     "send_message": 0.0,
+     "set_alarm": 0.0,
+     "turn_off_lights": 0.0,
+     "weather": 1.0
+    },
+    "confidence": 1.0
+   }
+  },
+  {
+   "id": "easy-intent-09",
+   "tier": "easy",
+   "family": "intent",
+   "type": "choice",
+   "expected": "send_message",
+   "predicted": "send_message",
+   "p_predicted": 0.9974,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "send_message",
+    "probabilities": {
+     "play_music": 0.0002,
+     "send_message": 0.9974,
+     "set_alarm": 0.0023,
+     "turn_off_lights": 0.0,
+     "weather": 0.0001
+    },
+    "confidence": 0.9968
+   }
+  },
+  {
+   "id": "easy-intent-10",
+   "tier": "easy",
+   "family": "intent",
+   "type": "choice",
+   "expected": "turn_off_lights",
+   "predicted": "turn_off_lights",
+   "p_predicted": 0.9999,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "turn_off_lights",
+    "probabilities": {
+     "play_music": 0.0,
+     "send_message": 0.0,
+     "set_alarm": 0.0,
+     "turn_off_lights": 0.9999,
+     "weather": 0.0001
+    },
+    "confidence": 0.9999
+   }
+  },
+  {
+   "id": "easy-intent-11",
+   "tier": "easy",
+   "family": "intent",
+   "type": "choice",
+   "expected": "set_alarm",
+   "predicted": "set_alarm",
+   "p_predicted": 1.0,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "set_alarm",
+    "probabilities": {
+     "play_music": 0.0,
+     "send_message": 0.0,
+     "set_alarm": 1.0,
+     "turn_off_lights": 0.0,
+     "weather": 0.0
+    },
+    "confidence": 1.0
+   }
+  },
+  {
+   "id": "easy-fact-00",
+   "tier": "easy",
+   "family": "fact",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9994,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9994
+   }
+  },
+  {
+   "id": "easy-fact-01",
+   "tier": "easy",
+   "family": "fact",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.997,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.003
+   }
+  },
+  {
+   "id": "easy-fact-02",
+   "tier": "easy",
+   "family": "fact",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9995,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9995
+   }
+  },
+  {
+   "id": "easy-fact-03",
+   "tier": "easy",
+   "family": "fact",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.9991,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0009
+   }
+  },
+  {
+   "id": "easy-fact-04",
+   "tier": "easy",
+   "family": "fact",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9982,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9982
+   }
+  },
+  {
+   "id": "easy-fact-05",
+   "tier": "easy",
+   "family": "fact",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.9991,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0009
+   }
+  },
+  {
+   "id": "easy-fact-06",
+   "tier": "easy",
+   "family": "fact",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9987,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9987
+   }
+  },
+  {
+   "id": "easy-fact-07",
+   "tier": "easy",
+   "family": "fact",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.9965,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0035
+   }
+  },
+  {
+   "id": "easy-fact-08",
+   "tier": "easy",
+   "family": "fact",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9978,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9978
+   }
+  },
+  {
+   "id": "easy-fact-09",
+   "tier": "easy",
+   "family": "fact",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.9993,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0007
+   }
+  },
+  {
+   "id": "easy-fact-10",
+   "tier": "easy",
+   "family": "fact",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9992,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9992
+   }
+  },
+  {
+   "id": "easy-fact-11",
+   "tier": "easy",
+   "family": "fact",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.9913,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0087
+   }
+  },
+  {
+   "id": "easy-extraction-00",
+   "tier": "easy",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "paypal",
+   "predicted": "paypal",
+   "p_predicted": 0.9998,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "paypal",
+    "probabilities": {
+     "bank_transfer": 0.0001,
+     "cash": 0.0,
+     "credit_card": 0.0001,
+     "paypal": 0.9998
+    },
+    "confidence": 0.9997
+   }
+  },
+  {
+   "id": "easy-extraction-01",
+   "tier": "easy",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "cash",
+   "predicted": "cash",
+   "p_predicted": 0.9991,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "cash",
+    "probabilities": {
+     "bank_transfer": 0.0002,
+     "cash": 0.9991,
+     "credit_card": 0.0005,
+     "paypal": 0.0002
+    },
+    "confidence": 0.9988
+   }
+  },
+  {
+   "id": "easy-extraction-02",
+   "tier": "easy",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "bank_transfer",
+   "predicted": "bank_transfer",
+   "p_predicted": 0.9996,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "bank_transfer",
+    "probabilities": {
+     "bank_transfer": 0.9996,
+     "cash": 0.0002,
+     "credit_card": 0.0001,
+     "paypal": 0.0001
+    },
+    "confidence": 0.9994
+   }
+  },
+  {
+   "id": "easy-extraction-03",
+   "tier": "easy",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "high",
+   "predicted": "high",
+   "p_predicted": 0.9792,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "high",
+    "probabilities": {
+     "high": 0.9792,
+     "low": 0.0005,
+     "medium": 0.0015,
+     "urgent": 0.0188
+    },
+    "confidence": 0.9723
+   }
+  },
+  {
+   "id": "easy-extraction-04",
+   "tier": "easy",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "low",
+   "predicted": "low",
+   "p_predicted": 0.9995,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "low",
+    "probabilities": {
+     "high": 0.0,
+     "low": 0.9995,
+     "medium": 0.0004,
+     "urgent": 0.0001
+    },
+    "confidence": 0.9993
+   }
+  },
+  {
+   "id": "easy-extraction-05",
+   "tier": "easy",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "urgent",
+   "predicted": "urgent",
+   "p_predicted": 0.9961,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "urgent",
+    "probabilities": {
+     "high": 0.0038,
+     "low": 0.0,
+     "medium": 0.0001,
+     "urgent": 0.9961
+    },
+    "confidence": 0.9947
+   }
+  },
+  {
+   "id": "easy-extraction-06",
+   "tier": "easy",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "M",
+   "predicted": "M",
+   "p_predicted": 0.9667,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "M",
+    "probabilities": {
+     "L": 0.0239,
+     "M": 0.9667,
+     "S": 0.0067,
+     "XL": 0.0027
+    },
+    "confidence": 0.9556
+   }
+  },
+  {
+   "id": "easy-extraction-07",
+   "tier": "easy",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "XL",
+   "predicted": "XL",
+   "p_predicted": 0.9832,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "XL",
+    "probabilities": {
+     "L": 0.0154,
+     "M": 0.0008,
+     "S": 0.0006,
+     "XL": 0.9832
+    },
+    "confidence": 0.9776
+   }
+  },
+  {
+   "id": "easy-extraction-08",
+   "tier": "easy",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "thursday",
+   "predicted": "thursday",
+   "p_predicted": 0.9937,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "thursday",
+    "probabilities": {
+     "friday": 0.0026,
+     "monday": 0.0018,
+     "thursday": 0.9937,
+     "tuesday": 0.0004,
+     "wednesday": 0.0015
+    },
+    "confidence": 0.9921
+   }
+  },
+  {
+   "id": "easy-extraction-09",
+   "tier": "easy",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "monday",
+   "predicted": "monday",
+   "p_predicted": 0.9984,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "monday",
+    "probabilities": {
+     "friday": 0.0005,
+     "monday": 0.9984,
+     "thursday": 0.0006,
+     "tuesday": 0.0002,
+     "wednesday": 0.0003
+    },
+    "confidence": 0.998
+   }
+  },
+  {
+   "id": "easy-extraction-10",
+   "tier": "easy",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "friday",
+   "predicted": "friday",
+   "p_predicted": 0.9891,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "friday",
+    "probabilities": {
+     "friday": 0.9891,
+     "monday": 0.0008,
+     "thursday": 0.0026,
+     "tuesday": 0.0012,
+     "wednesday": 0.0063
+    },
+    "confidence": 0.9864
+   }
+  },
+  {
+   "id": "easy-extraction-11",
+   "tier": "easy",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "credit_card",
+   "predicted": "credit_card",
+   "p_predicted": 0.9977,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "credit_card",
+    "probabilities": {
+     "bank_transfer": 0.0005,
+     "cash": 0.0005,
+     "credit_card": 0.9977,
+     "paypal": 0.0013
+    },
+    "confidence": 0.997
+   }
+  },
+  {
+   "id": "easy-tool_selection-00",
+   "tier": "easy",
+   "family": "tool_selection",
+   "type": "choice",
+   "expected": "get_weather",
+   "predicted": "get_weather",
+   "p_predicted": 1.0,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "get_weather",
+    "probabilities": {
+     "convert_currency": 0.0,
+     "create_calendar_event": 0.0,
+     "get_weather": 1.0,
+     "send_email": 0.0,
+     "translate_text": 0.0
+    },
+    "confidence": 1.0
+   }
+  },
+  {
+   "id": "easy-tool_selection-01",
+   "tier": "easy",
+   "family": "tool_selection",
+   "type": "choice",
+   "expected": "send_email",
+   "predicted": "send_email",
+   "p_predicted": 0.9997,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "send_email",
+    "probabilities": {
+     "convert_currency": 0.0,
+     "create_calendar_event": 0.0002,
+     "get_weather": 0.0,
+     "send_email": 0.9997,
+     "translate_text": 0.0001
+    },
+    "confidence": 0.9996
+   }
+  },
+  {
+   "id": "easy-tool_selection-02",
+   "tier": "easy",
+   "family": "tool_selection",
+   "type": "choice",
+   "expected": "create_calendar_event",
+   "predicted": "create_calendar_event",
+   "p_predicted": 1.0,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "create_calendar_event",
+    "probabilities": {
+     "convert_currency": 0.0,
+     "create_calendar_event": 1.0,
+     "get_weather": 0.0,
+     "send_email": 0.0,
+     "translate_text": 0.0
+    },
+    "confidence": 0.9999
+   }
+  },
+  {
+   "id": "easy-tool_selection-03",
+   "tier": "easy",
+   "family": "tool_selection",
+   "type": "choice",
+   "expected": "convert_currency",
+   "predicted": "convert_currency",
+   "p_predicted": 1.0,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "convert_currency",
+    "probabilities": {
+     "convert_currency": 1.0,
+     "create_calendar_event": 0.0,
+     "get_weather": 0.0,
+     "send_email": 0.0,
+     "translate_text": 0.0
+    },
+    "confidence": 0.9999
+   }
+  },
+  {
+   "id": "easy-tool_selection-04",
+   "tier": "easy",
+   "family": "tool_selection",
+   "type": "choice",
+   "expected": "translate_text",
+   "predicted": "translate_text",
+   "p_predicted": 0.9997,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "translate_text",
+    "probabilities": {
+     "convert_currency": 0.0001,
+     "create_calendar_event": 0.0001,
+     "get_weather": 0.0001,
+     "send_email": 0.0,
+     "translate_text": 0.9997
+    },
+    "confidence": 0.9997
+   }
+  },
+  {
+   "id": "easy-tool_selection-05",
+   "tier": "easy",
+   "family": "tool_selection",
+   "type": "choice",
+   "expected": "create_calendar_event",
+   "predicted": "create_calendar_event",
+   "p_predicted": 0.9999,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "create_calendar_event",
+    "probabilities": {
+     "convert_currency": 0.0,
+     "create_calendar_event": 0.9999,
+     "get_weather": 0.0,
+     "send_email": 0.0001,
+     "translate_text": 0.0
+    },
+    "confidence": 0.9998
+   }
+  },
+  {
+   "id": "easy-tool_selection-06",
+   "tier": "easy",
+   "family": "tool_selection",
+   "type": "choice",
+   "expected": "search_flights",
+   "predicted": "search_flights",
+   "p_predicted": 0.9997,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "search_flights",
+    "probabilities": {
+     "book_restaurant": 0.0001,
+     "call_taxi": 0.0001,
+     "get_stock_price": 0.0,
+     "search_flights": 0.9997,
+     "set_reminder": 0.0001
+    },
+    "confidence": 0.9996
+   }
+  },
+  {
+   "id": "easy-tool_selection-07",
+   "tier": "easy",
+   "family": "tool_selection",
+   "type": "choice",
+   "expected": "book_restaurant",
+   "predicted": "book_restaurant",
+   "p_predicted": 0.9999,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "book_restaurant",
+    "probabilities": {
+     "book_restaurant": 0.9999,
+     "call_taxi": 0.0,
+     "get_stock_price": 0.0,
+     "search_flights": 0.0,
+     "set_reminder": 0.0001
+    },
+    "confidence": 0.9999
+   }
+  },
+  {
+   "id": "easy-tool_selection-08",
+   "tier": "easy",
+   "family": "tool_selection",
+   "type": "choice",
+   "expected": "set_reminder",
+   "predicted": "set_reminder",
+   "p_predicted": 1.0,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "set_reminder",
+    "probabilities": {
+     "book_restaurant": 0.0,
+     "call_taxi": 0.0,
+     "get_stock_price": 0.0,
+     "search_flights": 0.0,
+     "set_reminder": 1.0
+    },
+    "confidence": 1.0
+   }
+  },
+  {
+   "id": "easy-tool_selection-09",
+   "tier": "easy",
+   "family": "tool_selection",
+   "type": "choice",
+   "expected": "get_stock_price",
+   "predicted": "get_stock_price",
+   "p_predicted": 1.0,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "get_stock_price",
+    "probabilities": {
+     "book_restaurant": 0.0,
+     "call_taxi": 0.0,
+     "get_stock_price": 1.0,
+     "search_flights": 0.0,
+     "set_reminder": 0.0
+    },
+    "confidence": 1.0
+   }
+  },
+  {
+   "id": "easy-tool_selection-10",
+   "tier": "easy",
+   "family": "tool_selection",
+   "type": "choice",
+   "expected": "call_taxi",
+   "predicted": "call_taxi",
+   "p_predicted": 1.0,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "call_taxi",
+    "probabilities": {
+     "book_restaurant": 0.0,
+     "call_taxi": 1.0,
+     "get_stock_price": 0.0,
+     "search_flights": 0.0,
+     "set_reminder": 0.0
+    },
+    "confidence": 0.9999
+   }
+  },
+  {
+   "id": "easy-tool_selection-11",
+   "tier": "easy",
+   "family": "tool_selection",
+   "type": "choice",
+   "expected": "set_reminder",
+   "predicted": "set_reminder",
+   "p_predicted": 1.0,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "set_reminder",
+    "probabilities": {
+     "book_restaurant": 0.0,
+     "call_taxi": 0.0,
+     "get_stock_price": 0.0,
+     "search_flights": 0.0,
+     "set_reminder": 1.0
+    },
+    "confidence": 1.0
+   }
+  },
+  {
+   "id": "original-policy-01-0",
+   "tier": "standard",
+   "family": "policy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.9992,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0008
+   }
+  },
+  {
+   "id": "original-policy-01-1",
+   "tier": "standard",
+   "family": "policy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.9975,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0025
+   }
+  },
+  {
+   "id": "original-policy-02-0",
+   "tier": "standard",
+   "family": "policy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9856,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9856
+   }
+  },
+  {
+   "id": "original-policy-02-1",
+   "tier": "standard",
+   "family": "policy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.8687,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.8687
+   }
+  },
+  {
+   "id": "original-policy-03-0",
+   "tier": "standard",
+   "family": "policy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.6713,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.6713
+   }
+  },
+  {
+   "id": "original-policy-03-1",
+   "tier": "standard",
+   "family": "policy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9011,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9011
+   }
+  },
+  {
+   "id": "original-policy-04-0",
+   "tier": "standard",
+   "family": "policy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.7802,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.2198
+   }
+  },
+  {
+   "id": "original-policy-04-1",
+   "tier": "standard",
+   "family": "policy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.9995,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0005
+   }
+  },
+  {
+   "id": "original-policy-05-0",
+   "tier": "standard",
+   "family": "policy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.9172,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0828
+   }
+  },
+  {
+   "id": "original-policy-05-1",
+   "tier": "standard",
+   "family": "policy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.9348,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0652
+   }
+  },
+  {
+   "id": "original-policy-06-0",
+   "tier": "standard",
+   "family": "policy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9625,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9625
+   }
+  },
+  {
+   "id": "original-policy-06-1",
+   "tier": "standard",
+   "family": "policy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.8954,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.8954
+   }
+  },
+  {
+   "id": "original-intent-01-0",
+   "tier": "standard",
+   "family": "intent",
+   "type": "choice",
+   "expected": "refund",
+   "predicted": "refund",
+   "p_predicted": 0.8558,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "refund",
+    "probabilities": {
+     "cancel": 0.0265,
+     "change_address": 0.0003,
+     "other": 0.1172,
+     "refund": 0.8558,
+     "status": 0.0002
+    },
+    "confidence": 0.8197
+   }
+  },
+  {
+   "id": "original-intent-01-1",
+   "tier": "standard",
+   "family": "intent",
+   "type": "choice",
+   "expected": "refund",
+   "predicted": "refund",
+   "p_predicted": 0.8505,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "refund",
+    "probabilities": {
+     "cancel": 0.0115,
+     "change_address": 0.0002,
+     "other": 0.1376,
+     "refund": 0.8505,
+     "status": 0.0002
+    },
+    "confidence": 0.8132
+   }
+  },
+  {
+   "id": "original-intent-02-0",
+   "tier": "standard",
+   "family": "intent",
+   "type": "choice",
+   "expected": "status",
+   "predicted": "status",
+   "p_predicted": 0.9062,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "status",
+    "probabilities": {
+     "cancel": 0.0,
+     "change_address": 0.0007,
+     "other": 0.0931,
+     "refund": 0.0,
+     "status": 0.9062
+    },
+    "confidence": 0.8827
+   }
+  },
+  {
+   "id": "original-intent-02-1",
+   "tier": "standard",
+   "family": "intent",
+   "type": "choice",
+   "expected": "status",
+   "predicted": "status",
+   "p_predicted": 0.9862,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "status",
+    "probabilities": {
+     "cancel": 0.0,
+     "change_address": 0.0,
+     "other": 0.0138,
+     "refund": 0.0,
+     "status": 0.9862
+    },
+    "confidence": 0.9828
+   }
+  },
+  {
+   "id": "original-intent-03-0",
+   "tier": "standard",
+   "family": "intent",
+   "type": "choice",
+   "expected": "change_address",
+   "predicted": "change_address",
+   "p_predicted": 0.9805,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "change_address",
+    "probabilities": {
+     "cancel": 0.0002,
+     "change_address": 0.9805,
+     "other": 0.0173,
+     "refund": 0.0001,
+     "status": 0.0019
+    },
+    "confidence": 0.9757
+   }
+  },
+  {
+   "id": "original-intent-03-1",
+   "tier": "standard",
+   "family": "intent",
+   "type": "choice",
+   "expected": "change_address",
+   "predicted": "change_address",
+   "p_predicted": 0.9989,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "change_address",
+    "probabilities": {
+     "cancel": 0.0,
+     "change_address": 0.9989,
+     "other": 0.0011,
+     "refund": 0.0,
+     "status": 0.0
+    },
+    "confidence": 0.9986
+   }
+  },
+  {
+   "id": "original-intent-04-0",
+   "tier": "standard",
+   "family": "intent",
+   "type": "choice",
+   "expected": "cancel",
+   "predicted": "cancel",
+   "p_predicted": 0.9988,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "cancel",
+    "probabilities": {
+     "cancel": 0.9988,
+     "change_address": 0.0,
+     "other": 0.001,
+     "refund": 0.0002,
+     "status": 0.0
+    },
+    "confidence": 0.9985
+   }
+  },
+  {
+   "id": "original-intent-04-1",
+   "tier": "standard",
+   "family": "intent",
+   "type": "choice",
+   "expected": "cancel",
+   "predicted": "cancel",
+   "p_predicted": 0.984,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "cancel",
+    "probabilities": {
+     "cancel": 0.984,
+     "change_address": 0.0001,
+     "other": 0.0156,
+     "refund": 0.0003,
+     "status": 0.0
+    },
+    "confidence": 0.98
+   }
+  },
+  {
+   "id": "original-intent-05-0",
+   "tier": "standard",
+   "family": "intent",
+   "type": "choice",
+   "expected": "other",
+   "predicted": "other",
+   "p_predicted": 0.9419,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "other",
+    "probabilities": {
+     "cancel": 0.0008,
+     "change_address": 0.0003,
+     "other": 0.9419,
+     "refund": 0.0565,
+     "status": 0.0005
+    },
+    "confidence": 0.9274
+   }
+  },
+  {
+   "id": "original-intent-05-1",
+   "tier": "standard",
+   "family": "intent",
+   "type": "choice",
+   "expected": "other",
+   "predicted": "other",
+   "p_predicted": 0.974,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "other",
+    "probabilities": {
+     "cancel": 0.0028,
+     "change_address": 0.0005,
+     "other": 0.974,
+     "refund": 0.0219,
+     "status": 0.0008
+    },
+    "confidence": 0.9675
+   }
+  },
+  {
+   "id": "original-intent-06-0",
+   "tier": "standard",
+   "family": "intent",
+   "type": "choice",
+   "expected": "status",
+   "predicted": "status",
+   "p_predicted": 0.9517,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "status",
+    "probabilities": {
+     "cancel": 0.0009,
+     "change_address": 0.0001,
+     "other": 0.0472,
+     "refund": 0.0001,
+     "status": 0.9517
+    },
+    "confidence": 0.9396
+   }
+  },
+  {
+   "id": "original-intent-06-1",
+   "tier": "standard",
+   "family": "intent",
+   "type": "choice",
+   "expected": "status",
+   "predicted": "status",
+   "p_predicted": 0.9435,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "status",
+    "probabilities": {
+     "cancel": 0.0004,
+     "change_address": 0.0001,
+     "other": 0.0556,
+     "refund": 0.0004,
+     "status": 0.9435
+    },
+    "confidence": 0.9293
+   }
+  },
+  {
+   "id": "original-ordinal-01-0",
+   "tier": "standard",
+   "family": "ordinal",
+   "type": "score",
+   "expected": 0,
+   "predicted": 0,
+   "p_predicted": 0.9838,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 0.0198,
+    "legend": {
+     "0": "No function impaired; cosmetic only",
+     "1": "One user or a nonessential function impaired, with a workaround",
+     "2": "Many users blocked from a core function, no data loss",
+     "3": "Confirmed irreversible data loss or physical harm"
+    },
+    "probabilities": {
+     "0": 0.9838,
+     "1": 0.0137,
+     "2": 0.0013,
+     "3": 0.0012
+    },
+    "confidence": 0.9802
+   }
+  },
+  {
+   "id": "original-ordinal-01-1",
+   "tier": "standard",
+   "family": "ordinal",
+   "type": "score",
+   "expected": 0,
+   "predicted": 0,
+   "p_predicted": 0.9439,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 0.061,
+    "legend": {
+     "0": "No function impaired; cosmetic only",
+     "1": "One user or a nonessential function impaired, with a workaround",
+     "2": "Many users blocked from a core function, no data loss",
+     "3": "Confirmed irreversible data loss or physical harm"
+    },
+    "probabilities": {
+     "0": 0.9439,
+     "1": 0.0524,
+     "2": 0.0025,
+     "3": 0.0012
+    },
+    "confidence": 0.939
+   }
+  },
+  {
+   "id": "original-ordinal-02-0",
+   "tier": "standard",
+   "family": "ordinal",
+   "type": "score",
+   "expected": 1,
+   "predicted": 1,
+   "p_predicted": 0.7962,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 0.9563,
+    "legend": {
+     "0": "No function impaired; cosmetic only",
+     "1": "One user or a nonessential function impaired, with a workaround",
+     "2": "Many users blocked from a core function, no data loss",
+     "3": "Confirmed irreversible data loss or physical harm"
+    },
+    "probabilities": {
+     "0": 0.1306,
+     "1": 0.7962,
+     "2": 0.0596,
+     "3": 0.0136
+    },
+    "confidence": 0.7826
+   }
+  },
+  {
+   "id": "original-ordinal-02-1",
+   "tier": "standard",
+   "family": "ordinal",
+   "type": "score",
+   "expected": 1,
+   "predicted": 1,
+   "p_predicted": 0.7466,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 0.8073,
+    "legend": {
+     "0": "No function impaired; cosmetic only",
+     "1": "One user or a nonessential function impaired, with a workaround",
+     "2": "Many users blocked from a core function, no data loss",
+     "3": "Confirmed irreversible data loss or physical harm"
+    },
+    "probabilities": {
+     "0": 0.2267,
+     "1": 0.7466,
+     "2": 0.0195,
+     "3": 0.0072
+    },
+    "confidence": 0.7394
+   }
+  },
+  {
+   "id": "original-ordinal-03-0",
+   "tier": "standard",
+   "family": "ordinal",
+   "type": "score",
+   "expected": 2,
+   "predicted": 2,
+   "p_predicted": 0.8728,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 1.861,
+    "legend": {
+     "0": "No function impaired; cosmetic only",
+     "1": "One user or a nonessential function impaired, with a workaround",
+     "2": "Many users blocked from a core function, no data loss",
+     "3": "Confirmed irreversible data loss or physical harm"
+    },
+    "probabilities": {
+     "0": 0.0345,
+     "1": 0.0814,
+     "2": 0.8728,
+     "3": 0.0113
+    },
+    "confidence": 0.8383
+   }
+  },
+  {
+   "id": "original-ordinal-03-1",
+   "tier": "standard",
+   "family": "ordinal",
+   "type": "score",
+   "expected": 2,
+   "predicted": 2,
+   "p_predicted": 0.6184,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 1.6554,
+    "legend": {
+     "0": "No function impaired; cosmetic only",
+     "1": "One user or a nonessential function impaired, with a workaround",
+     "2": "Many users blocked from a core function, no data loss",
+     "3": "Confirmed irreversible data loss or physical harm"
+    },
+    "probabilities": {
+     "0": 0.1113,
+     "1": 0.1962,
+     "2": 0.6184,
+     "3": 0.0741
+    },
+    "confidence": 0.5071
+   }
+  },
+  {
+   "id": "original-ordinal-04-0",
+   "tier": "standard",
+   "family": "ordinal",
+   "type": "score",
+   "expected": 3,
+   "predicted": 3,
+   "p_predicted": 0.9945,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 2.9916,
+    "legend": {
+     "0": "No function impaired; cosmetic only",
+     "1": "One user or a nonessential function impaired, with a workaround",
+     "2": "Many users blocked from a core function, no data loss",
+     "3": "Confirmed irreversible data loss or physical harm"
+    },
+    "probabilities": {
+     "0": 0.0007,
+     "1": 0.0015,
+     "2": 0.0033,
+     "3": 0.9945
+    },
+    "confidence": 0.9916
+   }
+  },
+  {
+   "id": "original-ordinal-04-1",
+   "tier": "standard",
+   "family": "ordinal",
+   "type": "score",
+   "expected": 3,
+   "predicted": 3,
+   "p_predicted": 0.9921,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 2.9886,
+    "legend": {
+     "0": "No function impaired; cosmetic only",
+     "1": "One user or a nonessential function impaired, with a workaround",
+     "2": "Many users blocked from a core function, no data loss",
+     "3": "Confirmed irreversible data loss or physical harm"
+    },
+    "probabilities": {
+     "0": 0.001,
+     "1": 0.0015,
+     "2": 0.0054,
+     "3": 0.9921
+    },
+    "confidence": 0.9886
+   }
+  },
+  {
+   "id": "original-ordinal-05-0",
+   "tier": "standard",
+   "family": "ordinal",
+   "type": "score",
+   "expected": 0,
+   "predicted": 0,
+   "p_predicted": 0.5913,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 0.668,
+    "legend": {
+     "0": "No function impaired; cosmetic only",
+     "1": "One user or a nonessential function impaired, with a workaround",
+     "2": "Many users blocked from a core function, no data loss",
+     "3": "Confirmed irreversible data loss or physical harm"
+    },
+    "probabilities": {
+     "0": 0.5913,
+     "1": 0.2282,
+     "2": 0.1017,
+     "3": 0.0788
+    },
+    "confidence": 0.332
+   }
+  },
+  {
+   "id": "original-ordinal-05-1",
+   "tier": "standard",
+   "family": "ordinal",
+   "type": "score",
+   "expected": 0,
+   "predicted": 0,
+   "p_predicted": 0.8737,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 0.2122,
+    "legend": {
+     "0": "No function impaired; cosmetic only",
+     "1": "One user or a nonessential function impaired, with a workaround",
+     "2": "Many users blocked from a core function, no data loss",
+     "3": "Confirmed irreversible data loss or physical harm"
+    },
+    "probabilities": {
+     "0": 0.8737,
+     "1": 0.0702,
+     "2": 0.0263,
+     "3": 0.0298
+    },
+    "confidence": 0.7878
+   }
+  },
+  {
+   "id": "original-ordinal-06-0",
+   "tier": "standard",
+   "family": "ordinal",
+   "type": "score",
+   "expected": 2,
+   "predicted": 2,
+   "p_predicted": 0.5717,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 1.498,
+    "legend": {
+     "0": "No function impaired; cosmetic only",
+     "1": "One user or a nonessential function impaired, with a workaround",
+     "2": "Many users blocked from a core function, no data loss",
+     "3": "Confirmed irreversible data loss or physical harm"
+    },
+    "probabilities": {
+     "0": 0.1204,
+     "1": 0.2845,
+     "2": 0.5717,
+     "3": 0.0234
+    },
+    "confidence": 0.4513
+   }
+  },
+  {
+   "id": "original-ordinal-06-1",
+   "tier": "standard",
+   "family": "ordinal",
+   "type": "score",
+   "expected": 2,
+   "predicted": 2,
+   "p_predicted": 0.9656,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 1.9664,
+    "legend": {
+     "0": "No function impaired; cosmetic only",
+     "1": "One user or a nonessential function impaired, with a workaround",
+     "2": "Many users blocked from a core function, no data loss",
+     "3": "Confirmed irreversible data loss or physical harm"
+    },
+    "probabilities": {
+     "0": 0.0064,
+     "1": 0.0244,
+     "2": 0.9656,
+     "3": 0.0036
+    },
+    "confidence": 0.9592
+   }
+  },
+  {
+   "id": "original-extraction-01-0",
+   "tier": "standard",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "pickup",
+   "predicted": "pickup",
+   "p_predicted": 0.901,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "pickup",
+    "probabilities": {
+     "courier": 0.0137,
+     "pickup": 0.901,
+     "post": 0.0105,
+     "unknown": 0.0748
+    },
+    "confidence": 0.868
+   }
+  },
+  {
+   "id": "original-extraction-01-1",
+   "tier": "standard",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "pickup",
+   "predicted": "pickup",
+   "p_predicted": 0.8695,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "pickup",
+    "probabilities": {
+     "courier": 0.0205,
+     "pickup": 0.8695,
+     "post": 0.0471,
+     "unknown": 0.0629
+    },
+    "confidence": 0.826
+   }
+  },
+  {
+   "id": "original-extraction-02-0",
+   "tier": "standard",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "unknown",
+   "predicted": "unknown",
+   "p_predicted": 0.8416,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "unknown",
+    "probabilities": {
+     "courier": 0.01,
+     "pickup": 0.0013,
+     "post": 0.1471,
+     "unknown": 0.8416
+    },
+    "confidence": 0.7889
+   }
+  },
+  {
+   "id": "original-extraction-02-1",
+   "tier": "standard",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "unknown",
+   "predicted": "unknown",
+   "p_predicted": 0.9628,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "unknown",
+    "probabilities": {
+     "courier": 0.0131,
+     "pickup": 0.0036,
+     "post": 0.0205,
+     "unknown": 0.9628
+    },
+    "confidence": 0.9504
+   }
+  },
+  {
+   "id": "original-extraction-03-0",
+   "tier": "standard",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "courier",
+   "predicted": "courier",
+   "p_predicted": 0.7874,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "courier",
+    "probabilities": {
+     "courier": 0.7874,
+     "pickup": 0.0416,
+     "post": 0.0115,
+     "unknown": 0.1595
+    },
+    "confidence": 0.7166
+   }
+  },
+  {
+   "id": "original-extraction-03-1",
+   "tier": "standard",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "courier",
+   "predicted": "courier",
+   "p_predicted": 0.9532,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "courier",
+    "probabilities": {
+     "courier": 0.9532,
+     "pickup": 0.0084,
+     "post": 0.0287,
+     "unknown": 0.0097
+    },
+    "confidence": 0.9375
+   }
+  },
+  {
+   "id": "original-extraction-04-0",
+   "tier": "standard",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "post",
+   "predicted": "post",
+   "p_predicted": 0.7865,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "post",
+    "probabilities": {
+     "courier": 0.028,
+     "pickup": 0.0094,
+     "post": 0.7865,
+     "unknown": 0.1761
+    },
+    "confidence": 0.7153
+   }
+  },
+  {
+   "id": "original-extraction-04-1",
+   "tier": "standard",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "post",
+   "predicted": "post",
+   "p_predicted": 0.9625,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "post",
+    "probabilities": {
+     "courier": 0.0081,
+     "pickup": 0.0009,
+     "post": 0.9625,
+     "unknown": 0.0285
+    },
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "original-extraction-05-0",
+   "tier": "standard",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "unknown",
+   "predicted": "unknown",
+   "p_predicted": 0.9894,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "unknown",
+    "probabilities": {
+     "courier": 0.0042,
+     "pickup": 0.0029,
+     "post": 0.0035,
+     "unknown": 0.9894
+    },
+    "confidence": 0.9859
+   }
+  },
+  {
+   "id": "original-extraction-05-1",
+   "tier": "standard",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "unknown",
+   "predicted": "unknown",
+   "p_predicted": 0.7441,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "unknown",
+    "probabilities": {
+     "courier": 0.2311,
+     "pickup": 0.0044,
+     "post": 0.0204,
+     "unknown": 0.7441
+    },
+    "confidence": 0.6588
+   }
+  },
+  {
+   "id": "original-extraction-06-0",
+   "tier": "standard",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "courier",
+   "predicted": "courier",
+   "p_predicted": 0.8049,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "courier",
+    "probabilities": {
+     "courier": 0.8049,
+     "pickup": 0.0011,
+     "post": 0.1672,
+     "unknown": 0.0268
+    },
+    "confidence": 0.7398
+   }
+  },
+  {
+   "id": "original-extraction-06-1",
+   "tier": "standard",
+   "family": "extraction",
+   "type": "choice",
+   "expected": "courier",
+   "predicted": "courier",
+   "p_predicted": 0.941,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "courier",
+    "probabilities": {
+     "courier": 0.941,
+     "pickup": 0.0057,
+     "post": 0.0149,
+     "unknown": 0.0384
+    },
+    "confidence": 0.9213
+   }
+  },
+  {
+   "id": "original-adequacy-01-0",
+   "tier": "standard",
+   "family": "adequacy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9902,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9902
+   }
+  },
+  {
+   "id": "original-adequacy-01-1",
+   "tier": "standard",
+   "family": "adequacy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9725,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9725
+   }
+  },
+  {
+   "id": "original-adequacy-02-0",
+   "tier": "standard",
+   "family": "adequacy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.7172,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.2828
+   }
+  },
+  {
+   "id": "original-adequacy-02-1",
+   "tier": "standard",
+   "family": "adequacy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.7262,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.2738
+   }
+  },
+  {
+   "id": "original-adequacy-03-0",
+   "tier": "standard",
+   "family": "adequacy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.9408,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9408
+   }
+  },
+  {
+   "id": "original-adequacy-03-1",
+   "tier": "standard",
+   "family": "adequacy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.816,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.816
+   }
+  },
+  {
+   "id": "original-adequacy-04-0",
+   "tier": "standard",
+   "family": "adequacy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9945,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9945
+   }
+  },
+  {
+   "id": "original-adequacy-04-1",
+   "tier": "standard",
+   "family": "adequacy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9857,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9857
+   }
+  },
+  {
+   "id": "original-adequacy-05-0",
+   "tier": "standard",
+   "family": "adequacy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.5409,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.5409
+   }
+  },
+  {
+   "id": "original-adequacy-05-1",
+   "tier": "standard",
+   "family": "adequacy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.5593,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.5593
+   }
+  },
+  {
+   "id": "original-adequacy-06-0",
+   "tier": "standard",
+   "family": "adequacy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.8815,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.8815
+   }
+  },
+  {
+   "id": "original-adequacy-06-1",
+   "tier": "standard",
+   "family": "adequacy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.914,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.914
+   }
+  },
+  {
+   "id": "original-routing-01-0",
+   "tier": "standard",
+   "family": "routing",
+   "type": "choice",
+   "expected": "math",
+   "predicted": "math",
+   "p_predicted": 0.9183,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "math",
+    "probabilities": {
+     "coding": 0.0058,
+     "coding_agent": 0.0021,
+     "document": 0.004,
+     "general": 0.0499,
+     "math": 0.9183,
+     "tools": 0.0199
+    },
+    "confidence": 0.9019
+   }
+  },
+  {
+   "id": "original-routing-01-1",
+   "tier": "standard",
+   "family": "routing",
+   "type": "choice",
+   "expected": "math",
+   "predicted": "math",
+   "p_predicted": 0.9155,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "math",
+    "probabilities": {
+     "coding": 0.0058,
+     "coding_agent": 0.0019,
+     "document": 0.0052,
+     "general": 0.0534,
+     "math": 0.9155,
+     "tools": 0.0182
+    },
+    "confidence": 0.8986
+   }
+  },
+  {
+   "id": "original-routing-02-0",
+   "tier": "standard",
+   "family": "routing",
+   "type": "choice",
+   "expected": "coding",
+   "predicted": "coding",
+   "p_predicted": 0.8417,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "coding",
+    "probabilities": {
+     "coding": 0.8417,
+     "coding_agent": 0.0239,
+     "document": 0.0129,
+     "general": 0.0968,
+     "math": 0.0083,
+     "tools": 0.0164
+    },
+    "confidence": 0.81
+   }
+  },
+  {
+   "id": "original-routing-02-1",
+   "tier": "standard",
+   "family": "routing",
+   "type": "choice",
+   "expected": "coding",
+   "predicted": "coding",
+   "p_predicted": 0.8985,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "coding",
+    "probabilities": {
+     "coding": 0.8985,
+     "coding_agent": 0.0432,
+     "document": 0.0131,
+     "general": 0.0354,
+     "math": 0.0035,
+     "tools": 0.0063
+    },
+    "confidence": 0.8782
+   }
+  },
+  {
+   "id": "original-routing-03-0",
+   "tier": "standard",
+   "family": "routing",
+   "type": "choice",
+   "expected": "coding_agent",
+   "predicted": "coding_agent",
+   "p_predicted": 0.966,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "coding_agent",
+    "probabilities": {
+     "coding": 0.0166,
+     "coding_agent": 0.966,
+     "document": 0.0017,
+     "general": 0.0072,
+     "math": 0.0005,
+     "tools": 0.008
+    },
+    "confidence": 0.9592
+   }
+  },
+  {
+   "id": "original-routing-03-1",
+   "tier": "standard",
+   "family": "routing",
+   "type": "choice",
+   "expected": "coding_agent",
+   "predicted": "coding_agent",
+   "p_predicted": 0.924,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "coding_agent",
+    "probabilities": {
+     "coding": 0.0406,
+     "coding_agent": 0.924,
+     "document": 0.0031,
+     "general": 0.0148,
+     "math": 0.0007,
+     "tools": 0.0168
+    },
+    "confidence": 0.9088
+   }
+  },
+  {
+   "id": "original-routing-04-0",
+   "tier": "standard",
+   "family": "routing",
+   "type": "choice",
+   "expected": "document",
+   "predicted": "document",
+   "p_predicted": 0.4419,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "document",
+    "probabilities": {
+     "coding": 0.0161,
+     "coding_agent": 0.0162,
+     "document": 0.4419,
+     "general": 0.3834,
+     "math": 0.0048,
+     "tools": 0.1376
+    },
+    "confidence": 0.3302
+   }
+  },
+  {
+   "id": "original-routing-04-1",
+   "tier": "standard",
+   "family": "routing",
+   "type": "choice",
+   "expected": "document",
+   "predicted": "document",
+   "p_predicted": 0.7088,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "document",
+    "probabilities": {
+     "coding": 0.0097,
+     "coding_agent": 0.0078,
+     "document": 0.7088,
+     "general": 0.2083,
+     "math": 0.0034,
+     "tools": 0.062
+    },
+    "confidence": 0.6506
+   }
+  },
+  {
+   "id": "original-routing-05-0",
+   "tier": "standard",
+   "family": "routing",
+   "type": "choice",
+   "expected": "tools",
+   "predicted": "tools",
+   "p_predicted": 0.5787,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "tools",
+    "probabilities": {
+     "coding": 0.0096,
+     "coding_agent": 0.0082,
+     "document": 0.0096,
+     "general": 0.3899,
+     "math": 0.004,
+     "tools": 0.5787
+    },
+    "confidence": 0.4945
+   }
+  },
+  {
+   "id": "original-routing-05-1",
+   "tier": "standard",
+   "family": "routing",
+   "type": "choice",
+   "expected": "tools",
+   "predicted": "general",
+   "p_predicted": 0.7176,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "general",
+    "probabilities": {
+     "coding": 0.0136,
+     "coding_agent": 0.0077,
+     "document": 0.0097,
+     "general": 0.7176,
+     "math": 0.006,
+     "tools": 0.2454
+    },
+    "confidence": 0.6611
+   }
+  },
+  {
+   "id": "original-routing-06-0",
+   "tier": "standard",
+   "family": "routing",
+   "type": "choice",
+   "expected": "general",
+   "predicted": "general",
+   "p_predicted": 0.9172,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "general",
+    "probabilities": {
+     "coding": 0.0141,
+     "coding_agent": 0.0071,
+     "document": 0.0267,
+     "general": 0.9172,
+     "math": 0.0111,
+     "tools": 0.0238
+    },
+    "confidence": 0.9007
+   }
+  },
+  {
+   "id": "original-routing-06-1",
+   "tier": "standard",
+   "family": "routing",
+   "type": "choice",
+   "expected": "general",
+   "predicted": "general",
+   "p_predicted": 0.858,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "general",
+    "probabilities": {
+     "coding": 0.0275,
+     "coding_agent": 0.0116,
+     "document": 0.0429,
+     "general": 0.858,
+     "math": 0.0182,
+     "tools": 0.0418
+    },
+    "confidence": 0.8296
+   }
+  },
+  {
+   "id": "hard-opus-a-long_policy-01",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "choice",
+   "expected": "pay_subject_to_15000_sublimit",
+   "predicted": "pay_subject_to_15000_sublimit",
+   "p_predicted": 0.308,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "pay_subject_to_15000_sublimit",
+    "probabilities": {
+     "deny_repeated_seepage": 0.0391,
+     "deny_vacancy_exclusion": 0.2715,
+     "pay_full_estimate_less_deductible": 0.2295,
+     "pay_subject_to_10000_sublimit": 0.1519,
+     "pay_subject_to_15000_sublimit": 0.308
+    },
+    "confidence": 0.135
+   }
+  },
+  {
+   "id": "hard-opus-a-long_policy-04",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "choice",
+   "expected": "cfo",
+   "predicted": "department_head",
+   "p_predicted": 0.7159,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "department_head",
+    "probabilities": {
+     "budget_holder": 0.0115,
+     "cfo": 0.009,
+     "department_head": 0.7159,
+     "executive_committee": 0.0065,
+     "vp_and_finance_director": 0.2571
+    },
+    "confidence": 0.6449
+   }
+  },
+  {
+   "id": "hard-opus-a-long_policy-08",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "choice",
+   "expected": "parts_covered_labour_charged",
+   "predicted": "not_covered",
+   "p_predicted": 0.5532,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "not_covered",
+    "probabilities": {
+     "full_repair_no_charge": 0.1247,
+     "not_covered": 0.5532,
+     "parts_covered_labour_charged": 0.1958,
+     "pro_rata_replacement_credit": 0.1263
+    },
+    "confidence": 0.4042
+   }
+  },
+  {
+   "id": "hard-opus-a-long_policy-09",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "choice",
+   "expected": "license_required",
+   "predicted": "no_license_required",
+   "p_predicted": 0.5314,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "no_license_required",
+    "probabilities": {
+     "license_exception_lvs": 0.3634,
+     "license_required": 0.0889,
+     "no_license_required": 0.5314,
+     "shipment_prohibited": 0.0163
+    },
+    "confidence": 0.3752
+   }
+  },
+  {
+   "id": "hard-opus-a-long_policy-11",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "no",
+   "p_predicted": 0.6751,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.3249
+   }
+  },
+  {
+   "id": "hard-opus-a-long_policy-13",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.7076,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.7076
+   }
+  },
+  {
+   "id": "hard-opus-a-long_policy-17",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "choice",
+   "expected": "database_oncall",
+   "predicted": "no_page_ticket_only",
+   "p_predicted": 0.5635,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "no_page_ticket_only",
+    "probabilities": {
+     "database_oncall": 0.2097,
+     "no_page_ticket_only": 0.5635,
+     "platform_oncall": 0.1728,
+     "security_incident_response": 0.0029,
+     "vendor_support": 0.0511
+    },
+    "confidence": 0.4544
+   }
+  },
+  {
+   "id": "hard-opus-a-long_policy-19",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.5032,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.5032
+   }
+  },
+  {
+   "id": "hard-opus-a-probability-03",
+   "tier": "hard",
+   "family": "probability",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9607,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9607
+   }
+  },
+  {
+   "id": "hard-opus-a-probability-04",
+   "tier": "hard",
+   "family": "probability",
+   "type": "choice",
+   "expected": "on_time",
+   "predicted": "late",
+   "p_predicted": 0.8931,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "late",
+    "probabilities": {
+     "early": 0.0035,
+     "late": 0.8931,
+     "on_time": 0.1034
+    },
+    "confidence": 0.8396
+   }
+  },
+  {
+   "id": "hard-opus-a-probability-07",
+   "tier": "hard",
+   "family": "probability",
+   "type": "choice",
+   "expected": "escalated",
+   "predicted": "escalated",
+   "p_predicted": 0.8267,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "escalated",
+    "probabilities": {
+     "escalated": 0.8267,
+     "reopened": 0.0123,
+     "resolved_first_contact": 0.161
+    },
+    "confidence": 0.74
+   }
+  },
+  {
+   "id": "hard-opus-a-probability-08",
+   "tier": "hard",
+   "family": "probability",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.6055,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.3945
+   }
+  },
+  {
+   "id": "hard-opus-a-temporal_numeric-03",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "no",
+   "p_predicted": 0.996,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.004
+   }
+  },
+  {
+   "id": "hard-opus-a-temporal_numeric-06",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.7519,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.7519
+   }
+  },
+  {
+   "id": "hard-opus-a-temporal_numeric-07",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "choice",
+   "expected": "sep_26",
+   "predicted": "sep_24",
+   "p_predicted": 0.7118,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "sep_24",
+    "probabilities": {
+     "sep_24": 0.7118,
+     "sep_25": 0.1182,
+     "sep_26": 0.0899,
+     "sep_27": 0.0334,
+     "sep_28": 0.0467
+    },
+    "confidence": 0.6397
+   }
+  },
+  {
+   "id": "hard-opus-a-temporal_numeric-09",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.8002,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.8002
+   }
+  },
+  {
+   "id": "hard-opus-a-temporal_numeric-12",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "score",
+   "expected": 1,
+   "predicted": 1,
+   "p_predicted": 0.3324,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 1.8223,
+    "legend": {
+     "0": "No violations",
+     "1": "Exactly one violation",
+     "2": "Exactly two violations",
+     "3": "Three or more violations"
+    },
+    "probabilities": {
+     "0": 0.0813,
+     "1": 0.3324,
+     "2": 0.2689,
+     "3": 0.3174
+    },
+    "confidence": 0.015
+   }
+  },
+  {
+   "id": "hard-opus-b-ambiguous-02",
+   "tier": "hard",
+   "family": "ambiguous",
+   "type": "choice",
+   "expected": "real_incident",
+   "predicted": "real_incident",
+   "p_predicted": 0.4516,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "real_incident",
+    "probabilities": {
+     "cannot_determine": 0.3302,
+     "false_positive": 0.2182,
+     "real_incident": 0.4516
+    },
+    "confidence": 0.1775
+   }
+  },
+  {
+   "id": "hard-opus-b-ambiguous-03",
+   "tier": "hard",
+   "family": "ambiguous",
+   "type": "choice",
+   "expected": "time_barred",
+   "predicted": "time_barred",
+   "p_predicted": 0.7184,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "time_barred",
+    "probabilities": {
+     "insufficient_information": 0.1515,
+     "time_barred": 0.7184,
+     "within_limitation": 0.1301
+    },
+    "confidence": 0.5775
+   }
+  },
+  {
+   "id": "hard-opus-b-ambiguous-07",
+   "tier": "hard",
+   "family": "ambiguous",
+   "type": "choice",
+   "expected": "within_policy",
+   "predicted": "over_limit",
+   "p_predicted": 0.8029,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "over_limit",
+    "probabilities": {
+     "insufficient_information": 0.1583,
+     "over_limit": 0.8029,
+     "within_policy": 0.0388
+    },
+    "confidence": 0.7043
+   }
+  },
+  {
+   "id": "hard-opus-b-ambiguous-09",
+   "tier": "hard",
+   "family": "ambiguous",
+   "type": "choice",
+   "expected": "legitimate",
+   "predicted": "compromised",
+   "p_predicted": 0.7917,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "compromised",
+    "probabilities": {
+     "compromised": 0.7917,
+     "inconclusive": 0.009,
+     "legitimate": 0.1993
+    },
+    "confidence": 0.6876
+   }
+  },
+  {
+   "id": "hard-opus-b-ambiguous-10",
+   "tier": "hard",
+   "family": "ambiguous",
+   "type": "choice",
+   "expected": "ask_user_which_alex",
+   "predicted": "send_to_alex_moreno",
+   "p_predicted": 0.676,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "send_to_alex_moreno",
+    "probabilities": {
+     "ask_user_which_alex": 0.2226,
+     "send_to_alex_moreno": 0.676,
+     "send_to_alexandra_lind": 0.1014
+    },
+    "confidence": 0.514
+   }
+  },
+  {
+   "id": "hard-opus-b-ambiguous-11",
+   "tier": "hard",
+   "family": "ambiguous",
+   "type": "choice",
+   "expected": "cannot_determine",
+   "predicted": "grade_correct",
+   "p_predicted": 0.6866,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "grade_correct",
+    "probabilities": {
+     "cannot_determine": 0.2166,
+     "grade_correct": 0.6866,
+     "grade_should_be_higher": 0.0968
+    },
+    "confidence": 0.53
+   }
+  },
+  {
+   "id": "hard-opus-b-ambiguous-13",
+   "tier": "hard",
+   "family": "ambiguous",
+   "type": "choice",
+   "expected": "cannot_determine",
+   "predicted": "split_50_50",
+   "p_predicted": 0.6028,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "split_50_50",
+    "probabilities": {
+     "cannot_determine": 0.2939,
+     "charge_data_team": 0.0736,
+     "charge_platform_team": 0.0297,
+     "split_50_50": 0.6028
+    },
+    "confidence": 0.4704
+   }
+  },
+  {
+   "id": "hard-opus-b-multi_hop-03",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "tier3_cfo",
+   "predicted": "tier2_department_head",
+   "p_predicted": 0.9569,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "tier2_department_head",
+    "probabilities": {
+     "tier1_team_lead": 0.0108,
+     "tier2_department_head": 0.9569,
+     "tier3_cfo": 0.0257,
+     "tier4_board": 0.0066
+    },
+    "confidence": 0.9426
+   }
+  },
+  {
+   "id": "hard-opus-b-multi_hop-04",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "bjorn",
+   "predicted": "no_page_ticket_only",
+   "p_predicted": 0.4401,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "no_page_ticket_only",
+    "probabilities": {
+     "ana": 0.0751,
+     "bjorn": 0.0246,
+     "chen": 0.0728,
+     "dmitri": 0.2802,
+     "esra": 0.1072,
+     "no_page_ticket_only": 0.4401
+    },
+    "confidence": 0.3281
+   }
+  },
+  {
+   "id": "hard-opus-b-multi_hop-05",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "score",
+   "expected": 2,
+   "predicted": 1,
+   "p_predicted": 0.529,
+   "correct": false,
+   "answer": {
+    "type": "score",
+    "score": 1.4243,
+    "legend": {
+     "0": "Level 0 \u2014 no award",
+     "1": "Level 1 \u2014 EUR 500",
+     "2": "Level 2 \u2014 EUR 1,200",
+     "3": "Level 3 \u2014 EUR 2,000",
+     "4": "Level 4 \u2014 EUR 3,000"
+    },
+    "probabilities": {
+     "0": 0.1809,
+     "1": 0.529,
+     "2": 0.0882,
+     "3": 0.0889,
+     "4": 0.113
+    },
+    "confidence": 0.345
+   }
+  },
+  {
+   "id": "hard-opus-b-multi_hop-07",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "credit_20_percent",
+   "predicted": "credit_10_percent",
+   "p_predicted": 0.4434,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "credit_10_percent",
+    "probabilities": {
+     "credit_10_percent": 0.4434,
+     "credit_20_percent": 0.1181,
+     "credit_25_percent": 0.0637,
+     "credit_50_percent": 0.0756,
+     "credit_full_month": 0.2613,
+     "no_credit": 0.0379
+    },
+    "confidence": 0.3321
+   }
+  },
+  {
+   "id": "hard-opus-b-multi_hop-08",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.5077,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.5077
+   }
+  },
+  {
+   "id": "hard-opus-b-probability-01",
+   "tier": "hard",
+   "family": "probability",
+   "type": "choice",
+   "expected": "merchant_wins",
+   "predicted": "merchant_wins",
+   "p_predicted": 0.8633,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "merchant_wins",
+    "probabilities": {
+     "customer_wins": 0.1323,
+     "customer_withdraws": 0.0044,
+     "merchant_wins": 0.8633
+    },
+    "confidence": 0.7949
+   }
+  },
+  {
+   "id": "hard-opus-b-probability-02",
+   "tier": "hard",
+   "family": "probability",
+   "type": "choice",
+   "expected": "upstream_provider",
+   "predicted": "bad_push",
+   "p_predicted": 0.9976,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "bad_push",
+    "probabilities": {
+     "bad_push": 0.9976,
+     "database_hardware": 0.0013,
+     "upstream_provider": 0.0011
+    },
+    "confidence": 0.9965
+   }
+  },
+  {
+   "id": "hard-opus-b-probability-03",
+   "tier": "hard",
+   "family": "probability",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "no",
+   "p_predicted": 0.7771,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.2229
+   }
+  },
+  {
+   "id": "hard-opus-b-probability-04",
+   "tier": "hard",
+   "family": "probability",
+   "type": "choice",
+   "expected": "attended",
+   "predicted": "no_show",
+   "p_predicted": 0.633,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "no_show",
+    "probabilities": {
+     "attended": 0.3467,
+     "late_cancellation": 0.0203,
+     "no_show": 0.633
+    },
+    "confidence": 0.4496
+   }
+  },
+  {
+   "id": "hard-opus-b-probability-06",
+   "tier": "hard",
+   "family": "probability",
+   "type": "choice",
+   "expected": "upheld",
+   "predicted": "overturned",
+   "p_predicted": 0.9431,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "overturned",
+    "probabilities": {
+     "modified": 0.0013,
+     "overturned": 0.9431,
+     "upheld": 0.0556
+    },
+    "confidence": 0.9147
+   }
+  },
+  {
+   "id": "hard-opus-b-tradeoff-01",
+   "tier": "hard",
+   "family": "tradeoff",
+   "type": "choice",
+   "expected": "escalate_to_engineering",
+   "predicted": "escalate_to_engineering",
+   "p_predicted": 0.4993,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "escalate_to_engineering",
+    "probabilities": {
+     "escalate_to_engineering": 0.4993,
+     "escalate_to_security": 0.4753,
+     "page_oncall": 0.0012,
+     "process_refund": 0.0029,
+     "send_kb_article": 0.0213
+    },
+    "confidence": 0.3741
+   }
+  },
+  {
+   "id": "hard-opus-b-tradeoff-03",
+   "tier": "hard",
+   "family": "tradeoff",
+   "type": "choice",
+   "expected": "order_b",
+   "predicted": "order_c",
+   "p_predicted": 0.4227,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "order_c",
+    "probabilities": {
+     "order_a": 0.2613,
+     "order_b": 0.292,
+     "order_c": 0.4227,
+     "order_d": 0.024
+    },
+    "confidence": 0.2302
+   }
+  },
+  {
+   "id": "hard-opus-b-tradeoff-06",
+   "tier": "hard",
+   "family": "tradeoff",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.5574,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.5574
+   }
+  },
+  {
+   "id": "hard-opus-b-tradeoff-07",
+   "tier": "hard",
+   "family": "tradeoff",
+   "type": "choice",
+   "expected": "p0_fix_24h",
+   "predicted": "p2_fix_30d",
+   "p_predicted": 0.6634,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "p2_fix_30d",
+    "probabilities": {
+     "out_of_scope": 0.007,
+     "p0_fix_24h": 0.213,
+     "p1_fix_7d": 0.0537,
+     "p2_fix_30d": 0.6634,
+     "p3_backlog": 0.0629
+    },
+    "confidence": 0.5793
+   }
+  },
+  {
+   "id": "hard-opus-b-tradeoff-08",
+   "tier": "hard",
+   "family": "tradeoff",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "no",
+   "p_predicted": 0.9215,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0785
+   }
+  },
+  {
+   "id": "hard-opus-b-tradeoff-12",
+   "tier": "hard",
+   "family": "tradeoff",
+   "type": "choice",
+   "expected": "refund_now",
+   "predicted": "wait_for_inspection",
+   "p_predicted": 0.7783,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "wait_for_inspection",
+    "probabilities": {
+     "deny_refund": 0.0519,
+     "escalate_to_fraud_team": 0.0021,
+     "offer_store_credit": 0.0064,
+     "refund_now": 0.1613,
+     "wait_for_inspection": 0.7783
+    },
+    "confidence": 0.7228
+   }
+  },
+  {
+   "id": "hard-opus-c-long_policy-02",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "choice",
+   "expected": "erase_but_retain_transaction_records",
+   "predicted": "erase_all",
+   "p_predicted": 0.4092,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "erase_all",
+    "probabilities": {
+     "erase_all": 0.4092,
+     "erase_but_retain_transaction_records": 0.2204,
+     "erase_marketing_only": 0.0053,
+     "reject_unverified_request": 0.0557,
+     "restrict_all_pending_legal_hold": 0.3094
+    },
+    "confidence": 0.2615
+   }
+  },
+  {
+   "id": "hard-opus-c-long_policy-03",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "choice",
+   "expected": "eur_400",
+   "predicted": "eur_400",
+   "p_predicted": 0.6464,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "eur_400",
+    "probabilities": {
+     "eur_0": 0.0646,
+     "eur_150": 0.0456,
+     "eur_200": 0.0783,
+     "eur_300": 0.1076,
+     "eur_400": 0.6464,
+     "eur_600": 0.0575
+    },
+    "confidence": 0.5757
+   }
+  },
+  {
+   "id": "hard-opus-c-long_policy-04",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9513,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9513
+   }
+  },
+  {
+   "id": "hard-opus-c-long_policy-05",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "score",
+   "expected": 1,
+   "predicted": 1,
+   "p_predicted": 0.265,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 1.4914,
+    "legend": {
+     "0": "Compliant: Named Users do not exceed Licences held on the Measurement Date",
+     "1": "Shortfall of 1 to 5 Licences",
+     "2": "Shortfall of 6 to 15 Licences",
+     "3": "Shortfall of more than 15 Licences"
+    },
+    "probabilities": {
+     "0": 0.2532,
+     "1": 0.265,
+     "2": 0.219,
+     "3": 0.2628
+    },
+    "confidence": 0.0022
+   }
+  },
+  {
+   "id": "hard-opus-c-long_policy-08",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "score",
+   "expected": 1,
+   "predicted": 2,
+   "p_predicted": 0.6463,
+   "correct": false,
+   "answer": {
+    "type": "score",
+    "score": 1.7906,
+    "legend": {
+     "0": "SEV-4 (lowest)",
+     "1": "SEV-3",
+     "2": "SEV-2",
+     "3": "SEV-1 (highest)"
+    },
+    "probabilities": {
+     "0": 0.0403,
+     "1": 0.2211,
+     "2": 0.6463,
+     "3": 0.0923
+    },
+    "confidence": 0.606
+   }
+  },
+  {
+   "id": "hard-opus-c-long_policy-10",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "choice",
+   "expected": "credit_minus_restocking_fee",
+   "predicted": "full_credit",
+   "p_predicted": 0.5957,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "full_credit",
+    "probabilities": {
+     "credit_minus_restocking_fee": 0.3177,
+     "full_credit": 0.5957,
+     "reject_return": 0.0579,
+     "repair_or_replace_only": 0.0287
+    },
+    "confidence": 0.4609
+   }
+  },
+  {
+   "id": "hard-opus-c-long_policy-11",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.8983,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.8983
+   }
+  },
+  {
+   "id": "hard-opus-c-probability-03",
+   "tier": "hard",
+   "family": "probability",
+   "type": "choice",
+   "expected": "kuznets_technik",
+   "predicted": "halvorsen_polymer",
+   "p_predicted": 0.4511,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "halvorsen_polymer",
+    "probabilities": {
+     "halvorsen_polymer": 0.4511,
+     "kuznets_technik": 0.4034,
+     "ortega_seal_works": 0.1455
+    },
+    "confidence": 0.1767
+   }
+  },
+  {
+   "id": "hard-opus-c-temporal_numeric-02",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "no",
+   "p_predicted": 0.7345,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.2655
+   }
+  },
+  {
+   "id": "hard-opus-c-temporal_numeric-03",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "choice",
+   "expected": "eur_692_00",
+   "predicted": "eur_617_00",
+   "p_predicted": 0.5724,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "eur_617_00",
+    "probabilities": {
+     "eur_617_00": 0.5724,
+     "eur_688_00": 0.1415,
+     "eur_692_00": 0.163,
+     "eur_693_90": 0.1053,
+     "eur_812_00": 0.0178
+    },
+    "confidence": 0.4655
+   }
+  },
+  {
+   "id": "hard-opus-c-temporal_numeric-04",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "choice",
+   "expected": "usd_2335_00",
+   "predicted": "usd_2303_01",
+   "p_predicted": 0.3455,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "usd_2303_01",
+    "probabilities": {
+     "usd_2222_50": 0.3064,
+     "usd_2303_01": 0.3455,
+     "usd_2303_33": 0.0671,
+     "usd_2335_00": 0.1796,
+     "usd_2340_00": 0.1014
+    },
+    "confidence": 0.1819
+   }
+  },
+  {
+   "id": "hard-opus-c-temporal_numeric-06",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "choice",
+   "expected": "sep_18_book_set",
+   "predicted": "none_declined",
+   "p_predicted": 0.8435,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "none_declined",
+    "probabilities": {
+     "none_declined": 0.8435,
+     "sep_15_office_chair": 0.0641,
+     "sep_16_taxi": 0.0152,
+     "sep_17_parking": 0.0256,
+     "sep_18_book_set": 0.0199,
+     "sep_21_client_dinner": 0.0317
+    },
+    "confidence": 0.8123
+   }
+  },
+  {
+   "id": "hard-opus-c-temporal_numeric-08",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "choice",
+   "expected": "eur_498_81",
+   "predicted": "eur_497_40",
+   "p_predicted": 0.3733,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "eur_497_40",
+    "probabilities": {
+     "eur_497_40": 0.3733,
+     "eur_498_81": 0.146,
+     "eur_506_06": 0.1997,
+     "eur_513_69": 0.1911,
+     "eur_532_01": 0.0899
+    },
+    "confidence": 0.2166
+   }
+  },
+  {
+   "id": "hard-opus-c-temporal_numeric-12",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "choice",
+   "expected": "expired_30_month_cap",
+   "predicted": "expired_24_month_term",
+   "p_predicted": 0.4895,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "expired_24_month_term",
+    "probabilities": {
+     "covered": 0.3838,
+     "expired_24_month_term": 0.4895,
+     "expired_30_month_cap": 0.1267
+    },
+    "confidence": 0.2342
+   }
+  },
+  {
+   "id": "hard-sol-a-adversarial-01",
+   "tier": "hard",
+   "family": "adversarial",
+   "type": "choice",
+   "expected": "deny_missing_approval",
+   "predicted": "grant_owner_exception",
+   "p_predicted": 0.6559,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "grant_owner_exception",
+    "probabilities": {
+     "deny_inactive_user": 0.0239,
+     "deny_missing_approval": 0.2305,
+     "grant_access": 0.0897,
+     "grant_owner_exception": 0.6559
+    },
+    "confidence": 0.5412
+   }
+  },
+  {
+   "id": "hard-sol-a-adversarial-06",
+   "tier": "hard",
+   "family": "adversarial",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.9728,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0272
+   }
+  },
+  {
+   "id": "hard-sol-a-adversarial-07",
+   "tier": "hard",
+   "family": "adversarial",
+   "type": "choice",
+   "expected": "retain_until_2031",
+   "predicted": "delete_now",
+   "p_predicted": 0.5789,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "delete_now",
+    "probabilities": {
+     "delete_now": 0.5789,
+     "needs_signature_review": 0.01,
+     "retain_indefinitely": 0.0653,
+     "retain_until_2031": 0.3458
+    },
+    "confidence": 0.4385
+   }
+  },
+  {
+   "id": "hard-sol-a-adversarial-08",
+   "tier": "hard",
+   "family": "adversarial",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "no",
+   "p_predicted": 0.9928,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0072
+   }
+  },
+  {
+   "id": "hard-sol-a-adversarial-09",
+   "tier": "hard",
+   "family": "adversarial",
+   "type": "score",
+   "expected": 2,
+   "predicted": 2,
+   "p_predicted": 0.9085,
+   "correct": true,
+   "answer": {
+    "type": "score",
+    "score": 1.9631,
+    "legend": {
+     "0": "Informational only.",
+     "1": "Routine degradation.",
+     "2": "Major multi-customer degradation.",
+     "3": "Complete outage."
+    },
+    "probabilities": {
+     "0": 0.0094,
+     "1": 0.0501,
+     "2": 0.9085,
+     "3": 0.032
+    },
+    "confidence": 0.8991
+   }
+  },
+  {
+   "id": "hard-sol-a-adversarial-11",
+   "tier": "hard",
+   "family": "adversarial",
+   "type": "choice",
+   "expected": "standard_research",
+   "predicted": "standard_research",
+   "p_predicted": 0.94,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "standard_research",
+    "probabilities": {
+     "ethics_review": 0.0085,
+     "major_grants": 0.0448,
+     "manual_hold": 0.0067,
+     "standard_research": 0.94
+    },
+    "confidence": 0.9199
+   }
+  },
+  {
+   "id": "hard-sol-a-multi_hop-01",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "accept_s2_dusk",
+   "predicted": "reroute_s3",
+   "p_predicted": 0.4848,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "reroute_s3",
+    "probabilities": {
+     "accept_s2_dusk": 0.2193,
+     "reject_cutoff": 0.1999,
+     "reject_tier": 0.096,
+     "reroute_s3": 0.4848
+    },
+    "confidence": 0.313
+   }
+  },
+  {
+   "id": "hard-sol-a-multi_hop-02",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "security_primary",
+   "predicted": "heron_q2",
+   "p_predicted": 0.9415,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "heron_q2",
+    "probabilities": {
+     "executive_bridge": 0.0131,
+     "heron_q2": 0.9415,
+     "insufficient_information": 0.0121,
+     "security_primary": 0.0333
+    },
+    "confidence": 0.9219
+   }
+  },
+  {
+   "id": "hard-sol-a-multi_hop-05",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "require_director",
+   "predicted": "pay_manager_approved",
+   "p_predicted": 0.7316,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "pay_manager_approved",
+    "probabilities": {
+     "pay_manager_approved": 0.7316,
+     "reject_category": 0.1461,
+     "require_director": 0.106,
+     "require_finance_board": 0.0163
+    },
+    "confidence": 0.6422
+   }
+  },
+  {
+   "id": "hard-sol-a-multi_hop-07",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "admit",
+   "predicted": "deny_score",
+   "p_predicted": 0.7261,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "deny_score",
+    "probabilities": {
+     "admit": 0.0049,
+     "deny_prerequisite": 0.25,
+     "deny_score": 0.7261,
+     "manual_equivalency": 0.019
+    },
+    "confidence": 0.6348
+   }
+  },
+  {
+   "id": "hard-sol-a-multi_hop-08",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "central_engineering",
+   "predicted": "central_engineering",
+   "p_predicted": 0.7195,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "central_engineering",
+    "probabilities": {
+     "central_engineering": 0.7195,
+     "insufficient_log": 0.0195,
+     "local_maintenance": 0.1591,
+     "safety_shutdown": 0.1019
+    },
+    "confidence": 0.626
+   }
+  },
+  {
+   "id": "hard-sol-a-multi_hop-09",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "require_steward",
+   "predicted": "require_steward",
+   "p_predicted": 0.6709,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "require_steward",
+    "probabilities": {
+     "confirm_l3": 0.1802,
+     "reject_capacity": 0.044,
+     "require_steward": 0.6709,
+     "switch_l4": 0.1049
+    },
+    "confidence": 0.5612
+   }
+  },
+  {
+   "id": "hard-sol-a-multi_hop-10",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "approve_45_days",
+   "predicted": "reduce_to_30_days",
+   "p_predicted": 0.6369,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "reduce_to_30_days",
+    "probabilities": {
+     "approve_45_days": 0.3299,
+     "deny_sensitive": 0.0173,
+     "needs_field_review": 0.0159,
+     "reduce_to_30_days": 0.6369
+    },
+    "confidence": 0.5159
+   }
+  },
+  {
+   "id": "hard-sol-a-multi_hop-12",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "needs_authentication",
+   "predicted": "expired",
+   "p_predicted": 0.4111,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "expired",
+    "probabilities": {
+     "covered_recurrence": 0.2394,
+     "expired": 0.4111,
+     "needs_authentication": 0.3086,
+     "wrong_issue_class": 0.0409
+    },
+    "confidence": 0.2148
+   }
+  },
+  {
+   "id": "hard-sol-a-trap-02",
+   "tier": "hard",
+   "family": "trap",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.9951,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0049
+   }
+  },
+  {
+   "id": "hard-sol-a-trap-04",
+   "tier": "hard",
+   "family": "trap",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.984,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.016
+   }
+  },
+  {
+   "id": "hard-sol-a-trap-05",
+   "tier": "hard",
+   "family": "trap",
+   "type": "score",
+   "expected": 0,
+   "predicted": 2,
+   "p_predicted": 0.5908,
+   "correct": false,
+   "answer": {
+    "type": "score",
+    "score": 1.6364,
+    "legend": {
+     "0": "No operative exception.",
+     "1": "Requested but unauthorized exception.",
+     "2": "Authorized, unused exception.",
+     "3": "Authorized exception already used."
+    },
+    "probabilities": {
+     "0": 0.146,
+     "1": 0.1674,
+     "2": 0.5908,
+     "3": 0.0958
+    },
+    "confidence": 0.4448
+   }
+  },
+  {
+   "id": "hard-sol-a-trap-06",
+   "tier": "hard",
+   "family": "trap",
+   "type": "choice",
+   "expected": "keep_open_unresolved",
+   "predicted": "keep_open_unresolved",
+   "p_predicted": 0.8517,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "keep_open_unresolved",
+    "probabilities": {
+     "await_internal_metrics": 0.0419,
+     "close_agent_verified": 0.0573,
+     "close_confirmed": 0.0491,
+     "keep_open_unresolved": 0.8517
+    },
+    "confidence": 0.8023
+   }
+  },
+  {
+   "id": "hard-sol-a-trap-08",
+   "tier": "hard",
+   "family": "trap",
+   "type": "choice",
+   "expected": "late",
+   "predicted": "late",
+   "p_predicted": 0.9456,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "late",
+    "probabilities": {
+     "canceled": 0.002,
+     "indeterminate": 0.0143,
+     "late": 0.9456,
+     "on_time": 0.0381
+    },
+    "confidence": 0.9274
+   }
+  },
+  {
+   "id": "hard-sol-a-trap-10",
+   "tier": "hard",
+   "family": "trap",
+   "type": "choice",
+   "expected": "blocked_second_review",
+   "predicted": "blocked_second_review",
+   "p_predicted": 0.8508,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "blocked_second_review",
+    "probabilities": {
+     "blocked_failed_test": 0.0269,
+     "blocked_second_review": 0.8508,
+     "ready_one_review": 0.0435,
+     "ready_two_reviews": 0.0788
+    },
+    "confidence": 0.8011
+   }
+  },
+  {
+   "id": "hard-sol-a-trap-13",
+   "tier": "hard",
+   "family": "trap",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.9585,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.0415
+   }
+  },
+  {
+   "id": "hard-sol-a-trap-15",
+   "tier": "hard",
+   "family": "trap",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.6529,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.3471
+   }
+  },
+  {
+   "id": "hard-sol-b-judge_hard-01",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.6129,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.6129
+   }
+  },
+  {
+   "id": "hard-sol-b-judge_hard-02",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.9476,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9476
+   }
+  },
+  {
+   "id": "hard-sol-b-judge_hard-05",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9443,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9443
+   }
+  },
+  {
+   "id": "hard-sol-b-judge_hard-08",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.8653,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.8653
+   }
+  },
+  {
+   "id": "hard-sol-b-judge_hard-10",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.6207,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.6207
+   }
+  },
+  {
+   "id": "hard-sol-b-judge_hard-14",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.8556,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.1444
+   }
+  },
+  {
+   "id": "hard-sol-b-judge_hard-15",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9068,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9068
+   }
+  },
+  {
+   "id": "hard-sol-b-judge_hard-18",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.9717,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9717
+   }
+  },
+  {
+   "id": "hard-sol-b-long_policy-01",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "choice",
+   "expected": "reject_entire_claim",
+   "predicted": "reject_entire_claim",
+   "p_predicted": 0.3587,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "reject_entire_claim",
+    "probabilities": {
+     "approve_all": 0.2513,
+     "approve_lodging_only": 0.3174,
+     "approve_meals_only": 0.0726,
+     "reject_entire_claim": 0.3587
+    },
+    "confidence": 0.1449
+   }
+  },
+  {
+   "id": "hard-sol-b-long_policy-02",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "choice",
+   "expected": "deny_current_export",
+   "predicted": "privacy_and_security",
+   "p_predicted": 0.5831,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "privacy_and_security",
+    "probabilities": {
+     "analytics_owner_only": 0.1587,
+     "deny_current_export": 0.1612,
+     "privacy_and_security": 0.5831,
+     "privacy_only": 0.097
+    },
+    "confidence": 0.4441
+   }
+  },
+  {
+   "id": "hard-sol-b-long_policy-05",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "choice",
+   "expected": "delete_profile_omar_april_and_table",
+   "predicted": "delete_profile_omar_april_and_table",
+   "p_predicted": 0.5391,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "delete_profile_omar_april_and_table",
+    "probabilities": {
+     "delete_everything": 0.1743,
+     "delete_nothing": 0.0602,
+     "delete_only_profile": 0.2264,
+     "delete_profile_omar_april_and_table": 0.5391
+    },
+    "confidence": 0.3854
+   }
+  },
+  {
+   "id": "hard-sol-b-long_policy-06",
+   "tier": "hard",
+   "family": "long_policy",
+   "type": "choice",
+   "expected": "east_ward",
+   "predicted": "river_arts",
+   "p_predicted": 0.4996,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "river_arts",
+    "probabilities": {
+     "east_ward": 0.3317,
+     "harbor_neighbors": 0.1082,
+     "no_award": 0.0605,
+     "river_arts": 0.4996
+    },
+    "confidence": 0.3328
+   }
+  },
+  {
+   "id": "hard-sol-b-routing_hard-01",
+   "tier": "hard",
+   "family": "routing_hard",
+   "type": "choice",
+   "expected": "office_file_repair",
+   "predicted": "office_file_repair",
+   "p_predicted": 0.9946,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "office_file_repair",
+    "probabilities": {
+     "data_pipeline": 0.0001,
+     "desktop_support": 0.0003,
+     "finance_review": 0.0003,
+     "office_file_repair": 0.9946,
+     "spreadsheet_formula": 0.0047
+    },
+    "confidence": 0.9933
+   }
+  },
+  {
+   "id": "hard-sol-b-routing_hard-02",
+   "tier": "hard",
+   "family": "routing_hard",
+   "type": "choice",
+   "expected": "ledger_reconciliation",
+   "predicted": "ledger_reconciliation",
+   "p_predicted": 0.9264,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "ledger_reconciliation",
+    "probabilities": {
+     "customer_support": 0.0019,
+     "fraud_review": 0.0002,
+     "ledger_reconciliation": 0.9264,
+     "mobile_app": 0.07,
+     "payment_disputes": 0.0015
+    },
+    "confidence": 0.908
+   }
+  },
+  {
+   "id": "hard-sol-b-routing_hard-03",
+   "tier": "hard",
+   "family": "routing_hard",
+   "type": "choice",
+   "expected": "network_dns",
+   "predicted": "network_dns",
+   "p_predicted": 0.951,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "network_dns",
+    "probabilities": {
+     "api_platform": 0.0054,
+     "authoritative_dns": 0.0023,
+     "endpoint_devices": 0.0411,
+     "network_dns": 0.951,
+     "tls_certificates": 0.0002
+    },
+    "confidence": 0.9388
+   }
+  },
+  {
+   "id": "hard-sol-b-routing_hard-07",
+   "tier": "hard",
+   "family": "routing_hard",
+   "type": "choice",
+   "expected": "release_notarization",
+   "predicted": "release_notarization",
+   "p_predicted": 0.6601,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "release_notarization",
+    "probabilities": {
+     "ci_infrastructure": 0.0016,
+     "code_signing": 0.1912,
+     "endpoint_security": 0.0609,
+     "macos_runtime": 0.0862,
+     "release_notarization": 0.6601
+    },
+    "confidence": 0.5752
+   }
+  },
+  {
+   "id": "hard-sol-b-routing_hard-09",
+   "tier": "hard",
+   "family": "routing_hard",
+   "type": "choice",
+   "expected": "source_access",
+   "predicted": "source_access",
+   "p_predicted": 0.983,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "source_access",
+    "probabilities": {
+     "git_client": 0.0081,
+     "identity_login": 0.0004,
+     "repository_admin": 0.0073,
+     "source_access": 0.983,
+     "vpn_network": 0.0012
+    },
+    "confidence": 0.9787
+   }
+  },
+  {
+   "id": "hard-sol-b-temporal_numeric-01",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "choice",
+   "expected": "late_by_under_2h",
+   "predicted": "within_window",
+   "p_predicted": 0.5237,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "within_window",
+    "probabilities": {
+     "before_open": 0.1346,
+     "late_by_2h_or_more": 0.176,
+     "late_by_under_2h": 0.1657,
+     "within_window": 0.5237
+    },
+    "confidence": 0.365
+   }
+  },
+  {
+   "id": "hard-sol-b-temporal_numeric-02",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "choice",
+   "expected": "over_limit",
+   "predicted": "over_limit",
+   "p_predicted": 0.9067,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "over_limit",
+    "probabilities": {
+     "at_least_100gb_below": 0.0122,
+     "exactly_equal": 0.0124,
+     "over_limit": 0.9067,
+     "under_100gb_below": 0.0687
+    },
+    "confidence": 0.8755
+   }
+  },
+  {
+   "id": "hard-sol-b-temporal_numeric-03",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "choice",
+   "expected": "9_credits",
+   "predicted": "6_credits",
+   "p_predicted": 0.3452,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "6_credits",
+    "probabilities": {
+     "12_credits": 0.2741,
+     "15_credits": 0.1223,
+     "6_credits": 0.3452,
+     "9_credits": 0.2584
+    },
+    "confidence": 0.127
+   }
+  },
+  {
+   "id": "hard-sol-b-temporal_numeric-04",
+   "tier": "hard",
+   "family": "temporal_numeric",
+   "type": "choice",
+   "expected": "pass",
+   "predicted": "clear_fail",
+   "p_predicted": 0.4666,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "clear_fail",
+    "probabilities": {
+     "clear_fail": 0.4666,
+     "narrow_fail": 0.4319,
+     "pass": 0.1015
+    },
+    "confidence": 0.1999
+   }
+  },
+  {
+   "id": "hard-sol-c-judge_hard-03",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.9863,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9863
+   }
+  },
+  {
+   "id": "hard-sol-c-judge_hard-05",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.8784,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.8784
+   }
+  },
+  {
+   "id": "hard-sol-c-judge_hard-07",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.9194,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9194
+   }
+  },
+  {
+   "id": "hard-sol-c-judge_hard-08",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.9926,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9926
+   }
+  },
+  {
+   "id": "hard-sol-c-judge_hard-09",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9821,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9821
+   }
+  },
+  {
+   "id": "hard-sol-c-judge_hard-10",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9496,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9496
+   }
+  },
+  {
+   "id": "hard-sol-c-judge_hard-11",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "no",
+   "p_predicted": 0.8434,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.1566
+   }
+  },
+  {
+   "id": "hard-sol-c-judge_hard-13",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "no",
+   "predicted": "yes",
+   "p_predicted": 0.9488,
+   "correct": false,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9488
+   }
+  },
+  {
+   "id": "hard-sol-c-judge_hard-15",
+   "tier": "hard",
+   "family": "judge_hard",
+   "type": "noul",
+   "expected": "yes",
+   "predicted": "yes",
+   "p_predicted": 0.9938,
+   "correct": true,
+   "answer": {
+    "type": "noul",
+    "noul": 0.9938
+   }
+  },
+  {
+   "id": "hard-sol-c-multi_hop-07",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "programme_review",
+   "predicted": "programme_review",
+   "p_predicted": 0.5327,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "programme_review",
+    "probabilities": {
+     "partial_release": 0.0216,
+     "programme_review": 0.5327,
+     "reject_draw": 0.0304,
+     "release_draw": 0.4153
+    },
+    "confidence": 0.3769
+   }
+  },
+  {
+   "id": "hard-sol-c-multi_hop-09",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "bus_substitution",
+   "predicted": "bus_substitution",
+   "p_predicted": 0.486,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "bus_substitution",
+    "probabilities": {
+     "bus_substitution": 0.486,
+     "call_fen_cross": 0.0824,
+     "pass_fen_cross": 0.1515,
+     "terminate_oakmere": 0.2801
+    },
+    "confidence": 0.3146
+   }
+  },
+  {
+   "id": "hard-sol-c-multi_hop-11",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "coverage_excluded",
+   "predicted": "coverage_confirmed",
+   "p_predicted": 0.4063,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "coverage_confirmed",
+    "probabilities": {
+     "adjuster_referral": 0.1008,
+     "coverage_confirmed": 0.4063,
+     "coverage_excluded": 0.3706,
+     "documentation_needed": 0.1223
+    },
+    "confidence": 0.2084
+   }
+  },
+  {
+   "id": "hard-sol-c-multi_hop-12",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "conservation_hold",
+   "predicted": "supervised_delivery",
+   "p_predicted": 0.8598,
+   "correct": false,
+   "answer": {
+    "type": "choice",
+    "choice": "supervised_delivery",
+    "probabilities": {
+     "conservation_hold": 0.0363,
+     "deny_request": 0.0353,
+     "digital_copy_only": 0.0686,
+     "supervised_delivery": 0.8598
+    },
+    "confidence": 0.813
+   }
+  },
+  {
+   "id": "hard-sol-c-multi_hop-13",
+   "tier": "hard",
+   "family": "multi_hop",
+   "type": "choice",
+   "expected": "normal_release",
+   "predicted": "normal_release",
+   "p_predicted": 0.9962,
+   "correct": true,
+   "answer": {
+    "type": "choice",
+    "choice": "normal_release",
+    "probabilities": {
+     "engineering_review": 0.0019,
+     "normal_release": 0.9962,
+     "rework": 0.0013,
+     "scrap_lot": 0.0006
+    },
+    "confidence": 0.9949
+   }
+  }
+ ]
+}

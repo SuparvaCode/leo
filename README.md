@@ -1,8 +1,10 @@
-# Leo
+﻿# Leo
 
 **An open-weight decision model.** Send a *state* (text or JSON) and typed questions (`choice`, `score`, `noul` yes/no); get a calibrated probability distribution for every question from one forward pass, with no text generation.
 
-- **Weights:** [huggingface.co/Suparva/leo-1.7b](https://huggingface.co/Suparva/leo-1.7b) (Apache-2.0, Qwen3-1.7B base + LoRA)
+- **Leo-1 (4B, latest):** [huggingface.co/Suparva/leo-1](https://huggingface.co/Suparva/leo-1): Qwen3-4B base + LoRA, calibrated; results in `results/compare_v5.md`
+- **Free trial API:** [leo.kognare.com](https://leo.kognare.com), `Authorization: Bearer free`, same `/v1/systemone` format
+- **Earlier weights:** [huggingface.co/Suparva/leo-1.7b](https://huggingface.co/Suparva/leo-1.7b) (leo-1.7b-v3)
 - **Benchmarks:** [docs/RESULTS.md](docs/RESULTS.md) (every table generated from `results/`)
 - **Design notes:** [docs/PLAN.md](docs/PLAN.md)
 

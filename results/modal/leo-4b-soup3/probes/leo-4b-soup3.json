@@ -1,0 +1,129 @@
+{
+ "device": "NVIDIA L4",
+ "results": {
+  "leo-4b-soup3 bf16": {
+   "order": [
+    {
+     "dataset": "emotion",
+     "n_rows": 300,
+     "n_perm": 5,
+     "flip_rate": 0.074,
+     "mean_tvd": 0.0467600762210274
+    },
+    {
+     "dataset": "fin_topic",
+     "n_rows": 300,
+     "n_perm": 5,
+     "flip_rate": 0.10066666666666668,
+     "mean_tvd": 0.08355463725858163
+    }
+   ],
+   "parity": {
+    "n_questions": 400,
+    "max_abs_diff": 0.017199999999999993,
+    "argmax_changes": 3
+   },
+   "latency": [
+    {
+     "state": "short",
+     "questions": 1,
+     "model_p50_ms": 67.3793794999824,
+     "model_p95_ms": 69.18717684999933
+    },
+    {
+     "state": "short",
+     "questions": 10,
+     "model_p50_ms": 75.26171700010309,
+     "model_p95_ms": 79.48102989990957
+    },
+    {
+     "state": "short",
+     "questions": 50,
+     "model_p50_ms": 334.2547359999344,
+     "model_p95_ms": 337.35809920003703
+    },
+    {
+     "state": "long",
+     "questions": 1,
+     "model_p50_ms": 73.17225050007892,
+     "model_p95_ms": 83.4215698999401
+    },
+    {
+     "state": "long",
+     "questions": 10,
+     "model_p50_ms": 131.0878844999479,
+     "model_p95_ms": 132.29966659993124
+    },
+    {
+     "state": "long",
+     "questions": 50,
+     "model_p50_ms": 382.49770850006826,
+     "model_p95_ms": 384.36932615020396
+    }
+   ],
+   "seconds": 154.8
+  },
+  "leo-4b-soup3 bf16 2 views": {
+   "order": [
+    {
+     "dataset": "emotion",
+     "n_rows": 300,
+     "n_perm": 5,
+     "flip_rate": 0.024,
+     "mean_tvd": 0.021214041161855893
+    },
+    {
+     "dataset": "fin_topic",
+     "n_rows": 300,
+     "n_perm": 5,
+     "flip_rate": 0.05800000000000001,
+     "mean_tvd": 0.04124766928423759
+    }
+   ],
+   "parity": {
+    "n_questions": 400,
+    "max_abs_diff": 0.019100000000000006,
+    "argmax_changes": 2
+   },
+   "latency": [
+    {
+     "state": "short",
+     "questions": 1,
+     "model_p50_ms": 70.5409964999717,
+     "model_p95_ms": 72.30111674999762
+    },
+    {
+     "state": "short",
+     "questions": 10,
+     "model_p50_ms": 129.14481450002313,
+     "model_p95_ms": 130.6862587500632
+    },
+    {
+     "state": "short",
+     "questions": 50,
+     "model_p50_ms": 1000.922394999975,
+     "model_p95_ms": 1003.6955221998255
+    },
+    {
+     "state": "long",
+     "questions": 1,
+     "model_p50_ms": 73.98533000002772,
+     "model_p95_ms": 75.34116385005518
+    },
+    {
+     "state": "long",
+     "questions": 10,
+     "model_p50_ms": 158.81912450004165,
+     "model_p95_ms": 161.42712030001576
+    },
+    {
+     "state": "long",
+     "questions": 50,
+     "model_p50_ms": 1002.124174999949,
+     "model_p95_ms": 1004.9074592500119
+    }
+   ],
+   "seconds": 239.4
+  }
+ }
+}

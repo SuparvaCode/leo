@@ -1,0 +1,13 @@
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:  68%|██████▊   | 270/398 [00:00<00:00, 2698.87it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 3751.87it/s]
+Generating train split:   0%|          | 0/16000 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 16000/16000 [00:00<00:00, 372427.70 examples/s]
+Generating validation split:   0%|          | 0/2000 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 2000/2000 [00:00<00:00, 224962.00 examples/s]
+Generating test split:   0%|          | 0/2000 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 2000/2000 [00:00<00:00, 206717.79 examples/s]
+               leo-4b-v5 emotion       n=2000  acc=0.541 f1=0.455 ece=0.055 brier=0.607 nll=1.263 (15.46 ms/row)
+               leo-4b-v5 tweet_topic   n=1693  acc=0.839 f1=0.686 ece=0.092 brier=0.256 nll=0.535 (23.09 ms/row)
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 16990 examples [00:00, 157861.19 examples/s]Generating train split: 16990 examples [00:00, 156789.68 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 4117 examples [00:00, 124862.25 examples/s]
+               leo-4b-v5 fin_topic     n=4117  acc=0.556 f1=0.530 ece=0.095 brier=0.595 nll=1.342 (36.46 ms/row)
+Generating train split:   0%|          | 0/11118 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 11118/11118 [00:00<00:00, 154711.70 examples/s]
+Generating validation split:   0%|          | 0/1000 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 1000/1000 [00:00<00:00, 95544.41 examples/s]
+Generating test split:   0%|          | 0/1000 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1000/1000 [00:00<00:00, 94917.38 examples/s]
+               leo-4b-v5 daily_dialog  n=7740  acc=0.629 f1=0.347 ece=0.034 brier=0.497 nll=0.915 (16.28 ms/row)

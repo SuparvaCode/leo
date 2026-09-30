@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leo-1: open-weight decision model · free trial API</title>
+<meta name="description" content="Leo-1 answers typed questions about text or JSON with calibrated probabilities in one forward pass. Free trial of a /v1/systemone-compatible API.">
+<style>
+  :root { --bg:#0d1117; --panel:#161b22; --line:#30363d; --fg:#e6edf3; --mute:#9da7b3; --acc:#f0b429; --ok:#3fb950; --bad:#f85149; --link:#58a6ff; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  a { color:var(--link); }
+  a:focus-visible, button:focus-visible, textarea:focus-visible, input:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 20px; }
+  header { border-bottom:1px solid var(--line); }
+  nav { display:flex; gap:18px; align-items:center; padding:14px 0; flex-wrap:wrap; }
+  nav .brand { font-weight:700; font-size:20px; color:var(--fg); text-decoration:none; margin-right:auto; }
+  nav a { text-decoration:none; }
+  .hero { padding:56px 0 36px; }
+  h1 { font-size:clamp(30px,5vw,48px); line-height:1.1; margin:0 0 14px; }
+  h2 { font-size:26px; margin:48px 0 12px; }
+  h3 { font-size:18px; margin:24px 0 8px; }
+  .lead { font-size:19px; color:var(--mute); max-width:760px; }
+  .pill { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:3px 12px; font-size:13px; color:var(--mute); margin:0 6px 8px 0; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin-top:22px; }
+  .btn { display:inline-block; background:var(--acc); color:#111; font-weight:700; padding:10px 18px; border-radius:8px; text-decoration:none; border:0; cursor:pointer; font-size:15px; }
+  .btn.alt { background:transparent; color:var(--fg); border:1px solid var(--line); }
+  .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:18px; }
+  .card h3 { margin-top:0; }
+  .muted { color:var(--mute); }
+  code, pre, textarea, input { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; }
+  pre { background:#0a0d12; border:1px solid var(--line); border-radius:8px; padding:14px; overflow:auto; font-size:13.5px; line-height:1.5; }
+  code { background:#0a0d12; padding:1px 5px; border-radius:4px; }
+  pre code { background:none; padding:0; }
+  table { width:100%; border-collapse:collapse; font-size:14.5px; }
+  th, td { border-bottom:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+  th { color:var(--mute); font-weight:600; }
+  td.win { color:var(--ok); font-weight:600; }
+  .tabs { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:-1px; }
+  .tabs button { background:var(--panel); color:var(--mute); border:1px solid var(--line); border-bottom:0; border-radius:8px 8px 0 0; padding:7px 14px; cursor:pointer; font-size:14px; }
+  .tabs button[aria-selected="true"] { color:var(--fg); background:#0a0d12; }
+  .tabpanel pre { margin-top:0; border-top-left-radius:0; }
+  label { display:block; font-weight:600; margin:14px 0 6px; }
+  textarea, input[type=text] { width:100%; background:#0a0d12; color:var(--fg); border:1px solid var(--line); border-radius:8px; padding:10px; font-size:14px; }
+  textarea { min-height:90px; resize:vertical; }
+  .row { display:grid; gap:16px; grid-template-columns:1fr 1fr; }
+  @media (max-width:820px) { .row { grid-template-columns:1fr; } }
+  .result { min-height:220px; }
+  .bar { height:8px; background:#0a0d12; border-radius:4px; overflow:hidden; margin-top:4px; }
+  .bar > span { display:block; height:100%; background:var(--acc); }
+  .ans { padding:8px 0; border-bottom:1px solid var(--line); }
+  .status { font-size:14px; color:var(--mute); margin-top:10px; min-height:22px; }
+  .notice { border-left:4px solid var(--acc); }
+  footer { border-top:1px solid var(--line); margin-top:56px; padding:24px 0 40px; color:var(--mute); font-size:14px; }
+  .sr { position:absolute; left:-9999px; }
+</style>
+</head>
+<body>
+<a class="sr" href="#main">Skip to content</a>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="brand" href="/">Leo-1</a>
+      <a href="#try">Try it</a>
+      <a href="#api">API</a>
+      <a href="#examples">Examples</a>
+      <a href="#benchmarks">Benchmarks</a>
+      <a href="#how">How it works</a>
+      <a href="https://github.com/SuparvaCode/leo" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero wrap">
+  <span class="pill">Open weights · Apache-2.0</span><span class="pill">4B parameters</span><span class="pill">Calibrated probabilities</span><span class="pill">/v1/systemone compatible</span>
+  <h1>Decisions, not text.<br>Leo-1 answers typed questions in one forward pass.</h1>
+  <p class="lead">Send a state (a message, a ticket, a web page, any JSON) and a set of yes/no, choice or score questions. Leo-1 returns a calibrated probability for every answer. No generation, no parsing, no JSON repair. It speaks the same <code>POST /v1/systemone</code> format as TypeSafe's Jev models, so existing clients work by changing the base URL.</p>
+  <div class="cta">
+    <a class="btn" href="#try">Try it free</a>
+    <a class="btn alt" href="#api">API key: <strong>free</strong></a>
+    <a class="btn alt" href="https://github.com/SuparvaCode/leo" rel="noopener">Code and training</a>
+    <a class="btn alt" href="https://huggingface.co/Suparva" rel="noopener">Hugging Face</a>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="why">
+  <h2 id="why">What it is good at</h2>
+  <div class="grid">
+    <div class="card"><h3>Short conditions</h3><p class="muted"><code>is(text, "angry")</code>, <code>"asking for a refund"</code>, <code>"spam"</code>, even one-word inputs like "ok" or an emoji. 0.97 accuracy on a blind 211-condition suite.</p></div>
+    <div class="card"><h3>Routing and classification</h3><p class="muted">Pick a team, an intent or a topic from your own labels, with or without descriptions, and get a probability for each.</p></div>
+    <div class="card"><h3>Moderation checks</h3><p class="muted">Spam, toxicity, PII and prompt-injection rules asked together; each rule gets its own probability.</p></div>
+    <div class="card"><h3>Browser agents</h3><p class="muted">Next-action choices for agents: 18 of 21 runs on TypeSafe's own jev-ultrafast suite, the same as Jev, with no false "done".</p></div>
+  </div>
+</section>
+
+<section class="wrap" id="try" aria-labelledby="try-h">
+  <h2 id="try-h">Try it</h2>
+  <p class="muted">Runs Leo-1 live on a GPU. The first request after a quiet period can take about a minute while the GPU starts; after that answers take about a second. Please do not paste personal or confidential data.</p>
+  <div class="row">
+    <div class="card">
+      <form id="play" novalidate>
+        <label for="state">State (text or JSON)</label>
+        <textarea id="state" required>This is the third time I'm writing. I was charged twice for order 55102 and nobody has refunded me. Fix this today or I cancel.</textarea>
+        <label for="conds">Yes/no conditions (one per line)</label>
+        <textarea id="conds">angry
+asking for a refund
+urgent
+spam</textarea>
+        <label for="cinstr">Choice question (optional)</label>
+        <input type="text" id="cinstr" value="Which team should handle this?">
+        <label for="copts">Options (comma separated)</label>
+        <input type="text" id="copts" value="billing, technical, shipping, other">
+        <div class="cta"><button class="btn" type="submit" id="run">Ask Leo-1</button></div>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+    <div class="card result">
+      <h3>Answers</h3>
+      <div id="answers" aria-live="polite"><p class="muted">Results appear here.</p></div>
+      <details><summary>Raw request and response</summary><pre id="raw"><code></code></pre></details>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="api" aria-labelledby="api-h">
+  <h2 id="api-h">API</h2>
+  <div class="card">
+    <table>
+      <tr><th scope="row">Base URL</th><td><code>https://leo.kognare.com</code></td></tr>
+      <tr><th scope="row">Endpoint</th><td><code>POST /v1/systemone</code> · <code>GET /v1/models</code> · <code>GET /v1/usage</code> (your own usage today)</td></tr>
+      <tr><th scope="row">API key</th><td><code>Authorization: Bearer free</code></td></tr>
+      <tr><th scope="row">Model</th><td><code>leo-1</code> (any <code>model</code> value is accepted and answered by Leo-1)</td></tr>
+      <tr><th scope="row">Free trial limits</th><td>20 requests per minute and 200 per day per IP address; up to 16 questions and 20,000 characters of state per request. Limits are shown in <code>X-RateLimit-*</code> response headers.</td></tr>
+      <tr><th scope="row">Errors</th><td><code>401</code> bad key · <code>413</code> body too large · <code>422</code> invalid request · <code>429</code> rate limit (see <code>Retry-After</code>) · <code>529</code> trial busy or GPU starting</td></tr>
+    </table>
+  </div>
+  <h3>Question types</h3>
+  <table>
+    <tr><th>type</th><th><code>criteria</code></th><th>answer</th></tr>
+    <tr><td><code>noul</code></td><td>optional <code>{"true": "...", "false": "..."}</code></td><td><code>noul</code> = probability of yes</td></tr>
+    <tr><td><code>choice</code></td><td>object: option key → description (or <code>null</code>), 2 to 255 options</td><td><code>choice</code>, <code>probabilities</code>, <code>confidence</code></td></tr>
+    <tr><td><code>score</code></td><td>ordered array of 2 to 10 level descriptions</td><td><code>score</code> (expected level), <code>probabilities</code>, <code>legend</code>, <code>confidence</code></td></tr>
+  </table>
+  <p class="muted">Questions never see each other, and question ids are never shown to the model. Instructions can point into JSON state with paths such as <code>`ticket.body`</code>. Probabilities have two decimals and sum to exactly 1.</p>
+</section>
+
+<section class="wrap" id="examples" aria-labelledby="ex-h">
+  <h2 id="ex-h">Examples</h2>
+  <div class="tabs" role="tablist" aria-label="Code examples">
+    <button role="tab" aria-selected="true" aria-controls="t-curl" id="b-curl">curl</button>
+    <button role="tab" aria-selected="false" aria-controls="t-py" id="b-py">Python</button>
+    <button role="tab" aria-selected="false" aria-controls="t-ts" id="b-ts">TypeScript SDK</button>
+    <button role="tab" aria-selected="false" aria-controls="t-nc" id="b-nc">naturalcodz</button>
+    <button role="tab" aria-selected="false" aria-controls="t-res" id="b-res">Response</button>
+  </div>
+  <div class="tabpanel" role="tabpanel" id="t-curl" aria-labelledby="b-curl"><pre><code>curl https://leo.kognare.com/v1/systemone \
+  -H "Authorization: Bearer free" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "leo-1",
+    "state": {"ticket": {"subject": "Charged twice", "body": "I was billed twice this month. Please fix it today."}},
+    "questions": {
+      "team":   {"type": "choice", "instructions": "Which team should handle `ticket`?",
+                 "criteria": {"billing": "charges, refunds", "technical": "bugs, outages", "other": null}},
+      "urgent": {"type": "noul", "instructions": "urgent"},
+      "anger":  {"type": "score", "instructions": "How upset is the customer?",
+                 "criteria": ["calm", "annoyed", "very angry"]}
+    }
+  }'</code></pre></div>
+  <div class="tabpanel" role="tabpanel" id="t-py" aria-labelledby="b-py" hidden><pre><code>import httpx
+
+r = httpx.post(
+    "https://leo.kognare.com/v1/systemone",
+    headers={"Authorization": "Bearer free"},
+    json={
+        "model": "leo-1",
+        "state": "Buy cheap followers now!!! 10k for $5, DM us",
+        "questions": {
+            "spam": {"type": "noul", "instructions": "spam"},
+            "intent": {"type": "choice", "instructions": "What does the sender want?",
+                       "criteria": {"sell something": None, "ask for help": None, "complain": None}},
+        },
+    },
+    timeout=120,  # the first call after a quiet period starts the GPU
+)
+r.raise_for_status()
+print(r.json()["answers"])</code></pre></div>
+  <div class="tabpanel" role="tabpanel" id="t-ts" aria-labelledby="b-ts" hidden><pre><code>// npm install @typesafe-ai/sdk   (TypeSafe's official SDK, unchanged)
+import { TypeSafeClient, choice, noul } from "@typesafe-ai/sdk";
+
+const client = new TypeSafeClient({ baseURL: "https://leo.kognare.com", apiKey: "free", timeout: 120_000 });
+
+const { answers } = await client.systemOne({
+  model: "leo-1",
+  state: "Please close my account and delete all my data.",
+  questions: {
+    wantsDeletion: noul("wants to delete their account"),
+    team: choice("Which team?", { privacy: "data and deletion requests", billing: null, support: null }),
+  },
+});
+console.log(answers.wantsDeletion.noul, answers.team.choice);</code></pre></div>
+  <div class="tabpanel" role="tabpanel" id="t-nc" aria-labelledby="b-nc" hidden><pre><code>// naturalcodz: natural-logic helpers (is, pick, rate, guard, classify ...) by Suparva
+// https://github.com/SuparvaCode/naturalcodz   ·   npm install naturalcodz
+//
+// Point it at Leo-1 with two environment variables:
+//   TYPESAFE_BASE_URL=https://leo.kognare.com
+//   TYPESAFE_API_KEY=free
+import { is, isSpam, hasPII, pick, rate, classify } from "naturalcodz";
+
+if (await is(comment, "angry")) escalate(comment);
+if (await isSpam(message)) drop(message);
+const team = await pick(ticket, ["billing", "engineering", "sales"]);
+const stars = await rate(review, 1, 5);
+const kind = await classify(feedback, ["bug_report", "feature_request", "billing"]);</code></pre>
+  <p class="muted">Leo-1 passed 35 of 37 naturalcodz scenarios through the real library (Jev: 36 of 37).</p></div>
+  <div class="tabpanel" role="tabpanel" id="t-res" aria-labelledby="b-res" hidden><pre><code>{
+  "model": "leo-1",
+  "answers": {
+    "team":   {"type": "choice", "choice": "billing",
+               "probabilities": {"billing": 0.95, "technical": 0.0, "other": 0.05}, "confidence": 0.92},
+    "urgent": {"type": "noul", "noul": 0.81},
+    "anger":  {"type": "score", "score": 1.2, "legend": {"0": "calm", "1": "annoyed", "2": "very angry"},
+               "probabilities": {"0": 0.05, "1": 0.7, "2": 0.25}, "confidence": 0.62}
+  },
+  "usage": {"input_tokens": 120, "output_tokens": 96}
+}</code></pre><p class="muted">Values are illustrative; the shape is exact.</p></div>
+</section>
+
+<section class="wrap" id="benchmarks" aria-labelledby="b-h">
+  <h2 id="b-h">Benchmarks</h2>
+  <p class="muted">Identical requests sent to Leo-1 and to TypeSafe's Jev 1.13 (live API, September 2026). Jev was used only for scoring, never for training.</p>
+  <table>
+    <tr><th scope="col">benchmark</th><th scope="col">Leo-1</th><th scope="col">Jev 1.13</th></tr>
+    <tr><td>Browser agent tasks, jev-ultrafast (21 runs)</td><td class="win">18/21</td><td>18/21</td></tr>
+    <tr><td>naturalcodz drop-in scenarios</td><td>35/37</td><td>36/37</td></tr>
+    <tr><td>Blind short-condition suite (211 conditions)</td><td>0.972</td><td>0.976</td></tr>
+    <tr><td>Calibration error on short conditions (lower is better)</td><td class="win">0.029</td><td>0.075</td></tr>
+    <tr><td>Held-out classification, calibration error (lower is better)</td><td class="win">0.069</td><td>0.167</td></tr>
+    <tr><td>Tweet topic classification</td><td class="win">0.840</td><td>0.790</td></tr>
+    <tr><td>JevBench standard tier</td><td>0.944</td><td>0.986</td></tr>
+    <tr><td>Held-out classification, mean accuracy</td><td>0.650</td><td>0.689</td></tr>
+    <tr><td>JevBench hard tier (long policies, multi-hop, dates)</td><td>0.414</td><td>0.721</td></tr>
+    <tr><td>World knowledge, MMMLU (15 languages)</td><td>0.481</td><td>0.861</td></tr>
+  </table>
+  <p class="muted">Where Leo-1 is behind: hard multi-step reasoning, world knowledge and low-resource languages. Put the facts it needs into the state. Full tables, protocol and raw results are on <a href="https://github.com/SuparvaCode/leo" rel="noopener">GitHub</a>.</p>
+</section>
+
+<section class="wrap" id="how" aria-labelledby="how-h">
+  <h2 id="how-h">How it works</h2>
+  <div class="grid">
+    <div class="card"><h3>Prefill only</h3><p class="muted">A pretrained Qwen3-4B decoder reads the state once; nothing is generated. LoRA adapters (rank 64) specialise it.</p></div>
+    <div class="card"><h3>Packed questions</h3><p class="muted">All questions share one encoding of the state behind a block-causal mask, so they cannot influence each other.</p></div>
+    <div class="card"><h3>Pointer readout</h3><p class="muted">A small head scores every option's end marker against the question's decision marker. Markers are reserved embeddings that text cannot forge.</p></div>
+    <div class="card"><h3>Calibrated</h3><p class="muted">Trained with proper scoring rules on about 180k requests, then temperature-calibrated per question type (dev calibration error 0.007).</p></div>
+  </div>
+  <p class="muted">Leo-1 is an exact weight merge of two training runs (leo-4b-v5 and its browser-focused continuation), trained on 2 epochs of public human-labelled datasets plus code-generated families on one H100.</p>
+</section>
+
+<section class="wrap" aria-labelledby="links-h">
+  <h2 id="links-h">Links</h2>
+  <div class="grid">
+    <div class="card"><h3>GitHub</h3><p><a href="https://github.com/SuparvaCode/leo" rel="noopener">SuparvaCode/leo</a>: code, data pipeline, training and every benchmark.</p><p><a href="https://github.com/SuparvaCode" rel="noopener">github.com/SuparvaCode</a></p></div>
+    <div class="card"><h3>Hugging Face</h3><p><a href="https://huggingface.co/Suparva" rel="noopener">huggingface.co/Suparva</a>: open weights (<a href="https://huggingface.co/Suparva/leo-1.7b" rel="noopener">leo-1.7b</a>).</p></div>
+    <div class="card"><h3>naturalcodz</h3><p><a href="https://github.com/SuparvaCode/naturalcodz" rel="noopener">SuparvaCode/naturalcodz</a>: one-line <code>is()</code>, <code>pick()</code>, <code>rate()</code>, <code>guard()</code> helpers that run on Leo-1 or Jev.</p></div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="notice-h">
+  <h2 id="notice-h">Notice</h2>
+  <div class="card notice">
+    <ul>
+      <li><strong>Free trial for testing and evaluation only.</strong> No uptime or accuracy guarantee; limits may change and the trial may close at any time. When many people use it at once, new users are asked to come back later.</li>
+      <li><strong>Privacy.</strong> Request and response contents are not stored or logged. Per-IP request counts and token usage are recorded (IP addresses are stored only as salted hashes) to enforce the limits.</li>
+      <li><strong>Do not send personal, confidential or regulated data.</strong> Do not use Leo-1 alone for decisions about people's health, finances, legal status or employment, and verify agent actions independently.</li>
+      <li><strong>Independent project.</strong> Leo is not affiliated with TypeSafe. It follows TypeSafe's publicly documented <code>/v1/systemone</code> format for compatibility, contains none of its weights and was not trained on its outputs.</li>
+      <li>Weights and code are Apache-2.0; training datasets keep their own licences.</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Leo-1 by <a href="https://github.com/SuparvaCode" rel="noopener">Suparva</a> · <a href="https://github.com/SuparvaCode/leo" rel="noopener">GitHub</a> · <a href="https://huggingface.co/Suparva" rel="noopener">Hugging Face</a> · <a href="https://github.com/SuparvaCode/naturalcodz" rel="noopener">naturalcodz</a></div>
+</footer>
+
+<script>
+(() => {
+  // tabs
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  tabs.forEach((t) => t.addEventListener("click", () => {
+    tabs.forEach((x) => { x.setAttribute("aria-selected", String(x === t)); document.getElementById(x.getAttribute("aria-controls")).hidden = x !== t; });
+  }));
+
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, text, cls) => { const e = document.createElement(tag); if (text !== undefined) e.textContent = text; if (cls) e.className = cls; return e; };
+  function bar(p) { const b = el("div", undefined, "bar"); const s = el("span"); s.style.width = Math.round(p * 100) + "%"; b.appendChild(s); return b; }
+
+  $("play").addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    let state = $("state").value.trim();
+    if (!state) { $("status").textContent = "Please enter a state."; return; }
+    try { if (/^[\[{]/.test(state)) state = JSON.parse(state); } catch (_) { /* keep as text */ }
+    const questions = {};
+    const conds = $("conds").value.split("\n").map((s) => s.trim()).filter(Boolean).slice(0, 12);
+    conds.forEach((c, i) => { questions["c" + i] = { type: "noul", instructions: c }; });
+    const opts = $("copts").value.split(",").map((s) => s.trim()).filter(Boolean);
+    if ($("cinstr").value.trim() && opts.length >= 2) {
+      questions.choice = { type: "choice", instructions: $("cinstr").value.trim(), criteria: Object.fromEntries(opts.slice(0, 20).map((o) => [o, null])) };
+    }
+    if (!Object.keys(questions).length) { $("status").textContent = "Add at least one condition or a choice with two options."; return; }
+    const body = { model: "leo-1", state, questions };
+    $("run").disabled = true;
+    $("status").textContent = "Asking Leo-1… (the first request can take up to a minute while the GPU starts)";
+    const t0 = performance.now();
+    try {
+      const r = await fetch("/v1/systemone", { method: "POST", headers: { Authorization: "Bearer free", "Content-Type": "application/json" }, body: JSON.stringify(body) });
+      const data = await r.json();
+      const ms = Math.round(performance.now() - t0);
+      $("raw").firstChild.textContent = "POST /v1/systemone\n" + JSON.stringify(body, null, 2) + "\n\n→ " + r.status + "\n" + JSON.stringify(data, null, 2);
+      const out = $("answers"); out.replaceChildren();
+      if (!r.ok) { out.appendChild(el("p", (data.error && data.error.message) || ("Error " + r.status))); $("status").textContent = ""; return; }
+      conds.forEach((c, i) => {
+        const a = data.answers["c" + i]; const row = el("div", undefined, "ans");
+        const p = a.noul; row.appendChild(el("div", `${p >= 0.5 ? "Yes" : "No"} · ${c} · P(yes) = ${p.toFixed(2)}`)); row.appendChild(bar(p)); out.appendChild(row);
+      });
+      if (data.answers.choice) {
+        const a = data.answers.choice; const row = el("div", undefined, "ans");
+        row.appendChild(el("div", `${$("cinstr").value.trim()} → ${a.choice} (confidence ${a.confidence.toFixed(2)})`));
+        Object.entries(a.probabilities).sort((x, y) => y[1] - x[1]).forEach(([k, v]) => { row.appendChild(el("div", `${k}: ${v.toFixed(2)}`, "muted")); row.appendChild(bar(v)); });
+        out.appendChild(row);
+      }
+      const left = r.headers.get("X-RateLimit-Remaining-Requests-Day");
+      $("status").textContent = `Answered in ${ms} ms · ${data.usage.input_tokens} input tokens · ${left ?? "?"} free requests left today`;
+    } catch (e) {
+      $("status").textContent = "Network error. Please try again.";
+    } finally {
+      $("run").disabled = false;
+    }
+  });
+})();
+</script>
+</body>
+</html>

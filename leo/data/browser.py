@@ -359,7 +359,7 @@ def observe(cat: Catalog, s: Session, rng: random.Random, inject: str | None = N
         srow.append((cat.button, ctl(role="button", label=cat.button, kind="click", value="")))
         rows.append(srow)
         if s.suggestions:
-            opts = [s.field_value] if s.field_value in CITIES else []
+            opts = [c for c in CITIES if c.lower() == s.field_value.lower()][:1]  # suggestions use the site's spelling
             opts += [c for c in cat.suggest_extra if c.lower().startswith(s.field_value[:1].lower())][:2]
             for o in dict.fromkeys(opts or [s.field_value]):
                 sub = rng.choice(["City", "Region", "Area"])
@@ -509,7 +509,9 @@ def apply(cat: Catalog, s: Session, page: dict[str, Any], aid: str, g: Goal, rng
     elif a["kind"] == "scroll":
         s.scroll = max(0, s.scroll + (1 if a["delta"] > 0 else -1))
     elif a["kind"] == "fill":
-        s.field_value = g.query or ""
+        from leo.data.browser_evidence import typed_form  # the helper may change the value's case
+
+        s.field_value = typed_form(g.query, rng) if g.query else ""
         rec["text"] = s.field_value
         s.chosen = False
         s.suggestions = cat.autocomplete

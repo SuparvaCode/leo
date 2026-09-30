@@ -1,0 +1,5 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  92%|█████████▏| 286/310 [00:00<00:00, 2857.07it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 3040.93it/s]
+             leo-1.7b-v5 emotion       n=2000  acc=0.517 f1=0.444 ece=0.056 brier=0.625 nll=1.273 (7.44 ms/row)
+             leo-1.7b-v5 tweet_topic   n=1693  acc=0.819 f1=0.665 ece=0.108 brier=0.275 nll=0.579 (10.1 ms/row)
+             leo-1.7b-v5 fin_topic     n=4117  acc=0.521 f1=0.505 ece=0.117 brier=0.642 nll=1.501 (16.28 ms/row)
+             leo-1.7b-v5 daily_dialog  n=7740  acc=0.425 f1=0.298 ece=0.096 brier=0.671 nll=1.199 (7.18 ms/row)

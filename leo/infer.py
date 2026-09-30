@@ -95,6 +95,7 @@ class Leo:
         merge: bool = True,
         max_state_tokens: int | None = None,
         dtype: str = "auto",
+        encoder_overrides: dict[str, Any] | None = None,
         **kwargs: Any,
     ) -> "Leo":
         """Load a checkpoint (a model directory or a run directory with ``best/``).
@@ -108,11 +109,16 @@ class Leo:
 
         dev = pick_device(device)
         dtype = resolve_dtype(dtype, dev)
+        from leo.checkpoint import resolve_checkpoint
+        from leo.model import base_source
+
         model, cfg = LeoModel.load(path, device=dev, dtype=dtype, merge=merge)
-        tok = AutoTokenizer.from_pretrained(cfg["base_model"], revision=cfg.get("base_revision"))
+        base, rev = base_source(resolve_checkpoint(path), cfg)
+        tok = AutoTokenizer.from_pretrained(base, revision=rev)
         enc_cfg = dict(cfg.get("encoder", {}))
         if max_state_tokens:
             enc_cfg["max_state_tokens"] = max_state_tokens
+        enc_cfg.update(encoder_overrides or {})
         enc = Encoder(make_tokenize(tok), **enc_cfg)
         return cls(model, enc, cfg, dev, dtype, **kwargs)
 
@@ -201,4 +207,7 @@ class Leo:
         n_in = len(self.encoder.encode_state(state).tokens)
         n_in += sum(len(self.encoder.encode_question(s, key=None).tokens) for s in specs)
         n_out = len(self.encoder.tok(json.dumps(answers, separators=(",", ":"))))
-        return {"input_tokens": n_in, "output_tokens": n_out}
+        usage: dict[str, Any] = {"input_tokens": n_in, "output_tokens": n_out}
+        if self.encoder.state_tokens(state) > self.encoder.max_state_tokens:  # only reachable when not rejecting
+            usage["truncated"] = True
+        return usage
